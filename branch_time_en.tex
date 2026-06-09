@@ -1,0 +1,177 @@
+% !TEX root = branch_time_en.tex
+\documentclass[pdflatex,sn-mathphys-num,iicol]{sn-jnl}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+
+\raggedbottom
+
+\begin{document}
+
+\title[Branch-Dependent Proper Time]{Branch-Dependent Proper Time}
+
+\author*[1]{\fnm{Oleg} \sur{Ponfilenok}}\email{ponfil@gmail.com}
+
+\affil*[1]{\orgname{Independent researcher}, \orgaddress{\country{Russia}}}
+
+\abstract{We propose tying the fundamental scale of gravitationally induced space-time blurring to proper time rather than to spatial length, and postulate that, under an ensemble reading of the quantum state in which each branch carries its own world line, proper-time fluctuations are statistically independent across branches. Together the two premises imply that the relative phase contains the full rest energy of the branch, not merely the energy difference between branches. This yields a decoherence law for matter-wave interference: fringe visibility falls exponentially with a parameter that scales as mass squared times superposition time to the two-thirds power, with an order-one numerical coefficient. The scaling matches mass-quadratic behaviour expected for conjectural space-time fluctuations, but the mechanism differs sharply from Di\'osi--Penrose collapse and from the standard K\'arolyh\'azy model. Confronted with sodium-nanoparticle interferometry of the Vienna group (2026; mass about 170~kDa, superposition time 6--12~ms), the data constrain the coefficient to be at most of order 0.3. A decisive test is near: at megadalton mass and reduced velocity, the model predicts complete loss of interference, whereas standard quantum mechanics predicts full fringe contrast.}
+
+\keywords{proper time, branch independence, K\'arolyh\'azy uncertainty, decoherence, matter-wave interferometry}
+
+\maketitle
+
+\section{Introduction: ensemble ontology and time}\label{sec:intro}
+
+The status of the wave function---an ontic object or a computational bookkeeping of an ensemble of possibilities---remains unsettled. We adopt the second, ensemble reading~\cite{ballentine1970,home1992}: $\lvert\psi\rangle=\sum_i c_i\lvert i\rangle$ catalogues distinct \emph{variants} of the system, and the squared amplitudes are the relative weights of those variants. This is a deliberately minimal ontology, yet it carries an immediate consequence once gravity enters the picture.
+
+In the relational view of time, a clock is a physical subsystem and ``time'' is a correlation within the total state~\cite{pagewootters}. If each branch is a genuine variant of the system, then it carries its own world line and hence its own proper time. Penrose reaches a structurally identical statement from the opposite direction: each component of the superposition sources its own space-time, and ``since there is no canonical way of relating the time parameters in the two space-times, a fundamental uncertainty in the time-translation operator arises''~\cite{penrose1996}. Consistently with this, proper time accumulates along a world line and is not fixed by a single common scale for distinct four-dimensional paths: in an interferometer with different trajectories one cannot, without an additional postulate, impose a single common $\tau$ on all branches. While the system is in a superposition of paths, interference requires a coherent relative phase between them; branch-independent fluctuations $\delta t$ (postulate~P2 below) introduce a random shift of this phase and bound the visibility from above, $V/V_0\le e^{-\chi}$ (see~\eqref{eq:chi})---this is a prediction of an interference limit under path-dependent proper time, not a denial of amplitude superposition. After a which-path registration, a single scenario and a single $\tau$ along the realized line are fixed; the $|c_i|^2$ remain the weights of the outcomes. The mechanism below is pure dephasing between branches: populations are not redistributed, and no which-path information is recorded.
+
+The present proposal differs from Penrose's in two respects. First, we take proper time itself as the fluctuating object; the K\'arolyh\'azy spatial-length uncertainty is then a derived consequence, not the primitive. Operationally this is natural: since 1983 the metre has been \emph{defined} through the second, so length uncertainty is secondary to time uncertainty. Second---and here the model becomes predictive---we postulate that the proper-time fluctuations of distinct branches are statistically \emph{independent}. This single step revives the full rest energy of each branch as a physically active phase, producing a decoherence law that is mass-quadratic and already at the edge of laboratory reach.
+
+\section{Two postulates}\label{sec:postulates}
+
+We introduce the key notation:
+\begin{itemize}
+\item $t$ --- the time the system spends in superposition (a proper-time interval along the world line);
+\item $t_P=\sqrt{\hbar G/c^5}$ --- the Planck time;
+\item $\ell_P=\sqrt{\hbar G/c^3}$ --- the Planck length;
+\item $m$ --- the mass of the particle (or cluster) in each branch;
+\item $\omega_C=mc^2/\hbar$ --- the Compton frequency;
+\item $\xi=\mathcal O(1)$ --- a dimensionless numerical coefficient.
+\end{itemize}
+
+\subsubsection{(P1) Primacy and magnitude of the proper-time fluctuation.}
+The accumulated uncertainty of the proper-time interval $t$ measured along a world line is
+\begin{equation}
+\delta t^3=\xi\,t_P^2\,t,
+\label{eq:dt}
+\end{equation}
+with $\xi=\mathcal O(1)$. Equation~(\ref{eq:dt}) is the temporal form of the K\'arolyh\'azy relation $\Delta s^3=\ell_P^2 s$~\cite{karolyhazy1966}. It follows \emph{intrinsically from the clock}, without invoking rods, via the Salecker--Wigner~\cite{saleckerwigner} / Ng--van Dam~\cite{ngvandam1995,ngvandam1994} argument: a clock of mass $m$ measuring $t$ with resolution $\delta t$ obeys (quantum spreading) $\delta t^2\gtrsim\hbar t/(mc^2)$, whence $m\gtrsim\hbar t/(c^2\delta t^2)$; at the same time the requirement that the clock not be a black hole, $\ell\gtrsim r_s=2Gm/c^2$, gives $m\lesssim c^3\delta t/(2G)$. Eliminating $m$, we obtain $\delta t^3\gtrsim 2\,t_P^2\,t$, i.e.\ Equation~(\ref{eq:dt}) with $\xi=2$.
+
+We stress that gravity is essential: without the ``not a black hole'' constraint the effect vanishes ($\delta t\to0$ as $m\to\infty$). The rest mass is equally essential: the uncertainty $\delta t$ is defined along a world line with nonzero proper time; without rest mass there is no proper time. For a photon $m=0$, $\mathrm{d}\tau=0$, and the entire mechanism does not apply to a light-like carrier. The exponent $1/3$ and the Planck scale $t_P^2$ are gravitational in origin, although the derivation nowhere invokes spatial length; the same cubic law is the holographic scale of space-time uncertainty~\cite{ng2005foam}. The coefficient $\xi$ remains undetermined at this level---an $\mathcal O(1)$ uncertainty.
+
+\subsubsection{(P2) Branch independence.}
+For two branches $a,b$ the realized proper-time shifts $\delta\tau_a,\delta\tau_b$ are independent random variables, each with variance $\delta t^2$ from Equation~(\ref{eq:dt}). This is a substantive postulate, motivated by the ensemble ontology of Sec.~\ref{sec:intro}: distinct variants do not share a common clock.
+
+\subsubsection{Nature of the uncertainty: informational, not environmental.}
+Crucially, $\delta t$ here is not a fluctuation of an external metric field and not environmental noise common to nearby trajectories. It is the \emph{informational} uncertainty of proper time itself: under the holographic bound on information density, no quantity---including the reading of any clock---is defined with infinite precision, and the cubic law~\eqref{eq:dt} is precisely the holographic scale of that uncertainty~\cite{ng2005foam}. The distinction is essential for~(P2). An environmental source---for example, a difference of gravitational potentials on the interferometer arms---would give a \emph{correlated} shift, the closer to common the nearer the branches, and it would cancel in the relative phase; but that is a systematic shift, not noise. The holographic uncertainty, by contrast, is sourced by nothing the branches share: it is intrinsic to each world line---to each clock, each reference frame---separately, and therefore does not diminish with the spatial proximity of the branches. In the ensemble reading, where each branch is a self-standing variant with its own world line, the quantities $\delta\tau_a,\delta\tau_b$ are for that reason statistically independent. Thus~(P2) is not an additional assumption about the environment but a consequence of the informational primacy of time applied to distinct variants. What remains irreducible is only the premise itself that the holographic information budget is allocated \emph{per branch} rather than as a single shared register; it is this that carries the predictive load of the model.
+
+\section{Decoherence functional}\label{sec:decoherence}
+
+The branch rest phase advances at the Compton frequency $\omega_C=mc^2/\hbar$. By (P2), the relative phase of two branches of equal mass is $\Delta\varphi=\omega_C(\delta\tau_a-\delta\tau_b)$---a global rest phase that would cancel for \emph{shared} clocks but survives here because the clocks are independent. Its variance is
+\begin{equation}
+\mathrm{Var}(\Delta\varphi)=2\,\omega_C^2\,\delta t^2 .
+\end{equation}
+Averaging $\langle e^{i\Delta\varphi}\rangle$ over the Gaussian phase reduces the interference visibility by a factor $\exp(-\mathrm{Var}/2)$; the factor $2$ from the two branches and the factor $1/2$ from the Gaussian averaging cancel,
+\begin{equation}
+\frac{V}{V_0}=e^{-\chi},
+\qquad
+\chi=\omega_C^2\,\delta t^2
+=\left(\frac{mc^2}{\hbar}\right)^{2}\!\bigl(\xi\,t_P^2\,t\bigr)^{2/3}.
+\label{eq:chi}
+\end{equation}
+The scaling form $\chi\propto m^2 t^{2/3}$ follows from the postulates and constitutes the central testable prediction; the overall coefficient, however, carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see Sec.~\ref{sec:experiment} for details). The mass-quadratic dependence matches the general expectation for conjectural space-time fluctuations in the matter-wave interferometry literature~\cite{kialka2022}.
+
+\subsubsection{Planck mass boundary.}
+Setting the single-particle decoherence time $t_{\mathrm{dec}}=t_C^3/t_P^2$ (the time for $\chi=1$ for a single carrier) equal to the carrier's own Compton time $t_C=\hbar/mc^2$, we obtain $t_C=t_P$, i.e.
+\begin{equation}
+m=m_P=\sqrt{\hbar c/G}\approx 2.2\times10^{-8}\;\text{kg}.
+\end{equation}
+The model reproduces the standard expectation that the quantum--classical boundary lies at the Planck mass.
+
+\subsubsection{What enters the branch mass $m$.}
+Let us specify which mass enters $m$ in law~(\ref{eq:chi}). The criterion concerns \emph{coherent branches}, not space: the contribution comes from the rest energy of \emph{only those degrees of freedom whose physical state differs between the interfering branches} (those entangled with the branch label). Only they are split across branches and acquire independent clocks (P2). Mass that enters as a \emph{common tensor factor}---in the same state in all branches---is not split: a single physical object has a single clock, its shift $\delta\tau$ is the same in all branches, and its rest phase cancels in the relative phase. Formally, for $|\psi\rangle=|C\rangle\otimes(\alpha|0\rangle+\beta|1\rangle)$ the common factor $|C\rangle$ (the supporting medium, the apparatus, a nucleus at rest in a single state) yields a global phase and drops out; only $(\alpha|0\rangle+\beta|1\rangle)$ is branched. Hence ``mass is present in the system'' and even ``the system is in superposition'' $\neq$ ``mass differs between branches''. The full rest mass enters $m$ \emph{only} when the state of the carrier itself differs between branches---the clearest case being a superposition of centre-of-mass positions (which-path), as in matter-wave interferometry (Sec.~\ref{sec:experiment}). An internal state (spin, a hyperfine or optical transition), by contrast, leaves the carrier as a common factor, and its rest mass does not enter $m$---only the energy of the genuinely differing degree of freedom does. Empirically this is confirmed by superconducting cavities that store a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity}: were the condensate mass split across branches, coherence would decay within nanoseconds.
+
+\section{Confrontation with experiment}\label{sec:experiment}
+
+\subsection{Matter-wave interferometry: the only probe}
+
+Because the mechanism is pure dephasing of the rest phase---there is no position-dependent stochastic potential, hence no force, no momentum diffusion, and no spontaneous emission---the model is \emph{transparent} to the non-interferometric bounds that constrain Di\'osi--Penrose: the underground search for spontaneous radiation~\cite{donadi2021}, the Majorana Demonstrator limit~\cite{majorana2022}, and X-ray tests~\cite{piscicchia2024} do not apply to it. Nor does the mechanism induce any detectable instability in the rate of atomic clocks: the effect exists only \emph{between} branches of a superposition, whereas single (non-superposed) clocks accumulate no rest phase differentially, so their rate is unaffected. Interferometry is therefore the only laboratory probe.
+
+\subsection{Sodium nanoparticles: the Vienna group (2026)}
+
+\subsubsection{Setup parameters.}
+We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer of the Vienna group~\cite{arndt2025,arndt_arxiv}:
+\begin{itemize}
+\item clusters of $5000$--$10000$ Na atoms with a mass-distribution centre $m\approx 172$~kDa ($m\approx 2.86\times10^{-22}$~kg);
+\item velocity $v\approx 160$~m/s;
+\item three gratings of period $d=133$~nm spaced by $L=0.983$~m;
+\item a measured fringe visibility $V=0.10\pm0.01$ (second run $0.08\pm0.01$) at $172$~kDa, described by the quantum model with a single global factor $0.78$ for conventional contrast losses (alignment, gravitational and rotational phase averaging, vibrations, thermal and collisional decoherence);
+\item a record macroscopicity $\mu=15.45$~\cite{macroscopicity,arndt2025}.
+\end{itemize}
+The relevant superposition time is the Talbot flight $t=L/v\approx 6.1$~ms (one section) up to $2L/v\approx 12.3$~ms.
+
+\subsubsection{Numerical estimate and constraint on $\xi$.}
+With $\omega_C=mc^2/\hbar=2.43\times10^{29}$~s$^{-1}$ (at $m=172$~kDa) and $t_P^2=2.91\times10^{-87}$~s$^2$, Equation~(\ref{eq:chi}) gives
+\begin{equation}
+\begin{split}
+\chi &\approx 0.41\,\xi^{2/3}\quad (t=L/v\approx 6.1~\text{ms}), \\
+\chi &\approx 0.65\,\xi^{2/3}\quad (t=2L/v\approx 12.3~\text{ms}).
+\end{split}
+\end{equation}
+At the derived $\xi\approx2$ (P1) this is $\chi\approx 0.64$--$1.02$, i.e.\ a visibility deficit of $48$--$64\%$. Since the observed fringes are described by the quantum model with a conventional-loss factor $0.78$, the additional factor $e^{-\chi}$ is compatible with the data only if $e^{-\chi}\gtrsim0.78$, i.e.\ $\chi\lesssim0.25$, whence
+\begin{equation}
+\xi\lesssim 0.3.
+\end{equation}
+We stress, however, that the coefficient in $\chi$ is not pinned down: $\xi$ (the derivation gives $\approx2$, but honestly ``$\mathcal O(1)$''), the interpretation of $\delta t$ (standard deviation / half-width / minimal uncertainty), the choice of the effective $t$, and the translation of $\delta t$ into a phase criterion (of order one radian versus $\pi$) together yield an uncertainty in the coefficient of $\chi$ of up to $\sim\pi^2$. The law $V/V_0=e^{-\chi}$ itself is exact (Gaussian dephasing). Therefore a single-mass datum does not \emph{exclude} the model but only \emph{constrains} the effective coefficient; formally, at fixed mass the contribution $e^{-\chi}$ is degenerate with the global factor $0.78$ and cannot be separated from it. On current data the model is neither safely consistent nor cleanly rejected.
+
+\begin{table*}[t]
+\centering
+\caption{Predicted visibility deficit $1-V/V_0$ at $m\approx172$~kDa for several values of $\xi$. The experiment absorbs contrast loss up to $\approx22\%$ into its global factor $0.78$.}
+\label{tab:visibility}
+\begin{tabular}{lcccc}
+\toprule
+ & & \multicolumn{3}{c}{visibility deficit $1-V/V_0$} \\
+Regime & $t$ & $\xi=0.3$ (allowed) & $\xi=1$ & $\xi=2$ (derived) \\
+\midrule
+1 section & $6.1$~ms & $\approx 17\%$ & $\approx 33\%$ & $\approx 47\%$ \\
+2 sections & $12.3$~ms & $\approx 25\%$ & $\approx 47\%$ & $\approx 64\%$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The experiment already absorbs into its global factor $0.78$ ($V_{\rm obs}=V_{\rm QM}\times0.78$) a contrast loss of up to $\approx\!22\%$, so deficits $\lesssim\!22\%$ are permitted by it. The data-allowed $\xi\approx0.3$ gives $17$--$25\%$---right at the edge of this budget, so the experiment permits such a model; the derived $\xi\approx2$ ($47$--$64\%$) is excluded. Thus the current data do not reject the model but press its coefficient towards $\xi\lesssim0.3$.
+
+\subsection{The decisive near-term test}
+
+The already-measured high visibility $V=0.66\pm0.09$ at $0.4$--$1$~MDa~\cite{arndt2025} does \emph{not} test the mechanism: it is taken in the short-wavelength regime $\lambda_{dB}\lesssim3$~fm, $L\le L_T$, where the quantum and classical predictions coincide (geometric optics), i.e.\ there is no genuine quantum coherence for our mechanism to dephase. A discriminating test requires the quantum regime at high mass. The same programme targets $m\sim 1$~MDa with particles slowed to $v\approx 25$~m/s~\cite{arndt2025}. Then $t\approx 2L/v\approx 79$~ms, $\omega_C\approx 1.4\times10^{30}$~s$^{-1}$, and Equation~(\ref{eq:chi}) gives
+\begin{equation}
+\begin{split}
+\chi &\approx 50\text{--}75, \\
+V/V_0 &= e^{-\chi}\sim10^{-20},
+\end{split}
+\end{equation}
+i.e.\ \emph{complete} suppression of interference, robust against any uncertainty in the coefficient (even dividing $\chi$ by $\sim\pi^2$ leaves $\chi\sim5$--$7$). Standard quantum mechanics predicts full-contrast fringes at this mass. The outcomes are therefore binary and near in time: observing fringes at $\sim\!1$~MDa immediately falsifies the model; their disappearance with the scaling $V\propto\exp[-(mc^2/\hbar)^2(\xi t_P^2 t)^{2/3}]$ would be evidence in its favour.
+
+\subsection{Distinguishing signature}
+
+A visibility deficit alone is not diagnostic, since thermal radiation, collisions with residual gas, and velocity spread also reduce the contrast. The signature of the present mechanism is its scaling $\chi\propto m^2 t^{2/3}$ together with \emph{immunity to shielding}: it cannot be reduced by improving the vacuum or cooling the particle. The experimental discriminator is whether a residual deficit persists after the suppression of all known environmental channels and whether it follows the $m^2$ law.
+
+\section{Conclusion}\label{sec:conclusion}
+
+Tying the K\'arolyh\'azy fluctuation to proper time, together with the postulate that branches do not share a common clock, yields a one-line decoherence law (with $\xi=\mathcal O(1)$)
+\begin{equation}
+V/V_0=\exp\!\left[-\left(\frac{mc^2}{\hbar}\right)^{2}\!\bigl(\xi\,t_P^2\,t\bigr)^{2/3}\right],
+\end{equation}
+mass-quadratic, immune to electromagnetic shielding and to the non-interferometric collapse bounds; sodium interferometry (2026) already constrains $\xi\lesssim0.3$, not rejecting the model but pressing its coefficient. Its boldest feature---decoherence set by the full branch energy rather than by the energy difference---is at the same time its most vulnerable assumption. Nonetheless the model is sharply falsifiable: the single near-term experiment at the megadalton scale will either show full-contrast fringes, closing the proposal, or show their predicted suppression with the characteristic $m^2 t^{2/3}$ scaling. That a fundamental question about the reality of the wave function reduces to a contrast measurement on a beam of nanoparticles is, in our view, sufficient reason to perform that measurement.
+
+\backmatter
+
+\section*{Statements and Declarations}
+
+\bmhead{Funding}
+The author received no specific grant from any funding agency.
+
+\bmhead{Data availability}
+Data sharing is not applicable to this article as no datasets were generated or analysed during the current study.
+
+\bmhead{Competing interests}
+The author declares no competing interests.
+
+\bmhead{Author contributions}
+OP conceived the model, performed the calculations, and wrote the manuscript.
+
+\bibliography{refs}
+
+\end{document}
