@@ -1,6 +1,6 @@
 # Branch-Dependent Proper Time
 
-**Author:** [Oleg Ponfilenok](mailto:ponfil@gmail.com) · Independent researcher
+**Author:** [Oleg Ponfilenok](mailto:ponfil@gmail.com) · Independent researcher, Vietnam
 
 Manuscript proposing a decoherence model in which gravitationally induced space-time blurring is tied to **proper time** rather than spatial length, and in which proper-time fluctuations are **statistically independent across quantum branches** (ensemble ontology).
 
@@ -9,24 +9,34 @@ Manuscript proposing a decoherence model in which gravitationally induced space-
 | English | [`branch_time_en.tex`](branch_time_en.tex) | [`branch_time_en.pdf`](branch_time_en.pdf) |
 | Russian | [`branch_time_ru.tex`](branch_time_ru.tex) | [`branch_time_ru.pdf`](branch_time_ru.pdf) |
 
+The English and Russian versions are aligned in content; the English file uses the Springer Nature `sn-jnl` template and includes a **Statements and Declarations** section.
+
 ## Summary
 
-Under two postulates — (P1) a Károlyházy-type proper-time uncertainty δt³ = ξ·tₚ²·t, and (P2) independent fluctuations on distinct branches — the relative phase between interfering branches acquires a variance set by the **full rest energy** of each branch, not merely the energy difference. Interference visibility then decays as
+Three postulates define the model:
+
+- **(P1) Branch structure** — a branch is a component differing in a physical degree of freedom that participates in interference (which-path centre of mass, or an internal level); clocks attach to the *split* subsystem with branch energy E_br.
+- **(P2) Proper-time uncertainty** — accumulated uncertainty along a world line: δt³ = ξ·tₚ²·t, with ξ = O(1).
+- **(P3) Branch independence** — realized shifts δtₐ, δtᵦ are independent, centered Gaussians with Var(δtₐ) = δt².
+
+Interference is sensitive to the **difference** of branch phase contributions. For a symmetric which-path pair,
 
 ```
 V/V₀ = exp[ −(mc²/ℏ)² · (ξ·tₚ²·t)^(2/3) ]
 ```
 
-with ξ = O(1). The scaling χ ∝ m²·t^(2/3) is testable in matter-wave interferometry. The mechanism is pure dephasing (no spontaneous collapse, no radiation), so non-interferometric bounds on Diósi–Penrose models do not apply.
+For a general branch pair, χ = (Eₐ² + Eᵦ²)·δt² / (2ℏ²); for internal branches with Eₐ = 0 the dephasing is weaker by a factor ½. The scaling χ ∝ m²·t^(2/3) is the central testable prediction.
 
-**Experimental status:** Sodium-nanoparticle data (Vienna group, 2026; ~170 kDa, t ~ 6–12 ms) constrain the effective coefficient to ξ ≲ 0.3 without cleanly excluding the model. A decisive near-term test: at ~1 MDa and reduced velocity the model predicts **complete** loss of fringes, whereas standard quantum mechanics predicts full contrast.
+The mechanism is pure dephasing (no spontaneous collapse, no radiation), so non-interferometric bounds on Diósi–Penrose models do not apply. A section on **limits on quantum computation** links decoherence to the Margolus–Levitin bound and holographic operation-count scaling.
+
+**Experimental status:** Sodium-nanoparticle data (Vienna group, 2026; ~172 kDa, t ≈ L/v ≈ 6.1 ms) give a strict one-sided 95% upper bound ξ ≲ 1.1 when the full visibility deficit is attributed to the model; with the published conventional-loss factor R_ord = 0.78, a conditional bound is ξ < 0.31. At ξ = 1 the prediction is consistent with the data within ~1.4σ. A decisive near-term test: at ~1 MDa and v ≈ 25 m/s the model predicts χ ≈ 47 and practically complete loss of fringes, whereas standard quantum mechanics expects measurable contrast.
 
 ## Key ideas
 
-1. **Proper time as primitive** — spatial Károlyházy uncertainty is derived; operationally, length is defined through the second.
-2. **Branch independence** — each variant in |ψ⟩ = Σᵢ cᵢ|i⟩ carries its own world line and clock; fluctuations are not shared environmental noise.
-3. **Branch mass** — only degrees of freedom whose state **differs between branches** enter m; common factors (apparatus, medium at rest) drop out of the relative phase.
-4. **Falsifiability** — residual visibility deficit that scales as m²·t^(2/3) and cannot be removed by vacuum or thermal shielding.
+1. **Proper time as primitive** — the Károlyházy cubic scaling is formulated along world lines; spatial length is not the primary variable.
+2. **Branch independence** — each variant in |ψ⟩ = Σᵢ cᵢ|i⟩ carries its own world line; ontic proper-time noise is not shared environmental dephasing.
+3. **Split-subsystem energy** — E_br is the energy of the degree of freedom that differs between branches: full carrier mass Mc² for which-path, ΔE for internal levels; common factors drop out.
+4. **Falsifiability** — visibility deficit scaling as m²·t^(2/3), immune to vacuum and thermal shielding; disappearance of fringes at ~1 MDa would support the model, their persistence would falsify it.
 
 ## Repository layout
 
@@ -75,7 +85,7 @@ If you use this work, please cite the manuscript (preprint; update when publishe
 
 ## Keywords
 
-proper time · branch independence · Károlyházy uncertainty · decoherence · matter-wave interferometry · quantum gravity
+proper time · branch independence · Károlyházy uncertainty · decoherence · matter-wave interferometry · Margolus–Levitin theorem · quantum gravity
 
 ## License
 
