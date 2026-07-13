@@ -35,7 +35,6 @@ We introduce the key notation:
 \begin{itemize}
 \item $t$ --- the time the system spends in superposition (a proper-time interval along the world line);
 \item $t_P=\sqrt{\hbar G/c^5}$ --- the Planck time;
-\item $\ell_P=\sqrt{\hbar G/c^3}$ --- the Planck length;
 \item $m$ --- the mass of the particle (or cluster) in each branch;
 \item $\omega_C=mc^2/\hbar$ --- the Compton frequency;
 \item $\xi=\mathcal O(1)$ --- a dimensionless numerical coefficient.
@@ -47,12 +46,12 @@ The accumulated uncertainty of the proper-time interval $t$ measured along a wor
 \delta t^3=\xi\,t_P^2\,t,
 \label{eq:dt}
 \end{equation}
-with $\xi=\mathcal O(1)$. Equation~(\ref{eq:dt}) is the temporal form of the K\'arolyh\'azy relation $\Delta s^3=\ell_P^2 s$~\cite{karolyhazy1966}. It follows \emph{intrinsically from the clock}, without invoking rods, via the Salecker--Wigner~\cite{saleckerwigner} / Ng--van Dam~\cite{ngvandam1995,ngvandam1994} argument: a clock of mass $m$ measuring $t$ with resolution $\delta t$ obeys (quantum spreading) $\delta t^2\gtrsim\hbar t/(mc^2)$, whence $m\gtrsim\hbar t/(c^2\delta t^2)$; at the same time the requirement that the clock not be a black hole, $\ell\gtrsim r_s=2Gm/c^2$, gives $m\lesssim c^3\delta t/(2G)$. Eliminating $m$, we obtain $\delta t^3\gtrsim 2\,t_P^2\,t$, i.e.\ Equation~(\ref{eq:dt}) with $\xi=2$.
+with $\xi=\mathcal O(1)$. Equation~(\ref{eq:dt}) is the temporal form of the K\'arolyh\'azy uncertainty relation~\cite{karolyhazy1966}; the same cubic scaling is consistent with the clock arguments of Salecker--Wigner~\cite{saleckerwigner}, Ng--van Dam~\cite{ngvandam1995,ngvandam1994}, and the holographic bound on space-time uncertainty~\cite{ng2005foam}. We do not fix the numerical coefficient $\xi$ in the postulate: in these works it is likewise never pinned down more precisely than to $\mathcal O(1)$.
 
-We stress that gravity is essential: without the ``not a black hole'' constraint the effect vanishes ($\delta t\to0$ as $m\to\infty$). The rest mass is equally essential: the uncertainty $\delta t$ is defined along a world line with nonzero proper time; without rest mass there is no proper time. For a photon $m=0$, $\mathrm{d}\tau=0$, and the entire mechanism does not apply to a light-like carrier. The exponent $1/3$ and the Planck scale $t_P^2$ are gravitational in origin, although the derivation nowhere invokes spatial length; the same cubic law is the holographic scale of space-time uncertainty~\cite{ng2005foam}. The coefficient $\xi$ remains undetermined at this level---an $\mathcal O(1)$ uncertainty.
+We stress that gravity is essential: without the ``not a black hole'' constraint the effect vanishes ($\delta t\to0$ as $m\to\infty$). The rest mass is equally essential: the uncertainty $\delta t$ is defined along a world line with nonzero proper time; without rest mass there is no proper time. For a photon $m=0$, $\mathrm{d}\tau=0$, and the entire mechanism does not apply to a light-like carrier. The exponent $1/3$ and the Planck scale $t_P^2$ are gravitational in origin; the postulate is formulated along a world line, without explicitly invoking spatial length.
 
 \subsubsection{(P2) Branch independence.}
-For two branches $a,b$ the realized proper-time shifts $\delta\tau_a,\delta\tau_b$ are independent random variables, each with variance $\delta t^2$ from Equation~(\ref{eq:dt}). This is a substantive postulate, motivated by the ensemble ontology of Sec.~\ref{sec:intro}: distinct variants do not share a common clock.
+For two branches $a,b$ the realized proper-time shifts $\delta\tau_a,\delta\tau_b$ are independent, centered Gaussian random variables, each with variance $\delta t^2$ from Equation~(\ref{eq:dt}). This is a substantive postulate, motivated by the ensemble ontology of Sec.~\ref{sec:intro}: distinct variants do not share a common clock.
 
 \subsubsection{Nature of the uncertainty: informational, not environmental.}
 Crucially, $\delta t$ here is not a fluctuation of an external metric field and not environmental noise common to nearby trajectories. It is the \emph{informational} uncertainty of proper time itself: under the holographic bound on information density, no quantity---including the reading of any clock---is defined with infinite precision, and the cubic law~\eqref{eq:dt} is precisely the holographic scale of that uncertainty~\cite{ng2005foam}. The distinction is essential for~(P2). An environmental source---for example, a difference of gravitational potentials on the interferometer arms---would give a \emph{correlated} shift, the closer to common the nearer the branches, and it would cancel in the relative phase; but that is a systematic shift, not noise. The holographic uncertainty, by contrast, is sourced by nothing the branches share: it is intrinsic to each world line---to each clock, each reference frame---separately, and therefore does not diminish with the spatial proximity of the branches. In the ensemble reading, where each branch is a self-standing variant with its own world line, the quantities $\delta\tau_a,\delta\tau_b$ are for that reason statistically independent. Thus~(P2) is not an additional assumption about the environment but a consequence of the informational primacy of time applied to distinct variants. What remains irreducible is only the premise itself that the holographic information budget is allocated \emph{per branch} rather than as a single shared register; it is this that carries the predictive load of the model.
@@ -63,7 +62,7 @@ The branch rest phase advances at the Compton frequency $\omega_C=mc^2/\hbar$. B
 \begin{equation}
 \mathrm{Var}(\Delta\varphi)=2\,\omega_C^2\,\delta t^2 .
 \end{equation}
-Averaging $\langle e^{i\Delta\varphi}\rangle$ over the Gaussian phase reduces the interference visibility by a factor $\exp(-\mathrm{Var}/2)$; the factor $2$ from the two branches and the factor $1/2$ from the Gaussian averaging cancel,
+Averaging $\langle e^{i\Delta\varphi}\rangle$ over the Gaussian relative phase implied by~(P2) reduces the interference visibility by a factor $\exp(-\mathrm{Var}/2)$; the factor $2$ from the two branches and the factor $1/2$ from the Gaussian averaging cancel,
 \begin{equation}
 \frac{V}{V_0}=e^{-\chi},
 \qquad
@@ -102,6 +101,8 @@ We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer 
 \end{itemize}
 The relevant superposition time is the Talbot flight $t=L/v\approx 6.1$~ms (one section) up to $2L/v\approx 12.3$~ms.
 
+By~(P1) clocks attach to the split subsystem as a whole: for a cluster of $N$ atoms $E_{\mathrm{br}}=Mc^2$, whence $\chi\propto M^2=(Nm_{\mathrm{at}})^2$. If each atom carried its own independent clocks instead, one would have $\chi\propto N\,m_{\mathrm{at}}^2$---a factor $N\approx5000$--$10^4$ smaller ($\chi\sim10^{-4}$ rather than $\sim0.4$ at $\xi\sim1$), and the model would have no predictive content on these data.
+
 \subsubsection{Numerical estimate and constraint on $\xi$.}
 With $\omega_C=mc^2/\hbar=2.43\times10^{29}$~s$^{-1}$ (at $m=172$~kDa) and $t_P^2=2.91\times10^{-87}$~s$^2$, Equation~(\ref{eq:chi}) gives
 \begin{equation}
@@ -110,11 +111,11 @@ With $\omega_C=mc^2/\hbar=2.43\times10^{29}$~s$^{-1}$ (at $m=172$~kDa) and $t_P^
 \chi &\approx 0.65\,\xi^{2/3}\quad (t=2L/v\approx 12.3~\text{ms}).
 \end{split}
 \end{equation}
-At the derived $\xi\approx2$ (P1) this is $\chi\approx 0.64$--$1.02$, i.e.\ a visibility deficit of $48$--$64\%$. Since the observed fringes are described by the quantum model with a conventional-loss factor $0.78$, the additional factor $e^{-\chi}$ is compatible with the data only if $e^{-\chi}\gtrsim0.78$, i.e.\ $\chi\lesssim0.25$, whence
+At $\xi=1$ this is $\chi\approx 0.41$--$0.65$, i.e.\ a visibility deficit of $33$--$47\%$. Since the observed fringes are described by the quantum model with a conventional-loss factor $0.78$, the additional factor $e^{-\chi}$ is compatible with the data only if $e^{-\chi}\gtrsim0.78$, i.e.\ $\chi\lesssim0.25$, whence
 \begin{equation}
 \xi\lesssim 0.3.
 \end{equation}
-We stress, however, that the coefficient in $\chi$ is not pinned down: $\xi$ (the derivation gives $\approx2$, but honestly ``$\mathcal O(1)$''), the interpretation of $\delta t$ (standard deviation / half-width / minimal uncertainty), the choice of the effective $t$, and the translation of $\delta t$ into a phase criterion (of order one radian versus $\pi$) together yield an uncertainty in the coefficient of $\chi$ of up to $\sim\pi^2$. The law $V/V_0=e^{-\chi}$ itself is exact (Gaussian dephasing). Therefore a single-mass datum does not \emph{exclude} the model but only \emph{constrains} the effective coefficient; formally, at fixed mass the contribution $e^{-\chi}$ is degenerate with the global factor $0.78$ and cannot be separated from it. On current data the model is neither safely consistent nor cleanly rejected.
+We stress, however, that the coefficient in $\chi$ is not pinned down: $\xi$ remains an $\mathcal O(1)$ uncertainty, and so do the interpretation of $\delta t$ (standard deviation / half-width / minimal uncertainty), the choice of the effective $t$, and the translation of $\delta t$ into a phase criterion (of order one radian versus $\pi$); together these yield an uncertainty in the coefficient of $\chi$ of up to $\sim\pi^2$. The law $V/V_0=e^{-\chi}$ itself is exact (Gaussian dephasing). Therefore a single-mass datum does not \emph{exclude} the model but only \emph{constrains} the effective coefficient; formally, at fixed mass the contribution $e^{-\chi}$ is degenerate with the global factor $0.78$ and cannot be separated from it. On current data the model is neither safely consistent nor cleanly rejected.
 
 \begin{table*}[t]
 \centering
@@ -123,7 +124,7 @@ We stress, however, that the coefficient in $\chi$ is not pinned down: $\xi$ (th
 \begin{tabular}{lcccc}
 \toprule
  & & \multicolumn{3}{c}{visibility deficit $1-V/V_0$} \\
-Regime & $t$ & $\xi=0.3$ (allowed) & $\xi=1$ & $\xi=2$ (derived) \\
+Regime & $t$ & $\xi=0.3$ (allowed) & $\xi=1$ & $\xi=2$ \\
 \midrule
 1 section & $6.1$~ms & $\approx 17\%$ & $\approx 33\%$ & $\approx 47\%$ \\
 2 sections & $12.3$~ms & $\approx 25\%$ & $\approx 47\%$ & $\approx 64\%$ \\
@@ -131,7 +132,7 @@ Regime & $t$ & $\xi=0.3$ (allowed) & $\xi=1$ & $\xi=2$ (derived) \\
 \end{tabular}
 \end{table*}
 
-The experiment already absorbs into its global factor $0.78$ ($V_{\rm obs}=V_{\rm QM}\times0.78$) a contrast loss of up to $\approx\!22\%$, so deficits $\lesssim\!22\%$ are permitted by it. The data-allowed $\xi\approx0.3$ gives $17$--$25\%$---right at the edge of this budget, so the experiment permits such a model; the derived $\xi\approx2$ ($47$--$64\%$) is excluded. Thus the current data do not reject the model but press its coefficient towards $\xi\lesssim0.3$.
+The experiment already absorbs into its global factor $0.78$ ($V_{\rm obs}=V_{\rm QM}\times0.78$) a contrast loss of up to $\approx\!22\%$, so deficits $\lesssim\!22\%$ are permitted by it. The data-allowed $\xi\approx0.3$ gives $17$--$25\%$---right at the edge of this budget, so the experiment permits such a model; values $\xi\gtrsim1$ ($\gtrsim33\%$) are already substantially strained. Thus the current data do not reject the model but press its coefficient towards $\xi\lesssim0.3$.
 
 \subsection{The decisive near-term test}
 
