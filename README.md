@@ -15,9 +15,9 @@ The English and Russian versions are aligned in content; the English file uses t
 
 Three postulates define the model:
 
-- **(P1) Branch structure** — a branch is a component differing in a physical degree of freedom that participates in interference (which-path centre of mass, or an internal level); clocks attach to the *split* subsystem with branch energy E_br.
+- **(P1) Branch structure** — a branch differs in a physical degree of freedom participating in interference. For composite motional branches, E_br is the constituent rest energy weighted by the trace distance of the branches' one-particle reduced density matrices; fully distinguishable which-path packets recover Mc². Strictly internal branches with a common motional carrier use ΔE.
 - **(P2) Proper-time uncertainty** — accumulated uncertainty along a world line: δt³ = ξ·tₚ²·t, with ξ = O(1).
-- **(P3) Branch independence** — realized shifts δtₐ, δtᵦ are independent, centered Gaussians with Var(δtₐ) = δt².
+- **(P3) Branch clock independence** — realized shifts δtₐ, δtᵦ are independent, centered Gaussians with Var(δtₐ) = δt².
 
 Interference is sensitive to the **difference** of branch phase contributions. For a symmetric which-path pair,
 
@@ -27,15 +27,15 @@ V/V₀ = exp[ −(mc²/ℏ)² · (ξ·tₚ²·t)^(2/3) ]
 
 For a general branch pair, χ = (Eₐ² + Eᵦ²)·δt² / (2ℏ²); for internal branches with Eₐ = 0 the dephasing is weaker by a factor ½. The scaling χ ∝ m²·t^(2/3) is the central testable prediction.
 
-The mechanism is pure dephasing (no spontaneous collapse, no radiation), so non-interferometric bounds on Diósi–Penrose models do not apply. A section on **limits on quantum computation** links decoherence to the Margolus–Levitin bound and holographic operation-count scaling.
+The mechanism is pure dephasing (no spontaneous collapse, no radiation), so non-interferometric bounds on Diósi–Penrose models do not apply. Massless carriers have no proper time, so purely optical searches for external metric or spatial shear noise do not directly constrain the model. The manuscript explicitly distinguishes the proposal from proper-time decoherence by internal clocks and identifies the promotion of the normally common Compton rest phase to a random relative phase as an independent, radical postulate. A section on **limits on quantum computation** discusses a heuristic comparison with the Margolus–Levitin bound; the matching holographic exponent is presented as a structural analogy, not as a derived operation-count limit.
 
 **Experimental status:** Sodium-nanoparticle data (Vienna group, 2026; ~172 kDa, t ≈ L/v ≈ 6.1 ms) give a strict one-sided 95% upper bound ξ ≲ 1.1 when the full visibility deficit is attributed to the model; with the published conventional-loss factor R_ord = 0.78, a conditional bound is ξ < 0.31. At ξ = 1 the prediction is consistent with the data within ~1.4σ. A decisive near-term test: at ~1 MDa and v ≈ 25 m/s the model predicts χ ≈ 47 and practically complete loss of fringes, whereas standard quantum mechanics expects measurable contrast.
 
 ## Key ideas
 
 1. **Proper time as primitive** — the Károlyházy cubic scaling is formulated along world lines; spatial length is not the primary variable.
-2. **Branch independence** — each variant in |ψ⟩ = Σᵢ cᵢ|i⟩ carries its own world line; ontic proper-time noise is not shared environmental dephasing.
-3. **Split-subsystem energy** — E_br is the energy of the degree of freedom that differs between branches: full carrier mass Mc² for which-path, ΔE for internal levels; common factors drop out.
+2. **Branch clock independence** — each variant in |ψ⟩ = Σᵢ cᵢ|i⟩ carries its own world line; ontic proper-time noise is not shared environmental dephasing.
+3. **Branch-sensitive energy** — the one-particle trace-distance rule makes constituent counting explicit: rigid which-path clusters give Mc², BCS current branches include only microscopically distinguishable occupations, product atom interferometers remain per-atom, and collective NOON branches give Nmc².
 4. **Falsifiability** — visibility deficit scaling as m²·t^(2/3), immune to vacuum and thermal shielding; disappearance of fringes at ~1 MDa would support the model, their persistence would falsify it.
 
 ## Repository layout
@@ -85,7 +85,7 @@ If you use this work, please cite the manuscript (preprint; update when publishe
 
 ## Keywords
 
-proper time · branch independence · Károlyházy uncertainty · decoherence · matter-wave interferometry · Margolus–Levitin theorem · quantum gravity
+proper time · branch clock independence · Károlyházy uncertainty · decoherence · matter-wave interferometry · Margolus–Levitin theorem · quantum gravity
 
 ## License
 

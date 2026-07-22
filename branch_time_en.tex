@@ -15,9 +15,9 @@
 
 \affil*[1]{\orgname{Independent researcher}, \orgaddress{\country{Vietnam}}}
 
-\abstract{We propose tying the fundamental scale of gravitationally induced space-time blurring to \emph{proper time} rather than to spatial length, and postulate that, under an ensemble reading of the quantum state in which each branch carries its own world line, proper-time fluctuations are statistically independent across branches. Interference is sensitive to the \emph{difference} of branch phase contributions; with independent clocks this difference accumulates at the frequency $\omega_{\mathrm{eff}}=E_{\mathrm{br}}/\hbar$, where $E_{\mathrm{br}}$ is the energy of the split subsystem: for which-path it is the full carrier energy $mc^2$, for internal branches $\Delta E$ of the differing level. This yields $V/V_0=\exp(-\chi)$ with $\chi=(\omega_{\mathrm{eff}})^2(\xi\,t_P^2\,t)^{2/3}$ for a branch pair with $E_a\approx E_b$ (for internal branches with $E_a=0$ an additional factor $1/2$ appears); for a centre-of-mass interferometer $\chi=(mc^2/\hbar)^2(\xi\,t_P^2\,t)^{2/3}$, where $t$ is the superposition time and $\xi=\mathcal O(1)$ is a numerical coefficient. The scaling form $\chi\propto m^2 t^{2/3}$ follows from the postulates; the overall coefficient carries an $\mathcal O(1)$ uncertainty. The cubic scaling is borrowed from the K\'arolyh\'azy relation; the decoherence mechanism differs from Di\'osi--Penrose collapse. Confronted with sodium-nanoparticle interferometry of the Vienna group~\cite{arndt2025}, this gives an upper bound $\xi\lesssim1.1$. A decisive test is near: at $m\sim1$~MDa and $v\approx25$~m/s the model predicts $\chi\gg1$ and practically complete loss of interference, whereas the standard quantum model of the setup at the same parameters expects measurable fringes with ordinary contrast.}
+\abstract{We propose tying the fundamental scale of gravitationally induced space-time blurring to \emph{proper time} rather than to spatial length, and postulate that, under an ensemble reading of the quantum state in which each branch carries its own world line, proper-time fluctuations are statistically independent across branches. Interference is sensitive to the \emph{difference} of branch phase contributions; with independent clocks this difference accumulates at the frequency $\omega_{\mathrm{eff}}=E_{\mathrm{br}}/\hbar$. For a composite system we define this branch-sensitive energy operationally: the rest energy of each particle species is weighted by the trace distance between the one-particle reduced density matrices of the two branches; a fully distinguishable which-path carrier gives $E_{\mathrm{br}}=mc^2$, while strictly internal branches with a common spatial-motional state give $E_{\mathrm{br}}=\Delta E$. This yields $V/V_0=\exp(-\chi)$ with $\chi=(\omega_{\mathrm{eff}})^2(\xi\,t_P^2\,t)^{2/3}$ for a branch pair with $E_a\approx E_b$ (for internal branches with $E_a=0$ an additional factor $1/2$ appears); for a centre-of-mass interferometer with fully distinguishable packets $\chi=(mc^2/\hbar)^2(\xi\,t_P^2\,t)^{2/3}$, where $t$ is the superposition time and $\xi=\mathcal O(1)$ is a numerical coefficient. The scaling form $\chi\propto m^2 t^{2/3}$ follows from the postulates; the overall coefficient carries an $\mathcal O(1)$ uncertainty. The cubic scaling is borrowed from the K\'arolyh\'azy relation; the decoherence mechanism differs from Di\'osi--Penrose collapse. Confronted with sodium-nanoparticle interferometry of the Vienna group~\cite{arndt2025}, this gives an upper bound $\xi\lesssim1.1$. A decisive test is near: at $m\sim1$~MDa and $v\approx25$~m/s the model predicts $\chi\gg1$ and practically complete loss of interference, whereas the standard quantum model of the setup at the same parameters expects measurable fringes with ordinary contrast.}
 
-\keywords{proper time, branch independence, K\'arolyh\'azy uncertainty, decoherence, matter-wave interferometry, Margolus--Levitin theorem}
+\keywords{proper time, branch clock independence, K\'arolyh\'azy uncertainty, decoherence, matter-wave interferometry, Margolus--Levitin theorem}
 
 \maketitle
 
@@ -41,9 +41,18 @@ We introduce the key notation:
 \end{itemize}
 
 \subsection{(P1) Branch structure.}
-A branch is a state component differing in a \emph{physical degree of freedom} that participates in interference: non-overlapping centre-of-mass wave packets (which-path); for internal degrees of freedom---a pair of distinct eigenstates of $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected wave packet carries one world line and one clock; branching occurs when evolution splits the state into distinguishable components, and ceases upon their recombination or which-path registration. Clocks attach to the \emph{split} subsystem, not necessarily to the entire branch composition: if the internal state is the same and only the centre of mass branches, $E_{\mathrm{br}}=mc^2$; if only an internal level branches with a common carrier $|C\rangle$, $E_{\mathrm{br}}=\Delta E$.
+A branch is a state component differing in a \emph{physical degree of freedom} that participates in interference: a spatial-motional state (which-path or current), or an internal eigenstate of $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected and indistinguishable wave packet carries one clock; branching occurs when evolution splits the state into distinguishable components, and ceases upon their recombination or which-path registration.
 
-\subsection{(P2) Primacy and magnitude of the proper-time fluctuation.}
+To prevent the choice of the ``split subsystem'' from depending on an arbitrary grouping of a composite system, we fix an operational rule. For particles of species $s$, let $\gamma^{(1)}_{a,s}$ and $\gamma^{(1)}_{b,s}$ be the one-particle reduced density matrices of the branches, normalized by $\operatorname{Tr}\gamma^{(1)}_{a,s}=\operatorname{Tr}\gamma^{(1)}_{b,s}=N_s$. The number of one-particle states distinguishable between the branches and the corresponding branch-sensitive energy are
+\begin{equation}
+\mathcal D_s(a,b)=\frac12\left\|\gamma^{(1)}_{a,s}-\gamma^{(1)}_{b,s}\right\|_1,
+\qquad
+E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
+\label{eq:ebr_dist}
+\end{equation}
+Here $0\le\mathcal D_s\le N_s$; the definition is basis-invariant and applies to identical particles. For fully distinguishable spatial packets of every constituent, $\mathcal D_s=N_s$, and hence $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. States common to both branches contribute zero. If only an internal level differs while the spatial-motional carrier $|C\rangle$ is common, we use the transition energy $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, not the rest energy of the common carrier. If both types of difference are present, their branch-sensitive contributions are added.
+
+\subsection{(P2) Magnitude of the proper-time fluctuation.}
 The accumulated uncertainty of the proper-time interval $t$ measured along a world line is
 \begin{equation}
 \boxed{\delta t^3=\xi\,t_P^2\,t,}
@@ -53,10 +62,12 @@ with $\xi=\mathcal O(1)$. Equation~(\ref{eq:dt}) is the temporal form of the K\'
 
 We stress that gravity is essential: without the ``not a black hole'' constraint the effect vanishes ($\delta t\to0$ as $m\to\infty$). The rest mass is equally essential: the uncertainty $\delta t$ is defined along a world line with nonzero proper time; without rest mass there is no proper time. For a photon $m=0$, $\mathrm{d}\tau=0$, and the entire mechanism does not apply to a light-like carrier. The exponent $1/3$ and the Planck scale $t_P^2$ are gravitational in origin; the postulate is formulated along a world line, without explicitly invoking spatial length.
 
-\subsection{(P3) Branch independence.}
-For two branches $a,b$ (in the sense of~P1) the realized shifts $\delta t_a,\delta t_b$ are independent, centered Gaussian random variables with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$. This is a substantive postulate, motivated by the ensemble ontology (\S~\ref{sec:intro}): distinct variants do not share a common clock; there is no strict derivation from it, and what remains irreducible is the premise that the holographic information budget is allocated \emph{per branch} rather than as a single shared register. Within one branch, all degrees of freedom \emph{not} participating in the split share that branch's clock.
+\subsection{(P3) Branch clock independence.}
+For two branches $a,b$ (in the sense of~P1) over the superposition interval $t$ (the same as in~\eqref{eq:dt}), the realized shifts $\delta t_a,\delta t_b$ are independent, centered Gaussian random variables of accumulated proper time with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$ and $\mathrm{Cov}(\delta t_a,\delta t_b)=0$. This is a substantive postulate, motivated by the ensemble ontology (\S~\ref{sec:intro}): distinct variants do not share a common clock; there is no strict derivation from it, and what remains irreducible is the premise that the holographic information budget is allocated \emph{per branch} rather than as a single shared register. Within one branch, all degrees of freedom \emph{not} participating in the split share that branch's clock.
 
 Crucially, $\delta t_a$ is not a fluctuation of an external metric field and not environmental noise common to nearby trajectories. It is an \emph{ontic} random shift of proper time; its scale over the interval $t$ is set by $\delta t$ from~\eqref{eq:dt}---the holographic scale of such uncertainty~\cite{ng2005foam}. An environmental source---for example, a difference of gravitational potentials on the interferometer arms---would give a \emph{correlated} shift $\delta t_a$, the closer to common the nearer the branches, and it would cancel in the relative phase; but that is a systematic shift, not noise. The holographic uncertainty attaches to the split subsystem of a branch, not to spatial points, so spatial proximity of branches does not by itself correlate their clocks. Attachment to discrete branches rather than positions is essential: noise independent for arbitrarily close \emph{positions} would mean a random phase field with unbounded gradient---hence a force and momentum diffusion; noise independent for discrete \emph{branches} is pure dephasing without force (\S~\ref{sec:matter_interferometry}).
+
+The law $\mathrm{Var}[\delta t(t)]\propto t^{2/3}$ fixes only the single-interval variance and does \emph{not} by itself determine a multi-time covariance, noise spectrum, or spin-echo response. If Gaussianity of the full process, self-similarity, and stationary increments are additionally imposed, the natural completion is fractional Brownian motion with Hurst exponent $H=1/3$~\cite{mandelbrot1968fbm}. In that completion, disjoint increments are anticorrelated, the low-frequency spectrum of fractional Gaussian noise behaves as $S(f)\propto|f|^{1/3}$, and echo requires an explicit calculation with the corresponding filter function rather than an automatic cancellation of a quasistatic phase. These spectral properties follow from an additional temporal postulate, not from P2--P3 as presently stated.
 
 \section{Decoherence functional}\label{sec:decoherence}
 
@@ -90,6 +101,11 @@ Since $\delta t_a,\delta t_b$ are Gaussian (P3), the relative phase $\Delta\varp
 \end{equation}
 The general expression for an arbitrary branch pair is $\chi=(E_a^2+E_b^2)\,\delta t^2/(2\hbar^2)$; for $E_a=E_b=mc^2$ it reduces to~\eqref{eq:chi}. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the postulates and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence matches the general expectation for conjectural space-time fluctuations in the matter-wave interferometry literature~\cite{kialka2022}.
 
+\noindent\textbf{Relation to clock interference and the Compton phase.}
+The conceptual framework of ``proper time along each branch'' is already used in quantum-clock interference. In Zych et al., an internal state acts as a clock: a deterministic proper-time difference along the two paths records which-path information in the internal degree of freedom and reduces visibility~\cite{zych2011proper}. Pikovski et al.\ developed this mechanism for a composite object in a gravitational field: an externally imposed potential difference unitarily entangles the centre of mass with the internal-energy distribution, and dephasing appears after tracing out the internal degrees of freedom~\cite{pikovski2015}. In contrast, the present model requires neither an external potential nor an internal clock, introduces the stochastic Planckian scale P2 and branch clock independence (P3), and therefore predicts irreversible ensemble dephasing even for an object in its internal ground state.
+
+Using $\omega_C=mc^2/\hbar$ requires a separate caveat. In the ``Compton clock'' debate, atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}, whereas Wolf, Blanchet, and co-workers stressed that in standard quantum mechanics and metric theories the Compton phase cancels in a closed interferometer and does not by itself constitute an observable clock rate~\cite{wolf2011compton}. The present model does not settle that debate within standard theory; it adds the more radical premise that independent $\delta t_a,\delta t_b$ turn the common $mc^2$ term into a random \emph{relative} phase contribution. The energy zero is not arbitrary here: P1 selects physical rest mass relative to the vacuum, while adding an arbitrary constant to an effective Hamiltonian must not change $E_{\mathrm{br}}$. This is an independent, testable postulate; if the rest phase does not become operational under independent clocks, the central prediction $\chi\propto m^2$ does not arise.
+
 \noindent\textbf{Planck mass boundary.}
 The decoherence time $t_{\mathrm{dec}}$ is defined by the condition $\chi=1$. From~\eqref{eq:chi}:
 \begin{equation}
@@ -104,7 +120,7 @@ m_\ast=\frac{m_P}{\sqrt{\xi}},
 \qquad
 m_P=\sqrt{\hbar c/G}\approx 2.2\times10^{-8}\;\text{kg}.
 \end{equation}
-For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ the decoherence time $t_{\mathrm{dec}}\ll t_C$, and coherence between branches is lost over an interval of microscopic duration---in principle indistinguishable and unmeasurable, since it lies below the uncertainty $\delta t$ from~\eqref{eq:dt}. Schr\"odinger's cat ($m\sim1$~kg $\gg m_P$) is the limiting example: the ``alive/dead'' superposition is amplitudinally recordable, but interference between branches vanishes over $t_{\mathrm{dec}}$, inaccessible to any clock; in the ensemble reading what remains is a statistical mixture with weights $|c_i|^2$---pure dephasing, without population redistribution (unlike objective collapse) and without the spontaneous emission predicted by Di\'osi--Penrose models~\cite{donadi2021}.
+For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ the decoherence time $t_{\mathrm{dec}}\ll t_C$, and coherence between branches is lost over an interval of microscopic duration---in principle indistinguishable and unmeasurable, since it lies below the uncertainty $\delta t$ from~\eqref{eq:dt}. Schr\"odinger's cat ($m\sim1$~kg $\gg m_P$) is the limiting example: the ``alive/dead'' superposition is amplitudinally recordable, but interference between branches vanishes over $t_{\mathrm{dec}}$, inaccessible to any clock; in the ensemble reading what remains is a statistical mixture with weights $|c_i|^2$. The mechanism remains pure dephasing: populations are not redistributed, and there is none of the spontaneous emission predicted by Di\'osi--Penrose models~\cite{donadi2021}. Ontologically, however, once $\chi\gg1$ the loss of coherence renders the alternatives operationally classical: one branch is realized as a fact (with weight $|c_i|^2$), while the definite value becomes known only upon registration. In this restricted sense the macroscopic limit of the model plays the role of an objective collapse, differing from dynamical collapse models in the channel (rest-phase dephasing rather than a localizing jump) and in the absence of their characteristic side signals.
 
 \section{Confrontation with experiment}\label{sec:experiment}
 
@@ -112,6 +128,8 @@ For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\as
 \label{sec:matter_interferometry}
 
 By construction~(P1)/(P3) the noise attaches to discrete branches, not to spatial points; the mechanism is therefore pure rest-phase dephasing: there is no position-dependent stochastic potential, hence no force, no momentum diffusion, and no spontaneous emission. We stress that this property is secured by the branching postulate~(P1), not automatically: noise attached to positions would induce a force. Consequently, the model is \emph{transparent} to the non-interferometric bounds that constrain Di\'osi--Penrose: the underground search for spontaneous radiation~\cite{donadi2021}, the Majorana Demonstrator limit~\cite{majorana2022}, and X-ray tests~\cite{piscicchia2024} do not apply to it. Nor does the mechanism induce any detectable instability in the rate of atomic clocks: the effect exists only \emph{between} branches of a superposition, whereas single (non-superposed) clocks accumulate no rest phase differentially, so their rate is unaffected. Matter-wave interferometry of the centre of mass is therefore the most direct laboratory probe of the mechanism with $E_{\mathrm{br}}=mc^2$.
+
+For the same reason, purely optical interferometers provide no direct constraint: for a massless carrier $\mathrm d\tau=0$, so the photonic phase acquires no BDPT contribution. LIGO-like detectors constrain models of external metric fluctuations, while the Fermilab Holometer searched for correlated spatial shear noise and excluded a specific class of such holographic models~\cite{chou2017holometer}; the present model predicts neither signal. This does not make the entire optical apparatus immune: massive mirrors or beam splitters would be subject to the mechanism if they themselves occupied distinguishable centre-of-mass superpositions. They do not do so in the usual classical optical regime, and existing optical null results therefore place no direct bound on $\xi$. The absence of photonic and external metric noise distinguishes the model from spatially attached implementations of Planckian uncertainty.
 
 \subsection{Sodium nanoparticles: the Vienna group (2026)}
 \label{sec:na_vienna}
@@ -127,7 +145,22 @@ We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer 
 \end{itemize}
 The relevant superposition time is the Talbot flight of one section $t=L/v\approx 6.1$~ms (justification of the choice---in \S~\ref{sec:xi_bound}).
 
-By~(P1) clocks attach to the split subsystem as a whole: for a cluster of $N$ atoms $E_{\mathrm{br}}=Mc^2$, whence $\chi\propto M^2=(Nm_{\mathrm{at}})^2$. If each atom carried its own independent clocks instead, one would have $\chi\propto N\,m_{\mathrm{at}}^2$---a factor $N\approx5000$--$10^4$ smaller ($\chi\sim10^{-4}$ rather than $\sim0.4$ at $\xi\sim1$), and the model would have no predictive content on these data.
+Under the sharpened P1 this is not a separate counting rule: the two resolved branches of a rigid cluster are translations of all its atoms. When their one-atom spatial supports have negligible overlap, $\mathcal D_{\rm Na}=N$ and Equation~\eqref{eq:ebr_dist} gives $E_{\mathrm{br}}=Nm_{\mathrm{at}}c^2=Mc^2$, whence $\chi\propto M^2$. If the overlap is incomplete, $M$ in the formulas below must be replaced by $m_{\mathrm{at}}\mathcal D_{\rm Na}$; the assumption of full branch distinguishability is thus explicit and can be checked against the packet geometry.
+
+\subsection{Composite superpositions: flux qubits and atomic NOON states}
+\label{sec:many_body}
+
+The unqualified phrase ``energy of the split subsystem'' is particularly hazardous for a superconducting flux qubit. Naively counting all $10^6$--$10^{10}$ electrons carrying superconductivity would give, at the upper end, $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would then exclude the model. A microscopic analysis of the BCS states, however, shows that the near-unit overlap of the one-electron states in the two current branches leaves only a small fraction of occupations changed. An estimate equivalent to the one-particle distinguishability in~\eqref{eq:ebr_dist} gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, rather than the total number of condensate electrons~\cite{korsbakken2009,korsbakken2010}. At $t=100~\mu\mathrm{s}$ this gives $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between naive and microscopic counts is not an $\mathcal O(1)$ uncertainty; this is why the distinguishability measure is part of P1.
+
+The same rule separates two often conflated regimes of atom interferometry. A product state
+\begin{equation}
+\left[(|L\rangle+|R\rangle)/\sqrt2\right]^{\otimes N}
+\end{equation}
+contains independent one-atom superpositions; observed first-order coherence compares components with $\mathcal D=1$ and acquires the atomic, not collective, energy $mc^2$. In contrast, a NOON state
+\begin{equation}
+\bigl(|N,0\rangle+|0,N\rangle\bigr)/\sqrt2
+\end{equation}
+has two collective branches with $\mathcal D=N$ and $E_{\mathrm{br}}=Nmc^2$. For $N=10^5$ ${}^{87}\mathrm{Rb}$ atoms and $t=10$~ms, Equation~\eqref{eq:chi} predicts $\chi\simeq1.4\times10^3$ at $\xi=1$, i.e.\ practically complete suppression of interference for a massive motional NOON state. This additional falsifiable prediction does not yet conflict with experiment: demonstrated atomic NOON states remain few-particle; for example, Ref.~\cite{chen2010noon} realized a second-order state.
 
 \subsection{Numerical estimate and constraint on $\xi$}
 \label{sec:xi_bound}
@@ -143,12 +176,13 @@ V_i=0.0732\pm0.0081,\quad
 0.0975\pm0.0070,\quad
 0.0780\pm0.0074,
 \end{equation}
-where the errors are $1\sigma$ from the covariance matrix of a nonlinear sinusoidal fit. The inverse-variance mean is $\bar V=0.0841$ with a formal error of $0.0043$. For these three scans $\chi^2_{\rm red}=3.09$; following the experiment's procedure for overdispersed bins, we inflate the error by $\sqrt{\chi^2_{\rm red}}$ and obtain $\sigma_{\bar V}=0.0076$.
+where the errors are $1\sigma$ from the covariance matrix of a nonlinear sinusoidal fit. For the displayed rounded values, the inverse-variance mean is $\bar V=0.0840$ with a formal error of $0.0043$. For these three scans $\chi^2_{\rm red}=3.08$; following the experiment's procedure for overdispersed bins, we inflate the error by $\sqrt{\chi^2_{\rm red}}$ and obtain $\sigma_{\bar V}=0.0076$.
 
 The official quantum curve at this power gives $V_{\rm QM}=0.1108$ (without conventional losses). The one-sided lower bound on the observed visibility at 95\% is
 \begin{equation}
 \bar V-1.645\,\sigma_{\bar V}=0.0716.
 \end{equation}
+Here and below, numerical combinations are evaluated from the unrounded intermediate values ($\bar V=0.0840247$, $\sigma_{\bar V}=0.0075552$) and only then rounded for display.
 
 We construct the upper bound on $\xi$ strictly. The observed visibility decomposes as $V_{\rm obs}=R_{\rm ord}\,V_{\rm QM}\,e^{-\chi}$, where $R_{\rm ord}\le1$ is the total conventional contrast-loss factor (alignment, vibrations, phase averaging, gas, radiation). Since $R_{\rm ord}$ cannot exceed unity by its physical meaning, regardless of its true value we have $e^{-\chi}\ge V_{\rm obs}/V_{\rm QM}$. Attributing \emph{the entire} visibility deficit to our mechanism ($R_{\rm ord}=1$), we obtain
 \begin{equation}
@@ -162,9 +196,9 @@ and from $\chi=0.41\,\xi^{2/3}$---a strict conservative bound
 \end{equation}
 This bound does not depend on the experimental calibration: any real conventional losses ($R_{\rm ord}<1$) could only tighten it. The exclusion threshold corresponds to a visibility deficit $1-0.646\approx35\%$: values of $\xi$ predicting a larger deficit are incompatible with the data at 95\%.
 
-If one trusts the published estimate of conventional losses $R_{\rm ord}=0.78$, the limit tightens: $e^{-\chi}\ge0.0716/(0.78\cdot0.1108)=0.829$, $\chi\le0.187$, whence $\xi<0.31$. But this is a conditional result: at a single mass the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and the data do not allow separating the new mechanism from underestimated conventional losses; the interpretation of $\delta t$, the choice of effective $t$, and the overall postulate coefficient also remain model systematics.
+If one trusts the published estimate of conventional losses $R_{\rm ord}=0.78$, the limit tightens: $e^{-\chi}\ge0.0716/(0.78\cdot0.1108)=0.828$, $\chi\le0.188$, whence $\xi<0.31$. But this is a conditional result: at a single mass the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and the data do not allow separating the new mechanism from underestimated conventional losses; the interpretation of $\delta t$, the choice of effective $t$, and the overall postulate coefficient also remain model systematics.
 
-Summary for the data: at $\xi=1$ the model predicts ($R_{\rm ord}=1$) visibility $0.1108\,e^{-0.41}\approx0.074$ against the observed $0.0841\pm0.0076$---a deviation of only $1.4\sigma$, so $\xi=\mathcal O(1)$ is \emph{not excluded} by the data; the strict bound presses the coefficient to $\xi\lesssim1.1$, the conditional one (with the $0.78$ calibration) to $0.31$. A statistically rigorous limit requires a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional contrast-loss channels.
+Summary for the data: at $\xi=1$ the model predicts ($R_{\rm ord}=1$) visibility $0.1108\,e^{-0.41}\approx0.074$ against the observed $0.0840\pm0.0076$---a deviation of only $1.4\sigma$, so $\xi=\mathcal O(1)$ is \emph{not excluded} by the data; the strict bound presses the coefficient to $\xi\lesssim1.1$, the conditional one (with the $0.78$ calibration) to $0.31$. A statistically rigorous limit requires a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional contrast-loss channels.
 
 \subsection{The decisive near-term test}
 \label{sec:decisive_test}
@@ -182,16 +216,35 @@ Practically complete loss of interference is robust against $\mathcal O(1)$ unce
 
 A visibility deficit alone is not diagnostic, since thermal radiation, collisions with residual gas, and velocity spread also reduce the contrast. The signature of the present mechanism is its scaling $\chi\propto m^2 t^{2/3}$ together with \emph{immunity to shielding}: it cannot be reduced by improving the vacuum or cooling the particle. The experimental discriminator is whether a residual deficit persists after the suppression of all known environmental channels and whether it follows the $m^2$ law. Disappearance of fringes at $\sim\!1$~MDa and $v\approx25$~m/s with scaling $V\propto\exp[-(mc^2/\hbar)^2(\xi t_P^2 t)^{2/3}]$ after excluding environmental losses would be evidence in favour of the model.
 
+An additional discriminator is the dependence on the maximum spatial branch separation $\Delta x$. For momentum-transfer decoherence (collisions and photon emission or scattering), the localization exponent contains factors of the form $1-\operatorname{sinc}(q\Delta x/\hbar)$: it vanishes for unresolved paths, grows as the environment starts to resolve them, and saturates at the event rate once $\Delta x$ exceeds the environment's spatial resolution~\cite{hornberger2004tli}. It would therefore be incorrect to say that \emph{all} environmental channels grow without bound with $\Delta x$. A gravitational gradient usually produces a deterministic geometry-dependent phase; contrast is lost only after averaging over fluctuations of the gradient or trajectories.
+
+The present model is likewise not strictly independent of $\Delta x$ over the entire range. Under the sharpened P1,
+\begin{equation}
+\chi_{\mathrm{BDPT}}(\Delta x)=
+\left[\frac{c^2\sum_s m_s\mathcal D_s(\Delta x)}{\hbar}\right]^2
+\bigl(\xi t_P^2t\bigr)^{2/3}.
+\label{eq:chi_dx}
+\end{equation}
+While the packets overlap, $\mathcal D_s(\Delta x)$ grows from zero. The specific signature emerges once the branches are resolved: as $\mathcal D_s\to N_s$, increasing $\Delta x$ further does not change $\chi_{\mathrm{BDPT}}$, producing a plateau that depends only on $m$ and $t$. This is the direct consequence of attaching the noise to distinguishable branches rather than to spatial points.
+
+The test can be performed in one apparatus: at fixed $m$, $v$, superposition time, pressure, and temperature, vary the transverse momentum transfer (preferably the diffraction order; changing the grating period also requires compensating the change in Talbot length) and thereby scan $\Delta x$. The quantity to compare is not raw visibility but the residual exponent
+\begin{equation}
+\chi_{\mathrm{res}}(\Delta x)=
+-\ln\!\left[\frac{V_{\mathrm{obs}}(\Delta x)}{V_{\mathrm{QM}}(\Delta x)}\right]
+-\chi_{\mathrm{env}}^{\mathrm{calc}}(\Delta x),
+\end{equation}
+where $V_{\mathrm{QM}}$ includes coherent dynamics and grating interactions, while $\chi_{\mathrm{env}}^{\mathrm{calc}}$ contains the calculated gas and thermal contributions. The model predicts a constant addition to $\chi_{\mathrm{res}}$ on the distinguishability plateau, whereas unsaturated environmental channels retain a characteristic $\Delta x$ dependence. A flat residual alone is not unique: saturated environmental decoherence and $\Delta x$-independent technical losses can mimic it. The $\Delta x$ scan should therefore be combined with changes in vacuum or temperature and with a test of the $m^2t^{2/3}$ scaling.
+
 \section{Limits on quantum computation}\label{sec:qc}
 
-\subsection{Link between decoherence and the Margolus--Levitin bound}
+\subsection{Margolus--Levitin: a heuristic comparison}
 \label{sec:ml_link}
 
 The decoherence time of the model is the moment when $\chi=1$ and the visibility falls to $e^{-1}$; it is given by Equation~\eqref{eq:tdec}.
 
 The Margolus--Levitin theorem~\cite{margolus1998} limits the speed of orthogonal evolution by the energy \emph{above the ground level} $E_{\mathrm{av}}=\langle H\rangle-E_0$: $\tau_\perp\ge\pi\hbar/(2E_{\mathrm{av}})$, whence $\nu_{\max}=2E_{\mathrm{av}}/(\pi\hbar)$. This is a question \emph{distinct} from branch decoherence: the Margolus--Levitin theorem concerns the unitary speed of state change, not the noise of independent clocks.
 
-For which-path with $E_a\approx E_b\approx mc^2$, decoherence is set by $\omega_{\mathrm{eff}}=mc^2/\hbar$ from~\eqref{eq:chi}. \emph{Conditionally}, identifying $E_{\mathrm{av}}$ with $E_{\mathrm{br}}$ in this regime (which does not follow automatically from the Margolus--Levitin theorem), we obtain an estimate of the number of orthogonal ticks over the window $t_{\mathrm{dec}}$:
+At fixed particle number, the term $mc^2$ is proportional to the identity and does not generate orthogonal centre-of-mass evolution; it cancels from $E_{\mathrm{av}}=\langle H\rangle-E_0$. Thus the identification $E_{\mathrm{av}}=E_{\mathrm{br}}=mc^2$ follows neither from the theorem nor from the model's postulates. Only as a formal dimensional illustration, under the additional and nonstandard assumption of that identification, one may write the number of ``ticks'' over the window $t_{\mathrm{dec}}$ as
 \begin{equation}
 N_{\max}=\nu_{\max}\,t_{\mathrm{dec}}
 =\frac{2\omega_{\mathrm{eff}}}{\pi}\cdot\frac{t_C^3}{\xi\,t_P^2}
@@ -199,22 +252,20 @@ N_{\max}=\nu_{\max}\,t_{\mathrm{dec}}
 \end{equation}
 Since $t_C/t_P=m_P/m$, for which-path
 \begin{equation}
-\boxed{\;N_{\max}=\frac{2}{\pi\xi}\left(\frac{m_P}{m}\right)^{2}.\;}
-\label{eq:Nmax}
+N_{\max}^{\rm formal}=\frac{2}{\pi\xi}\left(\frac{m_P}{m}\right)^{2}.
 \end{equation}
-At $m=m_\ast=m_P/\sqrt{\xi}$ this is $N_{\max}=2/\pi\approx0.64$ regardless of $\xi$. For internal branches with $E_{\mathrm{br}}=\Delta E\ll mc^2$ the same formalism gives $N_{\max}\propto(\Delta E)^{-2}$.
+At $m=m_\ast=m_P/\sqrt{\xi}$ this formal quantity is $2/\pi\approx0.64$. It is not a computational-power bound derived from the model. For internal branches, where the transition energy actually generates evolution, the theorem should instead be applied directly using the physical $E_{\mathrm{av}}$, without importing the formula based on $mc^2$.
 
-\subsection{Maximum operations over a given time: holographic scaling}
-One may ask the question differently: how many orthogonal operations are possible over a given time $t$ if the carrier mass may be chosen? The Margolus--Levitin speed $N=(2/\pi)\,t/t_C$ grows with mass, but the coherence-preservation condition $t_{\mathrm{dec}}\ge t$ limits the mass from above: $t_C\ge(\xi\,t_P^2\,t)^{1/3}$. The maximum is reached at the boundary where $t_C=(\xi\,t_P^2\,t)^{1/3}$, and the mass drops out of the answer:
+\subsection{Formal coincidence with holographic scaling}
+The same additional identification gives the formal rate $N=(2/\pi)\,t/t_C$. Combining it with the coherence condition $t_{\mathrm{dec}}\ge t$, i.e.\ $t_C\ge(\xi\,t_P^2\,t)^{1/3}$, and taking equality at the boundary gives
 \begin{equation}
-\boxed{\;N_{\max}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.\;}
-\label{eq:Nmax_t}
+N_{\mathrm{formal}}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.
 \end{equation}
-Over one second this is $\approx4.5\times10^{28}$ operations (at $\xi=1$; optimal mass $\sim5\times10^{4}$~a.m.u.). The exponent $2/3$ is not accidental: Ng obtains the same scaling $N\propto(t/t_P)^{2/3}$ as a holographic limit on the computational power of a ``space-time-foam computer'' and a black-hole quantum computer~\cite{ng2005foam}---from the same cubic law $\delta t^3\sim t_P^2\,t$ that underlies postulate~(P2). The model thus automatically reproduces the holographic bound on computation: coherent orthogonal evolution in it cannot outrun the budget set by space-time foam.
+Over one second this is $\approx4.5\times10^{28}$ at $\xi=1$. The exponent $2/3$ coincides with the scaling $N\propto(t/t_P)^{2/3}$ obtained by Ng for a ``space-time-foam computer'' and a black-hole quantum computer~\cite{ng2005foam}, because both estimates use the cubic law $\delta t^3\sim t_P^2t$. This is a meaningful structural analogy, but not an independent derivation of an operation-count bound: without additional physical justification for $E_{\mathrm{av}}=mc^2$, matching exponents does not turn $N_{\mathrm{formal}}$ into a computational limit of the model.
 
 \subsection{Phase noise and the qubit register}
 
-Postulates (P1)--(P3) act on any superposition, including a computational one. By~(P1) for a register a branch is the pair $|0\rangle,|1\rangle$ of a qubit; $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$. The mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the same criterion: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the condensate rest energy, long-lived coherence is consistent with the model; if $E_{\mathrm{br}}$ included the condensate mass, coherence would decay within nanoseconds. The random relative phase between a branch pair over time $t$:
+Postulates (P1)--(P3) act on any superposition, including a computational one. For strictly internal levels $|0\rangle,|1\rangle$ with a common one-particle spatial-motional density matrix, P1 gives $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$; the mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. This statement cannot automatically be transferred to a superposition of opposite persistent currents, for which Equation~\eqref{eq:ebr_dist} applies as discussed in \S~\ref{sec:many_body}. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the internal case: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the rest energy of the common walls, long-lived coherence is consistent with the model. The random relative phase between a pair of internal branches over time $t$:
 \begin{equation}
 \sigma(t)=\frac{\sqrt{E_a^2+E_b^2}}{\hbar}\,\delta t
 =\omega_q\bigl(\xi\,t_P^2\,t\bigr)^{1/3}
