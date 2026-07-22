@@ -1,31 +1,37 @@
 % !TEX root = branch_time_en.tex
-\documentclass[pdflatex,sn-mathphys-num,iicol]{sn-jnl}
+\documentclass[11pt,a4paper]{article}
 
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
 
-\raggedbottom
+\title{\textbf{Branch-Dependent Proper Time}}
+\author{%
+  Oleg Ponfilenok\\[0.35em]%
+  {\normalsize Independent researcher, Vietnam; \href{mailto:ponfil@gmail.com}{ponfil@gmail.com}}%
+}
+\date{}
 
 \begin{document}
 
-\title[Branch-Dependent Proper Time]{Branch-Dependent Proper Time}
-
-\author*[1]{\fnm{Oleg} \sur{Ponfilenok}}\email{ponfil@gmail.com}
-
-\affil*[1]{\orgname{Independent researcher}, \orgaddress{\country{Vietnam}}}
-
-\abstract{We propose tying the fundamental scale of gravitationally induced space-time blurring to \emph{proper time} rather than to spatial length, and postulate that, under an ensemble reading of the quantum state in which each branch carries its own world line, proper-time fluctuations are statistically independent across branches. Interference is sensitive to the \emph{difference} of branch phase contributions; with independent clocks this difference accumulates at the frequency $\omega_{\mathrm{eff}}=E_{\mathrm{br}}/\hbar$. For a composite system we define this branch-sensitive energy operationally: the rest energy of each particle species is weighted by the trace distance between the one-particle reduced density matrices of the two branches; a fully distinguishable which-path carrier gives $E_{\mathrm{br}}=mc^2$, while strictly internal branches with a common spatial-motional state give $E_{\mathrm{br}}=\Delta E$. This yields $V/V_0=\exp(-\chi)$ with $\chi=(\omega_{\mathrm{eff}})^2(\xi\,t_P^2\,t)^{2/3}$ for a branch pair with $E_a\approx E_b$ (for internal branches with $E_a=0$ an additional factor $1/2$ appears); for a centre-of-mass interferometer with fully distinguishable packets $\chi=(mc^2/\hbar)^2(\xi\,t_P^2\,t)^{2/3}$, where $t$ is the superposition time and $\xi=\mathcal O(1)$ is a numerical coefficient. The scaling form $\chi\propto m^2 t^{2/3}$ follows from the postulates; the overall coefficient carries an $\mathcal O(1)$ uncertainty. The cubic scaling is borrowed from the K\'arolyh\'azy relation; the decoherence mechanism differs from Di\'osi--Penrose collapse. Confronted with sodium-nanoparticle interferometry of the Vienna group~\cite{arndt2025}, this gives an upper bound $\xi\lesssim1.1$. A decisive test is near: at $m\sim1$~MDa and $v\approx25$~m/s the model predicts $\chi\gg1$ and practically complete loss of interference, whereas the standard quantum model of the setup at the same parameters expects measurable fringes with ordinary contrast.}
-
-\keywords{proper time, branch clock independence, K\'arolyh\'azy uncertainty, decoherence, matter-wave interferometry, Margolus--Levitin theorem, quantum gravity}
-
 \maketitle
+
+\begin{abstract}
+We propose tying the fundamental scale of gravitationally induced space-time blurring to \emph{proper time} rather than to spatial length, and postulate that, under an ensemble reading of the quantum state in which each branch carries its own world line, proper-time fluctuations are statistically independent across branches. Interference is sensitive to the \emph{difference} of branch phase contributions; with independent clocks this difference accumulates at the frequency $\omega_{\mathrm{eff}}=E_{\mathrm{br}}/\hbar$. For a composite system we define this branch-sensitive energy operationally after removing the Hamiltonian sector common to both branches and measuring the remaining split-sector energy from its physical vacuum or ground state: the rest energy of each particle species is weighted by the trace distance between the one-particle reduced density matrices of the two branches; a fully distinguishable which-path carrier gives $E_{\mathrm{br}}=mc^2$, while strictly internal branches with a common spatial-motional state give $E_{\mathrm{br}}=\Delta E$. This prescription is invariant under a global shift of the total Hamiltonian. It yields $V/V_0=\exp(-\chi)$ with $\chi=(\omega_{\mathrm{eff}})^2(\xi\,t_P^2\,t)^{2/3}$ for a symmetric motional branch pair (for internal branches with one split-sector ground state an additional factor $1/2$ appears); for a centre-of-mass interferometer with fully distinguishable packets $\chi=(mc^2/\hbar)^2(\xi\,t_P^2\,t)^{2/3}$, where $t$ is the superposition time and $\xi=\mathcal O(1)$ is a numerical coefficient. The scaling form $\chi\propto m^2 t^{2/3}$ follows from the postulates; the overall coefficient carries an $\mathcal O(1)$ uncertainty. The cubic scaling is borrowed from the K\'arolyh\'azy relation; the decoherence mechanism differs from Di\'osi--Penrose collapse. Confronted with sodium-nanoparticle interferometry of the Vienna group~\cite{arndt2025}, this gives an upper bound $\xi\lesssim1.1$. A decisive test is near: at $m\sim1$~MDa and $v\approx25$~m/s the model predicts $\chi\gg1$ and practically complete loss of interference, whereas the standard quantum model of the setup at the same parameters expects measurable fringes with ordinary contrast.
+\end{abstract}
+
+\noindent\textbf{Keywords:} proper time; branch clock independence; K\'arolyh\'azy uncertainty; decoherence; matter-wave interferometry; Margolus--Levitin theorem; quantum gravity
+
+\vspace{1em}
 
 \section{Introduction}\label{sec:intro}
 
 The status of the wave function---an ontic object or a computational bookkeeping of an ensemble of possibilities---remains unsettled. We adopt the second, ensemble reading~\cite{ballentine1970,home1992}: $\lvert\psi\rangle=\sum_i c_i\lvert i\rangle$ catalogues distinct \emph{variants} of the system, and the squared amplitudes are the relative weights of those variants. This is a deliberately minimal ontology; the substantive postulates on independent branch clocks (\S~\ref{sec:postulates}) are added separately, once gravity enters the picture.
 
-In the relational view of time, a clock is a physical subsystem and ``time'' is a correlation within the total state~\cite{pagewootters}. If each branch is a genuine variant of the system, then it carries its own world line and hence its own proper time. Penrose reaches a structurally identical statement from the opposite direction: each component of the superposition sources its own space-time, and ``since there is no canonical way of relating the time parameters in the two space-times, a fundamental uncertainty in the time-translation operator arises''~\cite{penrose1996}. Consistently with this, proper time accumulates along a world line and is not fixed by a single common scale for distinct four-dimensional paths: in an interferometer with different trajectories one cannot, without an additional postulate, impose a single common proper-time parameter on all branches. While the system is in a superposition of paths, interference requires a coherent relative phase between them; branch-independent proper-time fluctuations (postulates~P2--P3 below) introduce a random shift of this phase and bound the visibility from above, $V/V_0\le e^{-\chi}$ (see~\eqref{eq:chi})---this is a prediction of an interference limit under path-dependent proper time, not a denial of amplitude superposition. After a which-path registration, a single scenario and a single realized world line are fixed; the $|c_i|^2$ remain the weights of the outcomes. The mechanism below is pure dephasing between branches: populations are not redistributed, and no which-path information is recorded.
+In the relational view of time, a clock is a physical subsystem and ``time'' is a correlation within the total state~\cite{pagewootters}. If each branch is a genuine variant of the system, then it carries its own world line and hence its own proper time. Penrose reaches a structurally identical statement from the opposite direction: each component of the superposition sources its own space-time, and ``since there is no canonical way of relating the time parameters in the two space-times, a fundamental uncertainty in the time-translation operator arises''~\cite{penrose1996}. Consistently with this, proper time accumulates along a world line and is not fixed by a single common scale for distinct four-dimensional paths: in an interferometer with different trajectories one cannot, without an additional postulate, impose a single common proper-time parameter on all branches. While the system is in a superposition of paths, interference requires a coherent relative phase between them; branch-independent proper-time fluctuations (postulates~P2--P3 below) introduce a random shift of this phase and bound the visibility from above, $V/V_0\le e^{-\chi}$ (see~\eqref{eq:chi})---this is a prediction of an interference limit under path-dependent proper time, not a denial of amplitude superposition. After a which-path registration, a single scenario and a single realized world line are fixed; the $|c_i|^2$ remain the weights of the outcomes. The mechanism below is pure dephasing between branches: populations are not redistributed, and no which-path information is recorded. The mixed state arises only after ensemble averaging over $\delta t_a,\delta t_b$, not as the selection of a single realization.
 
 \section{Postulates}\label{sec:postulates}
 
@@ -34,7 +40,8 @@ We introduce the key notation:
 \item $t$ --- the time the system spends in superposition (a proper-time interval along the world line);
 \item $\delta t$ --- the scale of proper-time uncertainty over the interval $t$; $\delta t_a$ --- the realized shift on branch $a$ (P3), $\mathrm{Var}(\delta t_a)=\delta t^2$;
 \item $t_P=\sqrt{\hbar G/c^5}$ --- the Planck time;
-\item $E_{\mathrm{br}}$ --- the energy of the \emph{split} subsystem in the interfering branch pair;
+\item $E_{\mathrm{br}}$ --- the characteristic energy of the \emph{split} subsystem in the interfering branch pair;
+\item $\varepsilon_{a|b}$ --- the energy carried on branch $a$ by degrees of freedom that distinguish it from branch $b$, measured from the physical vacuum or ground state of that split sector after removing the sector common to both branches;
 \item $\omega_{\mathrm{eff}}=E_{\mathrm{br}}/\hbar$ --- the corresponding effective phase-noise frequency;
 \item $m$ --- the carrier mass in the which-path case (then $E_{\mathrm{br}}=mc^2$, $\omega_{\mathrm{eff}}=\omega_C=mc^2/\hbar$);
 \item $\xi=\mathcal O(1)$ --- a dimensionless numerical coefficient.
@@ -50,7 +57,19 @@ To prevent the choice of the ``split subsystem'' from depending on an arbitrary 
 E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
 \label{eq:ebr_dist}
 \end{equation}
-Here $0\le\mathcal D_s\le N_s$; the definition is basis-invariant and applies to identical particles~\cite{korsbakken2007}. For fully distinguishable spatial packets of every constituent, $\mathcal D_s=N_s$, and hence $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. States common to both branches contribute zero. If only an internal level differs while the spatial-motional carrier $|C\rangle$ is common, we use the transition energy $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, not the rest energy of the common carrier. If both types of difference are present, their branch-sensitive contributions are added.
+Here $0\le\mathcal D_s\le N_s$; the definition is basis-invariant and applies to identical particles~\cite{korsbakken2007}. For fully distinguishable spatial packets of every constituent, $\mathcal D_s=N_s$, and hence $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. States common to both branches contribute zero. If only an internal level differs while the spatial-motional carrier $|C\rangle$ is common, we use the transition energy $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, not the rest energy of the common carrier.
+
+The energies that multiply the independent clock shifts are not absolute eigenvalues of the total Hamiltonian. For each ordered branch pair we denote by $\varepsilon_{a|b}$ the energy carried on branch $a$ by the branch-distinguishing degrees of freedom, measured relative to the physical vacuum or ground state of that split sector. The Hamiltonian sector represented identically in both branches is common and is removed before coupling to $\delta t_a,\delta t_b$. Thus, for a motional pair,
+\begin{equation}
+\varepsilon_{a|b}^{\mathrm{mot}}
+=\varepsilon_{b|a}^{\mathrm{mot}}
+=E_{\mathrm{br}}^{\mathrm{mot}}
+=c^2\sum_s m_s\mathcal D_s(a,b),
+\label{eq:exclusive_energy}
+\end{equation}
+where the rest energy is the energy of occupied branch-exclusive matter modes relative to the vacuum. For internal states $|0\rangle,|1\rangle$ of a common carrier, energies are measured from the ground state of the split internal sector: $\varepsilon_{0|1}^{\mathrm{int}}=0$ and $\varepsilon_{1|0}^{\mathrm{int}}=\Delta E$. If motional and internal differences coexist, the corresponding exclusive contributions are added separately on each branch, $\varepsilon_{a|b}=E_{\mathrm{br}}^{\mathrm{mot}}+\varepsilon_a^{\mathrm{int}}$ and $\varepsilon_{b|a}=E_{\mathrm{br}}^{\mathrm{mot}}+\varepsilon_b^{\mathrm{int}}$.
+
+This prescription is invariant under a global shift $H\mapsto H+C\mathbf 1$. Such a shift changes the reference energy of the common or ground-state sector by the same amount and leaves $\varepsilon_{a|b}$, $\varepsilon_{b|a}$, and hence all predicted visibilities unchanged. The occurrence of $Mc^2$ for resolved motional branches is therefore not the use of an arbitrary additive constant in a fixed-particle Hamiltonian; it is an additional premise that proper-time noise couples to the vacuum-referenced energy of the branch-exclusive massive modes.
 
 \subsection{(P2) Magnitude of the proper-time fluctuation.}
 The accumulated uncertainty of the proper-time interval $t$ measured along a world line is
@@ -69,17 +88,17 @@ Crucially, $\delta t_a$ is not a fluctuation of an external metric field and not
 
 \section{Decoherence functional}\label{sec:decoherence}
 
-For a composite system we use the decomposition $H = mc^2 + P^2/(2m) + H_{\mathrm{int}}$. For which-path ($E_{\mathrm{br}}=mc^2$ by~(P1)) the phase contribution of the split subsystem gives the relative phase
+For a composite system we use the decomposition $H = mc^2 + P^2/(2m) + H_{\mathrm{int}}$. For which-path ($\varepsilon_{a|b}=\varepsilon_{b|a}=E_{\mathrm{br}}=mc^2$ by~(P1)) the phase contribution of the split subsystem gives the relative phase
 \begin{equation}
-\Delta\varphi=\frac{E_a}{\hbar}\,\delta t_a-\frac{E_b}{\hbar}\,\delta t_b
+\Delta\varphi=\frac{\varepsilon_{a|b}}{\hbar}\,\delta t_a-\frac{\varepsilon_{b|a}}{\hbar}\,\delta t_b
 \approx\frac{mc^2}{\hbar}\,(\delta t_a-\delta t_b),
 \label{eq:dphi}
 \end{equation}
-since $E_a\approx E_b\approx mc^2$ and interference involves the \emph{difference} of contributions, not the absolute phase of each branch.
+since $\varepsilon_{a|b}=\varepsilon_{b|a}=mc^2$ and interference involves the \emph{difference} of branch-exclusive contributions, not an absolute eigenvalue of the total Hamiltonian.
 
 For a single superposition interval, postulates~(P2)--(P3) fully specify the distribution of $\delta t_a,\delta t_b$ used in the derivation below; the multi-time structure of the noise is discussed in \S~\ref{sec:temporal_noise}. The general formula follows from~\eqref{eq:dphi} and postulates~(P2)--(P3). By~(P3), with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$:
 \begin{equation}
-\mathrm{Var}(\Delta\varphi)=\frac{E_a^2+E_b^2}{\hbar^2}\,\delta t^2.
+\mathrm{Var}(\Delta\varphi)=\frac{\varepsilon_{a|b}^{\,2}+\varepsilon_{b|a}^{\,2}}{\hbar^2}\,\delta t^2.
 \label{eq:vardphi}
 \end{equation}
 If the centre of mass branches (which-path),~\eqref{eq:vardphi} gives
@@ -87,7 +106,7 @@ If the centre of mass branches (which-path),~\eqref{eq:vardphi} gives
 \mathrm{Var}(\Delta\varphi)=2\,\omega_{\mathrm{eff}}^{\,2}\,\delta t^2,
 \qquad \omega_{\mathrm{eff}}=\frac{mc^2}{\hbar}.
 \end{equation}
-With \emph{shared} clocks the global phase $mc^2\tau/\hbar$ would cancel in $\Delta\varphi$; with independent clocks (P3) the accumulation $E_{\mathrm{br}}\delta t_a/\hbar$ and $E_{\mathrm{br}}\delta t_b/\hbar$ enters the difference. For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $E_a=0$, $E_b=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
+With \emph{shared} clocks the global phase $mc^2\tau/\hbar$ would cancel in $\Delta\varphi$; with independent clocks (P3) the vacuum-referenced branch-exclusive accumulations enter the difference. A constant common term in the total Hamiltonian is removed by~(P1) and cannot generate dephasing. For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $\varepsilon_{0|1}=0$ and $\varepsilon_{1|0}=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
 
 Since $\delta t_a,\delta t_b$ are Gaussian (P3), the relative phase $\Delta\varphi$ is also Gaussian and $\langle e^{i\Delta\varphi}\rangle=\exp[-\mathrm{Var}(\Delta\varphi)/2]$; the factor $2$ from the two branches and the factor $1/2$ from Gaussian averaging cancel. In the which-path case, for fringe visibility ($V$ relative to the reference $V_0$):
 \begin{equation}
@@ -97,12 +116,19 @@ Since $\delta t_a,\delta t_b$ are Gaussian (P3), the relative phase $\Delta\varp
 =\left(\frac{mc^2}{\hbar}\right)^{2}\!\bigl(\xi\,t_P^2\,t\bigr)^{2/3}.\;}
 \label{eq:chi}
 \end{equation}
-The general expression for an arbitrary branch pair is $\chi=(E_a^2+E_b^2)\,\delta t^2/(2\hbar^2)$; for $E_a=E_b=mc^2$ it reduces to~\eqref{eq:chi}. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the postulates and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
+The general expression for an arbitrary branch pair is
+\begin{equation}
+\boxed{\;
+\chi_{ab}=\frac{\varepsilon_{a|b}^{\,2}+\varepsilon_{b|a}^{\,2}}{2\hbar^2}\,\delta t^2.
+\;}
+\label{eq:chi_general}
+\end{equation}
+For $\varepsilon_{a|b}=\varepsilon_{b|a}=mc^2$ it reduces to~\eqref{eq:chi}. Because the $\varepsilon$'s are vacuum- or ground-state-referenced energies of the split sector,~\eqref{eq:chi_general} is unchanged by $H\mapsto H+C\mathbf1$. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the postulates and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
 
 \noindent\textbf{Relation to clock interference and the Compton phase.}
 The conceptual framework of ``proper time along each branch'' is already used in quantum-clock interference. In Zych et al., an internal state acts as a clock: a deterministic proper-time difference along the two paths records which-path information in the internal degree of freedom and reduces visibility~\cite{zych2011proper}. Pikovski et al.\ developed this mechanism for a composite object in a gravitational field: an externally imposed potential difference unitarily entangles the centre of mass with the internal-energy distribution, and dephasing appears after tracing out the internal degrees of freedom~\cite{pikovski2015}. In contrast, the present model does not rely on an external potential difference or on a dedicated internal degree of freedom that unitarily encodes which-path information; it introduces the stochastic Planckian scale P2 and branch clock independence (P3), and therefore predicts irreversible ensemble dephasing even for an object in its internal ground state.
 
-Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model postulates that, with independent $\delta t_a,\delta t_b$, the rest phase $mc^2$ becomes a random \emph{relative} contribution; P1 fixes $E_{\mathrm{br}}$ relative to the vacuum. Without this premise the central prediction $\chi\propto m^2$ does not arise (see also \S~\ref{sec:discussion}).
+Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model adds the independent premise that the vacuum-referenced rest energy of branch-exclusive massive modes couples to the independent shifts $\delta t_a,\delta t_b$ and thereby becomes a random \emph{relative} contribution. It does not couple an arbitrary identity term in the total Hamiltonian: P1 first removes the common sector and its reference energy. Without this premise the central prediction $\chi\propto m^2$ does not arise (see also \S~\ref{sec:discussion}).
 
 \noindent\textbf{Planck mass boundary.}
 The decoherence time $t_{\mathrm{dec}}$ is defined by the condition $\chi=1$. From~\eqref{eq:chi}:
@@ -118,7 +144,7 @@ m_\ast=\frac{m_P}{\sqrt{\xi}},
 \qquad
 m_P=\sqrt{\hbar c/G}\approx 2.2\times10^{-8}\;\text{kg}.
 \end{equation}
-For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement. The mechanism remains pure dephasing without population redistribution or spontaneous emission~\cite{donadi2021}. The ontological consequences of the macroscopic limit---a mixture in the branch basis, objectivity of coherence loss before readout, and distinction from dynamical collapse models---are discussed in \S~\ref{sec:objective_collapse}.
+For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement. The mechanism remains pure dephasing without population redistribution or spontaneous emission~\cite{donadi2021}. The ontological consequences of the macroscopic limit---an effective ensemble mixture in the branch basis, objective loss of inter-branch interference before readout, and distinction from dynamical collapse models---are discussed in \S~\ref{sec:objective_collapse}.
 
 \section{Confrontation with experiment}\label{sec:experiment}
 
@@ -139,7 +165,7 @@ We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer 
 \item velocity $v\approx 160$~m/s;
 \item three gratings of period $d=133$~nm spaced by $L=0.983$~m;
 \item a measured fringe visibility $V=0.10\pm0.01$ (second run $0.08\pm0.01$) at $172$~kDa, described by the quantum model with a single global factor $0.78$ for conventional contrast losses (alignment, gravitational and rotational phase averaging, vibrations, thermal and collisional decoherence);
-\item a record macroscopicity $\mu=15.45$~\cite{macroscopicity,arndt2025}.
+\item a record macroscopicity $\mu=15.5$~\cite{macroscopicity,arndt2025}.
 \end{itemize}
 The relevant superposition time is the Talbot flight of one section $t=L/v\approx 6.1$~ms (justification of the choice---in \S~\ref{sec:xi_bound}).
 
@@ -264,9 +290,9 @@ Over one second this is $\approx4.5\times10^{28}$ at $\xi=1$. The exponent $2/3$
 
 Postulates (P1)--(P3) act on any superposition, including a computational one. For strictly internal levels $|0\rangle,|1\rangle$ with a common one-particle spatial-motional density matrix, P1 gives $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$; the mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. This statement cannot automatically be transferred to a superposition of opposite persistent currents, for which Equation~\eqref{eq:ebr_dist} applies as discussed in \S~\ref{sec:many_body}. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the internal case: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the rest energy of the common walls, long-lived coherence is consistent with the model. The random relative phase between a pair of internal branches over time $t$:
 \begin{equation}
-\sigma(t)=\frac{\sqrt{E_a^2+E_b^2}}{\hbar}\,\delta t
+\sigma(t)=\frac{\sqrt{\varepsilon_{a|b}^{\,2}+\varepsilon_{b|a}^{\,2}}}{\hbar}\,\delta t
 =\omega_q\bigl(\xi\,t_P^2\,t\bigr)^{1/3}
-\quad (E_a=0,\;E_b=\hbar\omega_q).
+\quad (\varepsilon_{0|1}=0,\;\varepsilon_{1|0}=\hbar\omega_q).
 \label{eq:sigmaq}
 \end{equation}
 For a superconducting qubit ($\omega_q\approx2\pi\times5$~GHz) and $t=1$~s: $\delta t\approx1.4\times10^{-29}$~s, $\sigma\approx4.5\times10^{-19}$~rad (the corresponding dephasing parameter $\chi=\sigma^2/2$). Crucially, the variance~\eqref{eq:sigmaq} is \emph{pairwise} and independent of the number of branches: interference involves only differences of independent $\delta t_a$, and the extremal phase spread over $2^n$ branches grows only as $\sigma\sqrt{2\ln 2^{\,n}}\propto\sigma\sqrt{n}$. For a branch pair differing in the state of $d$ qubits, $\chi\propto d^{\,2}$; in the worst case, when all $n$ qubits differ, the formal limit $n\,\omega_q\,\delta t\lesssim1$ gives $n\lesssim10^{18}$---far beyond practical horizons.
@@ -288,15 +314,23 @@ The central prediction $\chi\propto m^2 t^{2/3}$ follows from the postulates, bu
 
 \subsection{Relation to objective collapse}
 \label{sec:objective_collapse}
-A natural question is how BDPT relates to objective collapse if it extinguishes the relative phase between branches. In standard quantum mechanics, dephasing destroys the off-diagonal elements of the density matrix in the basis of split components. For two branches $|a\rangle,|b\rangle$ at $\chi\gg1$, ensemble averaging over independent $\delta t_a,\delta t_b$ yields the effective state
+A natural question is how BDPT relates to objective collapse if it extinguishes the relative phase between branches. Two levels must be kept apart. For \emph{fixed} realizations $\delta t_a,\delta t_b$ the state
+\begin{equation}
+|\psi\rangle=c_a|a\rangle+c_b e^{i\Delta\varphi}|b\rangle
+\end{equation}
+remains \emph{pure}; $\Delta\varphi$ is given by~\eqref{eq:dphi} and depends on the particular realization of the branch clocks. A mixed state appears only after ensemble averaging over independent $\delta t_a,\delta t_b$:
+\begin{equation}
+\overline{\rho}_{ab}=\rho_{ab}(0)\,e^{-\chi}.
+\end{equation}
+At $\chi\gg1$ this yields the effective state
 \begin{equation}
 \rho \approx |c_a|^2|a\rangle\langle a| + |c_b|^2|b\rangle\langle b|,
 \end{equation}
 without coherent terms $c_a c_b^*\,|a\rangle\langle b|+\text{h.c.}$ The loss of phase and passage to a mixed state is not reducible to the observer's incomplete knowledge of the phase: by~(P3) the noise is an \emph{ontic} independent shift of proper time per branch, not the recording of which-path information in an environment.
 
-In the ensemble reading (\S~\ref{sec:intro}) each branch is a genuine variant of the system and $|c_i|^2$ are the variant weights. For $\chi\gg1$ there is no observable interference between variants, and the mixture with the same weights becomes \emph{operationally} indistinguishable from the realization of one variant with probability $|c_i|^2$. The definite outcome remains unknown until registration, but coherent superposition of alternatives as a physical resource disappears \emph{objectively}---before and independently of readout---over a time $\lesssim t_{\mathrm{dec}}$. In this sense the macroscopic limit of BDPT implements objective collapse in the branch basis.
+In the ensemble reading (\S~\ref{sec:intro}) each branch is a genuine variant of the system and $|c_i|^2$ are the variant weights. For $\chi\gg1$ there is no observable interference between variants; the ensemble mixture with the same weights is operationally indistinguishable from a statistical description of outcomes with probabilities $|c_i|^2$. The definite outcome remains unknown until registration, but coherent superposition of alternatives as a physical resource disappears \emph{objectively}---before and independently of readout---over a time $\lesssim t_{\mathrm{dec}}$. In this sense the macroscopic limit of BDPT yields objective loss of inter-branch interference and effective branch superselection at $\chi\gg1$, but does \emph{not} select a single realization and does not replace dynamical collapse.
 
-The mechanism differs from dynamical collapse models (Di\'osi--Penrose and others) in its channel: the populations $|c_i|^2$ are not redistributed by a jump and there is no spontaneous emission~\cite{donadi2021}; it is pure rest-phase dephasing. Yet the destruction of inter-branch coherence and the passage to a mixture is precisely the link to objectivist programmes. No separate nonlinear term in the state equation is postulated: ``collapse'' follows from the ensemble ontology, independent branch clocks, and the P2 scale. Schr\"odinger's cat at $m\gg m_\ast$ illustrates the limit: the amplitudinal record ``alive/dead'' remains, but interference between branches vanishes over $t_{\mathrm{dec}}\ll t_C$; what remains is a statistical mixture of variants with weights $|c_i|^2$.
+The mechanism differs from dynamical collapse models (Di\'osi--Penrose and others) in its channel: the populations $|c_i|^2$ are not redistributed by a jump and there is no spontaneous emission~\cite{donadi2021}; it is pure rest-phase dephasing. The destruction of inter-branch coherence and the passage to an ensemble mixture is the link that \emph{resembles} objectivist programmes, but formally follows only from the ensemble ontology, independent branch clocks, and the P2 scale, without an additional nonlinear term in the state equation. Schr\"odinger's cat at $m\gg m_\ast$ illustrates the limit: the amplitudinal record ``alive/dead'' remains, but interference between branches vanishes over $t_{\mathrm{dec}}\ll t_C$; what remains is a statistical mixture of variants with weights $|c_i|^2$, not the selection of a single outcome before measurement.
 
 \subsection{Distinction from other decoherence mechanisms}
 The mechanism must be distinguished from nearby sources of interference loss. In quantum-clock interference, a deterministic or potential-induced proper-time difference records which-path information through internal degrees of freedom or an external gravitational gradient~\cite{zych2011proper,pikovski2015}; BDPT is not reducible to such unitary readout and does not require a potential difference, but introduces a stochastic Planckian scale with independent $\delta t_a,\delta t_b$. An environment with momentum transfer (gas, thermal radiation, photon scattering) creates position-dependent noise, force, and momentum diffusion and is usually suppressed by improving the vacuum or cooling; the characteristic dependence on $\Delta x$ is described by localization factors~\cite{hornberger2004tli} (see \S~\ref{sec:signature}). Dynamical Di\'osi--Penrose collapse models predict population redistribution and spontaneous emission~\cite{donadi2021}, to which the present model is \emph{transparent}: it is pure rest-phase dephasing without additional channels. Spatially attached implementations of Planckian uncertainty (correlated shear noise, external metric fluctuations) are constrained by devices such as the Holometer and LIGO-like detectors~\cite{chou2017holometer}; BDPT attaches to discrete branches, not to points, and does not act on a massless carrier. Finally, in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}; the present model does not settle that debate but postulates that, with independent branch clocks, the rest phase $mc^2$ becomes a random \emph{relative} contribution (see \S~\ref{sec:decoherence})---a separate and falsifiable premise.
@@ -309,22 +343,17 @@ Tying the K\'arolyh\'azy fluctuation to proper time and postulating independent 
 \end{equation}
 where interference involves the \emph{difference} of branch phase contributions and $mc^2$ is the energy of the split carrier. The scaling $m^2 t^{2/3}$ is immune to electromagnetic shielding; sodium interferometry~\cite{arndt2025} gives a strict one-sided 95\% bound $\xi\lesssim1.1$ (the entire contrast deficit attributed to the mechanism; conditionally, with the conventional-loss normalization $0.78$, $\xi\lesssim0.31$). For $\xi=\mathcal O(1)$ the characteristic scale $m_\ast=m_P/\sqrt{\xi}$ is of the order of the Planck mass; for $m\gg m_\ast$ decoherence occurs over $t_{\mathrm{dec}}\ll t_C$, below the K\'arolyh\'azy distinguishability limit for proper time. The model is falsifiable by a test at $\sim\!1$~MDa and $v\approx25$~m/s: either fringes of the standard quantum model, or suppression with the $m^2 t^{2/3}$ scaling.
 
-\backmatter
+\section*{Declarations}
 
-\section*{Statements and Declarations}
+\noindent\textbf{Funding.} The author received no specific grant from any funding agency.
 
-\bmhead{Funding}
-The author received no specific grant from any funding agency.
+\noindent\textbf{Data availability.} Data sharing is not applicable to this article as no datasets were generated or analysed during the current study.
 
-\bmhead{Data availability}
-Data sharing is not applicable to this article as no datasets were generated or analysed during the current study.
+\noindent\textbf{Competing interests.} The author declares no competing interests.
 
-\bmhead{Competing interests}
-The author declares no competing interests.
+\noindent\textbf{Author contributions.} OP conceived the model, performed the calculations, and wrote the manuscript.
 
-\bmhead{Author contributions}
-OP conceived the model, performed the calculations, and wrote the manuscript.
-
+\bibliographystyle{unsrt}
 \bibliography{refs}
 
 \end{document}
