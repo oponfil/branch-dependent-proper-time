@@ -13,3 +13,8 @@
 *.nav
 *.snm
 *.vrb
+
+# Local outreach list
+email_recipients.*
+cover_letter.*
+ijtp_submission.*
