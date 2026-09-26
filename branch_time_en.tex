@@ -2,11 +2,14 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage[hidelinks]{hyperref}
 \usepackage{indentfirst}
+\emergencystretch=2em
 
 \title{\textbf{Branch-Dependent Proper Time}}
 \author{%
@@ -168,7 +171,7 @@ m_\ast=\frac{m_P}{\sqrt{\xi}},
 \qquad
 m_P=\sqrt{\hbar c/G}\approx 2.2\times10^{-8}\;\text{kg}.
 \end{equation}
-For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement. The mechanism remains pure dephasing without population redistribution or spontaneous emission~\cite{donadi2021}. The ontological consequences of the macroscopic limit---an effective ensemble mixture in the branch basis, objective loss of inter-branch interference before readout, and distinction from dynamical collapse models---are discussed in \S~\ref{sec:objective_collapse}.
+For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement.
 
 \section{Growth of the von Neumann entropy}\label{sec:entropy}
 
@@ -385,26 +388,6 @@ The relation~\eqref{eq:dt} and the postulate specify only the single-interval va
 
 \subsection{Limitations and model systematics}\label{sec:limitations}
 The central prediction $\chi\propto m^2 t^{2/3}$ follows from the relation~\eqref{eq:dt} and the postulate, but the overall coefficient remains incompletely fixed. The number $\xi$ in~\eqref{eq:dt} is specified only as $\mathcal O(1)$; interpreting $\delta t$ as a single-interval variance enters the $\mathcal O(1)$ uncertainty of the predicted visibility on equal footing with $\xi$. When confronting a single mass, the observed visibility decomposes as $V_{\rm obs}=R_{\rm ord}\,V_{\rm QM}\,e^{-\chi}$; the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and without varying $m$ or $t$ one cannot uniquely separate the BDPT contribution from underestimated conventional contrast losses. The conditional bound at fixed $R_{\rm ord}=0.78$ is therefore weaker than the estimate at $R_{\rm ord}=1$, which attributes the entire deficit to the mechanism. A statistically robust limit on $\xi$ will require a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional loss channels, not aggregated visibility values alone.
-
-\subsection{Relation to objective collapse}
-\label{sec:objective_collapse}
-A natural question is how BDPT relates to objective collapse if it extinguishes the relative phase between branches. Two levels must be kept apart. For \emph{fixed} realizations $\delta t_a,\delta t_b$ the state
-\begin{equation}
-|\psi\rangle=c_a|a\rangle+c_b e^{i\Delta\varphi}|b\rangle
-\end{equation}
-remains \emph{pure}; $\Delta\varphi$ is given by~\eqref{eq:dphi} and depends on the particular realization of the branch clocks. A mixed state appears only after ensemble averaging over independent $\delta t_a,\delta t_b$:
-\begin{equation}
-\overline{\rho}_{ab}=\rho_{ab}(0)\,e^{-\chi}.
-\end{equation}
-At $\chi\gg1$ this yields the effective state
-\begin{equation}
-\rho \approx |c_a|^2|a\rangle\langle a| + |c_b|^2|b\rangle\langle b|,
-\end{equation}
-without coherent terms $c_a c_b^*\,|a\rangle\langle b|+\text{h.c.}$ The loss of phase and passage to a mixed state is not reducible to the observer's incomplete knowledge of the phase: by the postulate the noise is an \emph{ontic} independent shift of proper time per branch, not the recording of which-path information in an environment.
-
-In the ensemble reading (\S~\ref{sec:intro}) each branch is a genuine variant of the system and $|c_i|^2$ are the variant weights. For $\chi\gg1$ there is no observable interference between variants; the ensemble mixture with the same weights is operationally indistinguishable from a statistical description of outcomes with probabilities $|c_i|^2$. The definite outcome remains unknown until registration, but coherent superposition of alternatives as a physical resource disappears \emph{objectively}---before and independently of readout---over a time $\lesssim t_{\mathrm{dec}}$. In this sense the macroscopic limit of BDPT yields objective loss of inter-branch interference and effective branch superselection at $\chi\gg1$, but does \emph{not} select a single realization and does not replace dynamical collapse.
-
-The mechanism differs from dynamical collapse models (Di\'osi--Penrose and others) in its channel: the populations $|c_i|^2$ are not redistributed by a jump and there is no spontaneous emission~\cite{donadi2021}; it is pure rest-phase dephasing. The destruction of inter-branch coherence and the passage to an ensemble mixture is the link that \emph{resembles} objectivist programmes, but formally follows only from the ensemble ontology, independent branch clocks, and the K\'arolyh\'azy relation for $\delta t$, without an additional nonlinear term in the state equation. Schr\"odinger's cat at $m\gg m_\ast$ illustrates the limit: the amplitudinal record ``alive/dead'' remains, but interference between branches vanishes over $t_{\mathrm{dec}}\ll t_C$; what remains is a statistical mixture of variants with weights $|c_i|^2$, not the selection of a single outcome before measurement.
 
 \subsection{Distinction from other decoherence mechanisms}
 \label{sec:other_mechanisms}
