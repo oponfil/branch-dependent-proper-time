@@ -64,11 +64,30 @@ A branch $a$ is the term $c_a|a\rangle$ of one superposition $|\psi\rangle=\sum_
 \label{sec:branch_energy}
 The energy of branch $a$ in the superposition, $E_{a|b}$, is the energy carried on that branch by the degrees of freedom that distinguish it from branch $b$. The zero of energy is the physical vacuum or the ground state of the split sector. A sector represented identically on both branches is common: it is subtracted before the remaining energy is multiplied by $\delta t_a$ and $\delta t_b$. What couples to the independent clock shifts is this $E_{a|b}$.
 
-On a motional pair both branches carry the same exclusive rest energy, $E_{a|b}^{\mathrm{mot}}=E_{b|a}^{\mathrm{mot}}=E_{\mathrm{br}}^{\mathrm{mot}}$. When the spatial packets of the branches are distinguishable, $E_{a|b}^{\mathrm{mot}}=Mc^2$. How that energy is assembled from the particle masses is given in \S~\ref{sec:branch_examples}.
+On a motional pair both branches carry the same exclusive rest energy, $E_{a|b}^{\mathrm{mot}}=E_{b|a}^{\mathrm{mot}}=E_{\mathrm{br}}^{\mathrm{mot}}$. When the spatial packets of the branches are distinguishable, $E_{a|b}^{\mathrm{mot}}=Mc^2$. How that energy is assembled from the particle masses is given in \S~\ref{sec:particle_count}.
 
 For internal states $|0\rangle,|1\rangle$ of a common carrier the zero lies at the ground state: branch $|0\rangle$ carries no exclusive energy, and branch $|1\rangle$ carries the transition energy, $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$. If motion and an internal level both differ, the two contributions add on each branch: $E_{a|b}=E_{\mathrm{br}}^{\mathrm{mot}}+E_a^{\mathrm{int}}$ and $E_{b|a}=E_{\mathrm{br}}^{\mathrm{mot}}+E_b^{\mathrm{int}}$.
 
 A global shift $H\mapsto H+C\mathbf 1$ adds the same number to the reference energy of the common sector or of the ground state. After that sector is subtracted, $E_{a|b}$ and $E_{b|a}$ are unchanged, and so are the visibilities.
+
+\subsection{Assembly from the particle masses.}
+\label{sec:particle_count}
+Let $E_{\mathrm{br}}^{\mathrm{mot}}$ be the rest energy of those particles by which the already given branches differ. The full mass of the body enters only when the spatial packets of all its particles are distinguishable between the two branches. For particles of species $s$---one type and one mass $m_s$---let $\gamma^{(1)}_{a,s}$ and $\gamma^{(1)}_{b,s}$ be the one-particle reduced density matrices of the branches, normalized by $\operatorname{Tr}\gamma^{(1)}_{a,s}=\operatorname{Tr}\gamma^{(1)}_{b,s}=N_s$. From these matrices the rest energy of a motional pair is assembled from the number of distinguishable particles of each species:
+\begin{equation}
+\mathcal D_s(a,b)=\frac12\left\|\gamma^{(1)}_{a,s}-\gamma^{(1)}_{b,s}\right\|_1,
+\qquad
+E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
+\label{eq:ebr_dist}
+\end{equation}
+Identical particles of one species share one matrix. Different species are added separately: each has its own mass and its own packet overlap. The definition does not depend on the one-particle basis and applies to identical particles~\cite{korsbakken2007}; throughout, $0\le\mathcal D_s\le N_s$. A state that is the same on both branches does not enter the difference of the matrices. For a motional pair this energy is the exclusive rest energy of each branch,
+\begin{equation}
+E_{a|b}^{\mathrm{mot}}
+=E_{b|a}^{\mathrm{mot}}
+=E_{\mathrm{br}}^{\mathrm{mot}}
+=c^2\sum_s m_s\mathcal D_s(a,b).
+\label{eq:exclusive_energy}
+\end{equation}
+This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches.
 
 \subsection{Proper-time fluctuation.}
 The proper-time fluctuation $\delta t$ is adopted from the K\'arolyh\'azy uncertainty relation and is not a new postulate of this work.
@@ -83,6 +102,7 @@ with $\xi=\mathcal O(1)$. Equation~(\ref{eq:dt}) is the temporal form of the K\'
 We stress where gravity enters $\delta t$. The Salecker--Wigner lower bound for a clock of mass $m_{\mathrm{cl}}$, $\delta t\gtrsim(\hbar t/m_{\mathrm{cl}}c^2)^{1/2}$, vanishes as $m_{\mathrm{cl}}\to\infty$. The ``not a black hole'' constraint stops that limit: the optimal $m_{\mathrm{cl}}$ drops out and leaves the mass-independent minimum $\delta t^3\sim t_P^2 t$ adopted in Equation~\eqref{eq:dt}. The rest mass is equally essential: the uncertainty $\delta t$ is defined along a world line with nonzero proper time; without rest mass there is no proper time. For a photon $m=0$, $\mathrm{d}\tau=0$, and the rest-energy channel does not apply to a light-like carrier.
 
 \subsection{Postulate: branch clock independence.}
+\label{sec:postulate}
 This is the postulate of the model. In standard quantum mechanics one time parameter is common to the whole superposition. Here branches $a$ and $b$ have their own proper-time shifts, $\delta t_a$ and $\delta t_b$, and those shifts are independent.
 
 For two branches $a,b$ (in the sense of the definitions above) over the superposition interval $t$ (the same as in~\eqref{eq:dt}), the realized shifts $\delta t_a,\delta t_b$ are independent, centered Gaussian random variables of accumulated proper time with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$ and $\mathrm{Cov}(\delta t_a,\delta t_b)=0$. The variances are always equal. Branches of one split separate at one moment and, until they recombine or the apparatus reads which-path, share one interval $t$, so~\eqref{eq:dt} assigns them the same $\delta t$. This is a substantive postulate, motivated by the ensemble ontology (\S~\ref{sec:intro}): distinct variants do not share a common clock; there is no strict derivation from that ontology, and what remains irreducible is the premise that the holographic information budget is allocated \emph{per branch} rather than as a single shared register.
@@ -129,7 +149,7 @@ For one pair of orthogonal branches
 
 For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $E_{0|1}=0$ and $E_{1|0}=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
 
-Each arm's own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair of one split, including three or more arms. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
+Each arm's own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair of one split, including three or more arms. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$ and the interpretation of $\delta t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
 
 Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model adds the independent premise that the vacuum-referenced rest energy of branch-exclusive massive modes couples to the independent shifts $\delta t_a,\delta t_b$ and thereby becomes a random \emph{relative} contribution. It does not couple an arbitrary identity term in the total Hamiltonian: The definitions first remove the common sector and its reference energy.
 
@@ -185,47 +205,34 @@ S\to-\sum_i|c_i|^2\ln|c_i|^2
 The populations $|c_i|^2$ stay constant throughout. $\lambda_+$ decreases from 1 to $1/2$ and $\lambda_-$ increases from 0 to $1/2$: the off-diagonal elements decay as $e^{-\chi}$, and the original pure vector ceases to be an eigenvector of the averaged matrix. This is the growth of the entropy of the averaged state of the split system itself, not of a reduced subsystem. In environmental decoherence the joint state of system and environment can remain pure, and entropy appears after the environment is traced out. Here there is no environment recording which-path information, and the purity of $\overline{\rho}$ cannot be restored by tracing out another quantum subsystem. The mixture and the growth of $S$ arise by averaging over the noise of the postulate. The map on $\overline{\rho}$ is linear, $\rho_{ab}\mapsto\rho_{ab}e^{-\chi}$.
 
 \section{Examples}\label{sec:branch_examples}
-\label{sec:particle_count}
-$E_{\mathrm{br}}^{\mathrm{mot}}$ is the rest energy of those particles by which the already given branches differ. The full mass of the body enters only when the spatial packets of all its particles are distinguishable between the two branches. For particles of species $s$---one type and one mass $m_s$---let $\gamma^{(1)}_{a,s}$ and $\gamma^{(1)}_{b,s}$ be the one-particle reduced density matrices of the branches, normalized by $\operatorname{Tr}\gamma^{(1)}_{a,s}=\operatorname{Tr}\gamma^{(1)}_{b,s}=N_s$. The number of distinguishable particles of that species and the corresponding energy are
-\begin{equation}
-\mathcal D_s(a,b)=\frac12\left\|\gamma^{(1)}_{a,s}-\gamma^{(1)}_{b,s}\right\|_1,
-\qquad
-E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
-\label{eq:ebr_dist}
-\end{equation}
-Identical particles of one species share one matrix. Different species are added separately: each has its own mass and its own packet overlap. The definition does not depend on the one-particle basis and applies to identical particles~\cite{korsbakken2007}; throughout, $0\le\mathcal D_s\le N_s$. A state that is the same on both branches does not enter the difference of the matrices. For a motional pair this energy is the exclusive rest energy of each branch,
-\begin{equation}
-E_{a|b}^{\mathrm{mot}}
-=E_{b|a}^{\mathrm{mot}}
-=E_{\mathrm{br}}^{\mathrm{mot}}
-=c^2\sum_s m_s\mathcal D_s(a,b).
-\label{eq:exclusive_energy}
-\end{equation}
-This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches.
 
-\emph{Full resolution.} The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body.
+\subsection{Full resolution.}
+The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body, with no change of the internal configuration. An example is a sodium cluster in a matter-wave interferometer: two spatially resolved arms of one and the same body. When the single-atom packets of these arms do not overlap, $\mathcal D_{\rm Na}=N$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Nm_{\mathrm{at}}c^2=Mc^2$: the energy that enters is the mass of the whole cluster. For the Vienna cluster this is $m\approx172$~kDa; the comparison with the measured visibility is in \S~\ref{sec:experiment}.
 
-\emph{Partial overlap.} A species contributes $m_s\mathcal D_s c^2$. If the packets have separated only in part, the full mass of the body is replaced by the sum of $m_s\mathcal D_s$ over species.
+\subsection{Incomplete resolution.}
+If the packets of one species have separated only in part, $0<\mathcal D_s<N_s$, and that species contributes $m_s\mathcal D_s c^2$ rather than $m_s N_s c^2$. An example is the same two arms of a cluster while their separation is comparable to the packet width: some of the atoms still overlap, and $\mathcal D_{\rm Na}$ grows from zero toward $N$ as the arms separate. Species are not mixed in the sum. In a body of several species the nuclei may already be distinguishable while the electron packets still overlap; the terms $m_s\mathcal D_s c^2$ then differ and are added separately.
 
-\emph{Common carrier.} Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions.
+\subsection{Common carrier.}
+Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions. An example is an atomic clock: a superposition of two internal levels of one atom, both on the same trajectory $|C\rangle$. The arms differ by the level, not by position. For a microwave transition $\Delta E\ll mc^2$, and $\chi$ is negligible.
 
-\emph{Collective mode.} A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$.
+\subsection{Collective mode.}
+A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$. An example is a vibrational mode of a molecule, or a phonon in a solid, at such a displacement. The atoms of the two branches are almost indistinguishable by position, so a count through $\mathcal D_s mc^2$ would insert the rest energy of distinguishable atoms, which this split does not have.
 
-\emph{Current.} The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. For the devices considered, $\mathcal D_e\simeq42$--$5750$ against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The estimate of $\chi$ is given in \S~\ref{sec:many_body}.
+\subsection{Current.}
+The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. For the devices considered, $\mathcal D_e\simeq42$--$5750$ against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The estimate of $\chi$ is given in \S~\ref{sec:many_body}.
 
-\section{Confrontation with experiment}\label{sec:experiment}
+\section{Experimental test}\label{sec:experiment}
 
 \subsection{Matter-wave interferometry: the primary probe}
 \label{sec:matter_interferometry}
 
-By the definitions and the postulate the mechanism is pure rest-phase dephasing without force or momentum diffusion (see the postulate and \S~\ref{sec:discussion}). The experimental consequence is that non-interferometric bounds on Di\'osi--Penrose (the underground search for spontaneous radiation~\cite{donadi2021}, the Majorana Demonstrator limit~\cite{majorana2022}, and X-ray tests~\cite{piscicchia2024}) do not apply. An atomic clock has no $mc^2$ channel: a superposition of internal levels proceeds with $E_{\mathrm{br}}=\Delta E$, and for a microwave transition $\chi$ is negligible. Matter-wave interferometry of the centre of mass is therefore the most direct laboratory probe of the mechanism with $E_{\mathrm{br}}=mc^2$.
+By the definitions and the postulate (\S~\ref{sec:postulate}) the mechanism is pure rest-phase dephasing without force or momentum diffusion (\S~\ref{sec:other_mechanisms}). The experimental consequence is that non-interferometric bounds on Di\'osi--Penrose (the underground search for spontaneous radiation~\cite{donadi2021}, the Majorana Demonstrator limit~\cite{majorana2022}, and X-ray tests~\cite{piscicchia2024}) do not apply. An atomic clock has no $mc^2$ channel: a superposition of internal levels proceeds with $E_{\mathrm{br}}=\Delta E$, and for a microwave transition $\chi$ is negligible. Matter-wave interferometry of the centre of mass is therefore the most direct laboratory probe of the mechanism with $E_{\mathrm{br}}=mc^2$.
 
-For the same reason, purely optical interferometers provide no direct constraint ($\mathrm d\tau=0$ for a photon); LIGO and the Holometer constrain external metric and spatial models~\cite{chou2017holometer}, but not branch-dependent proper time (BDPT; see \S~\ref{sec:discussion}). Massive mirrors would be subject to the mechanism only in their own centre-of-mass superposition; in the usual classical optical regime they are not, and existing optical null results therefore place no direct bound on $\xi$.
+For the same reason, purely optical interferometers provide no direct constraint ($\mathrm d\tau=0$ for a photon); LIGO and the Holometer constrain external metric and spatial models~\cite{chou2017holometer}, but not the proposed model. Massive mirrors would be subject to the mechanism only in their own centre-of-mass superposition; in the usual classical optical regime they are not.
 
-\subsection{Sodium nanoparticles: the Vienna group (2026)}
+\subsection{Setup parameters: sodium nanoparticles (Vienna group, 2026)}
 \label{sec:na_vienna}
 
-\noindent\textbf{Setup parameters.}
 We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer of the Vienna group~\cite{arndt2025,arndt_arxiv}:
 \begin{itemize}
 \item clusters of $5000$--$10000$ Na atoms with a mass-distribution centre $m\approx 172$~kDa ($m\approx 2.86\times10^{-22}$~kg);
@@ -234,13 +241,13 @@ We confront Equation~(\ref{eq:chi}) with the sodium-nanoparticle interferometer 
 \item a measured fringe visibility $V=0.10\pm0.01$ (second run $0.08\pm0.01$) at $172$~kDa, described by the quantum model with a single global factor $0.78$ for conventional contrast losses (alignment, gravitational and rotational phase averaging, vibrations, thermal and collisional decoherence);
 \item a record macroscopicity $\mu=15.5$~\cite{macroscopicity,arndt2025}.
 \end{itemize}
-The relevant superposition time is the Talbot flight of one section $t=L/v\approx 6.1$~ms (justification of the choice---in \S~\ref{sec:xi_bound}).
+The relevant superposition time is the Talbot flight of one section $t=L/v\approx 6.1$~ms (justification---in \S~\ref{sec:xi_bound}).
 
-Under the sharpened definitions this is not a separate counting rule: the two resolved branches of a rigid cluster are centre-of-mass shifts of the whole body (without change of internal configuration). When their one-atom spatial supports have negligible overlap, $\mathcal D_{\rm Na}=N$ and Equation~\eqref{eq:ebr_dist} gives $E_{\mathrm{br}}=Nm_{\mathrm{at}}c^2=Mc^2$, whence $\chi\propto M^2$. If the overlap is incomplete, $M$ in the formulas below must be replaced by $m_{\mathrm{at}}\mathcal D_{\rm Na}$; the assumption of full branch distinguishability is thus explicit and can be checked against the packet geometry.
+The two resolved branches of a rigid cluster are centre-of-mass shifts of the whole body, with the same internal configuration. At full resolution $\mathcal D_{\rm Na}=N$, and Equation~\eqref{eq:ebr_dist} gives $E_{\mathrm{br}}=Nm_{\mathrm{at}}c^2=Mc^2$, so $\chi\propto M^2$. At incomplete resolution the formulas below use $m_{\mathrm{at}}\mathcal D_{\rm Na}$ in place of $M$. Full distinguishability of the branches is an explicit assumption and can be checked from the packet geometry.
 
 \subsection{Numerical estimate and constraint on \texorpdfstring{$\xi$}{xi}}
 \label{sec:xi_bound}
-We first fix the effective superposition time. The definitions and the postulate do not uniquely define the moment at which independent branch clocks ``switch on'' (§~\ref{sec:limitations}): delocalization of the wave function grows already after the first grating (full flight $2L/v\approx12.3$~ms), but distinguishable diffraction orders---branches in the strict sense of the definitions---form only at the second grating, leaving one section until recombination at the third, $t=L/v\approx6.1$~ms. For an upper bound we take the \emph{minimal} interpretation $t=L/v$: the smaller $t$, the smaller the predicted dephasing and the \emph{weaker} (more conservative) the resulting bound on $\xi$; any broader interpretation of the superposition time would only tighten the limit. With $\omega_C=mc^2/\hbar=2.43\times10^{29}$~s$^{-1}$ (at $m=172$~kDa) and $t_P^2=2.91\times10^{-87}$~s$^2$, Equation~(\ref{eq:chi}) gives
+The superposition time is fixed by the definition of a branch: branch clocks run while the terms of the split are distinguishable. In the interferometer such diffraction orders form at the second grating and recombine at the third, so $t=L/v\approx6.1$~ms. With $\omega_C=mc^2/\hbar=2.43\times10^{29}$~s$^{-1}$ (at $m=172$~kDa) and $t_P^2=2.91\times10^{-87}$~s$^2$, Equation~(\ref{eq:chi}) gives
 \begin{equation}
 \chi\approx 0.41\,\xi^{2/3}\quad (t=L/v\approx 6.1~\text{ms}).
 \end{equation}
@@ -271,14 +278,14 @@ and from $\chi=0.41\,\xi^{2/3}$ we obtain
 \end{equation}
 This bound does not depend on the conventional-loss factor $R_{\rm ord}$: any real losses ($R_{\rm ord}<1$) could only tighten it. The number $1.1$ corresponds to the quantile $1.645$ after inflating the error on three scans, that is, two degrees of freedom. Student's quantile $t_{0.95}(2)=2.92$ gives $\xi\lesssim1.7$.
 
-If one trusts the published estimate of conventional losses $R_{\rm ord}=0.78$, the limit tightens: $e^{-\chi}\ge0.0716/(0.78\cdot0.1108)=0.828$, $\chi\le0.188$, whence $\xi\lesssim0.32$. But this is a conditional result: at a single mass the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and the data do not allow separating the new mechanism from underestimated conventional losses; the interpretation of $\delta t$, the choice of effective $t$, and the overall coefficient $\xi$ also remain model systematics.
+If one trusts the published estimate of conventional losses $R_{\rm ord}=0.78$, the limit tightens: $e^{-\chi}\ge0.0716/(0.78\cdot0.1108)=0.828$, $\chi\le0.188$, whence $\xi\lesssim0.32$. But this is a conditional result: at a single mass the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and the data do not allow separating the new mechanism from underestimated conventional losses; the interpretation of $\delta t$ and the overall coefficient $\xi$ also remain model systematics.
 
 Summary for the data: at $\xi=1$ the model predicts ($R_{\rm ord}=1$) visibility $0.1108\,e^{-0.41}\approx0.074$ against the observed $0.0840\pm0.0076$---a deviation of only $1.3\sigma$, so $\xi=\mathcal O(1)$ is \emph{not excluded} by the data; the normal quantile gives $\xi\lesssim1.1$, and the conditional result (at $R_{\rm ord}=0.78$) gives $0.32$. A statistically rigorous limit requires a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional contrast-loss channels.
 
 \subsection{The decisive near-term test}
 \label{sec:decisive_test}
 
-The already-measured high visibility $V=0.66\pm0.09$ at $0.4$--$1$~MDa~\cite{arndt2025} does \emph{not} test the mechanism as distinguishable quantum coherence: it was taken in the regime $\lambda_{dB}\lesssim3$~fm, $L\le L_T$ ($L_T\sim d^2/\lambda_{dB}$---the \emph{Talbot length}, the scale of grating self-imaging in the near field of a Talbot--Lau interferometer~\cite{arndt2025,kialka2022}), where the quantum and classical predictions coincide (geometric optics). A discriminating test requires the quantum regime at high mass. The same programme targets $m\sim 1$~MDa with $v\approx 25$~m/s~\cite{arndt2025}. Then even with the conservative $t=L/v\approx 39$~ms and $\omega_{\mathrm{eff}}\approx 1.4\times10^{30}$~s$^{-1}$, Equation~\eqref{eq:chi} at $\xi=1$ gives
+The already-measured high visibility $V=0.66\pm0.09$ at $0.4$--$1$~MDa~\cite{arndt2025} does \emph{not} test the mechanism as distinguishable quantum coherence: it was taken in the regime $\lambda_{dB}\lesssim3$~fm, $L\le L_T$ ($L_T\sim d^2/\lambda_{dB}$---the \emph{Talbot length}, the scale of grating self-imaging in the near field of a Talbot--Lau interferometer~\cite{arndt2025,kialka2022}), where the quantum and classical predictions coincide (geometric optics). A discriminating test requires the quantum regime at high mass. The same programme targets $m\sim 1$~MDa with $v\approx 25$~m/s~\cite{arndt2025}. Then at $t=L/v\approx 39$~ms and $\omega_{\mathrm{eff}}\approx 1.4\times10^{30}$~s$^{-1}$, Equation~\eqref{eq:chi} at $\xi=1$ gives
 \begin{equation}
 \chi\approx 47,
 \qquad
@@ -293,7 +300,7 @@ A visibility deficit alone is not diagnostic, since thermal radiation, collision
 
 An additional discriminator is the dependence on the maximum spatial branch separation $\Delta x$. For momentum-transfer decoherence (collisions and photon emission or scattering), the localization exponent contains factors of the form $1-\operatorname{sinc}(q\Delta x/\hbar)$: it vanishes for unresolved paths, grows as the environment starts to resolve them, and saturates at the event rate once $\Delta x$ exceeds the environment's spatial resolution~\cite{hornberger2004tli}. It would therefore be incorrect to say that \emph{all} environmental channels grow without bound with $\Delta x$. A gravitational gradient usually produces a deterministic geometry-dependent phase; contrast is lost only after averaging over fluctuations of the gradient or trajectories.
 
-The present model is likewise not strictly independent of $\Delta x$ over the entire range. Under the sharpened definitions,
+By \S~\ref{sec:particle_count}, $\mathcal D_s$ depends on the packet separation, and the exponent varies with $\Delta x$:
 \begin{equation}
 \chi_{\mathrm{BDPT}}(\Delta x)=
 \left[\frac{c^2\sum_s m_s\mathcal D_s(\Delta x)}{\hbar}\right]^2
@@ -377,7 +384,7 @@ The case of amplitude amplification~\cite{grover1996} is contrasting. Here there
 The relation~\eqref{eq:dt} and the postulate specify only the single-interval variance $\delta t$; multi-time covariance, the noise spectrum, and the spin-echo response are not fixed by them. The law $\mathrm{Var}[\delta t(t)]\propto t^{2/3}$ follows from~\eqref{eq:dt}, but does \emph{not} by itself determine the full stochastic process. If Gaussianity of the full process, self-similarity, and stationary increments are additionally imposed, the natural completion is fractional Brownian motion with Hurst exponent $H=1/3$~\cite{mandelbrot1968fbm}. In that completion, disjoint increments are anticorrelated, the low-frequency spectrum of fractional Gaussian noise behaves as $S(f)\propto|f|^{1/3}$, and echo requires an explicit calculation with the corresponding filter function rather than an automatic cancellation of a quasistatic phase. These spectral properties follow from an additional temporal postulate, not from the relation~\eqref{eq:dt} and the postulate as presently stated.
 
 \subsection{Limitations and model systematics}\label{sec:limitations}
-The central prediction $\chi\propto m^2 t^{2/3}$ follows from the relation~\eqref{eq:dt} and the postulate, but the overall coefficient remains incompletely fixed. The number $\xi$ in~\eqref{eq:dt} is specified only as $\mathcal O(1)$; interpreting $\delta t$ as a single-interval variance and choosing the effective superposition time $t$ (e.g.\ $L/v$ versus $2L/v$ in a Talbot--Lau interferometer; see \S~\ref{sec:xi_bound}) enter the $\mathcal O(1)$ uncertainty of the predicted visibility on equal footing with $\xi$. When confronting a single mass, the observed visibility decomposes as $V_{\rm obs}=R_{\rm ord}\,V_{\rm QM}\,e^{-\chi}$; the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and without varying $m$ or $t$ one cannot uniquely separate the BDPT contribution from underestimated conventional contrast losses. The conditional bound at fixed $R_{\rm ord}=0.78$ is therefore weaker than the estimate at $R_{\rm ord}=1$, which attributes the entire deficit to the mechanism. A statistically robust limit on $\xi$ will require a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional loss channels, not aggregated visibility values alone.
+The central prediction $\chi\propto m^2 t^{2/3}$ follows from the relation~\eqref{eq:dt} and the postulate, but the overall coefficient remains incompletely fixed. The number $\xi$ in~\eqref{eq:dt} is specified only as $\mathcal O(1)$; interpreting $\delta t$ as a single-interval variance enters the $\mathcal O(1)$ uncertainty of the predicted visibility on equal footing with $\xi$. When confronting a single mass, the observed visibility decomposes as $V_{\rm obs}=R_{\rm ord}\,V_{\rm QM}\,e^{-\chi}$; the product $R_{\rm ord}\,e^{-\chi}$ is degenerate, and without varying $m$ or $t$ one cannot uniquely separate the BDPT contribution from underestimated conventional contrast losses. The conditional bound at fixed $R_{\rm ord}=0.78$ is therefore weaker than the estimate at $R_{\rm ord}=1$, which attributes the entire deficit to the mechanism. A statistically robust limit on $\xi$ will require a joint likelihood analysis of the raw scans, the quantum-curve parameters, and all conventional loss channels, not aggregated visibility values alone.
 
 \subsection{Relation to objective collapse}
 \label{sec:objective_collapse}
