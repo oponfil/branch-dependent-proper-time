@@ -57,10 +57,11 @@ The contribution of this work to theoretical physics is one operational postulat
 \end{itemize}
 
 \subsection{Definition of a branch.}
-These are new definitions. A branch is a term of a superposition, as in standard quantum mechanics. $E_{a|b}$ is the rule adopted here for the energy of that term.
+\label{sec:branch_def}
+A branch $a$ is the term $c_a|a\rangle$ of one superposition $|\psi\rangle=\sum_a c_a|a\rangle$, differing in a \emph{physical degree of freedom} that participates in interference: a spatial-motional state (which-path or current), or an eigenstate of the internal Hamiltonian $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected and indistinguishable wave packet carries one clock. Branching occurs when evolution splits the state into distinguishable terms, and ceases when those terms recombine or the apparatus registers which-path. Which terms of this superposition count as branches is fixed by one split: the split whose interference is read out.
 
-A branch $a$ is the term $c_a|a\rangle$ of one superposition $|\psi\rangle=\sum_a c_a|a\rangle$, differing in a \emph{physical degree of freedom} that participates in interference: a spatial-motional state (which-path or current), or an internal eigenstate of $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected and indistinguishable wave packet carries one clock. Branching occurs when evolution splits the state into distinguishable terms, and ceases when those terms recombine or the apparatus registers which-path. Which terms of this superposition count as branches is fixed by one split: the split whose interference is read out.
-
+\subsection{Energy of a branch.}
+\label{sec:branch_energy}
 The energy of branch $a$ in the superposition, $E_{a|b}$, is the energy carried on that branch by the degrees of freedom that distinguish it from branch $b$. The zero of energy is the physical vacuum or the ground state of the split sector. A sector represented identically on both branches is common: it is subtracted before the remaining energy is multiplied by $\delta t_a$ and $\delta t_b$. What couples to the independent clock shifts is this $E_{a|b}$.
 
 On a motional pair both branches carry the same exclusive rest energy, $E_{a|b}^{\mathrm{mot}}=E_{b|a}^{\mathrm{mot}}=E_{\mathrm{br}}^{\mathrm{mot}}$. When the spatial packets of the branches are distinguishable, $E_{a|b}^{\mathrm{mot}}=Mc^2$. How that energy is assembled from the particle masses is given in \S~\ref{sec:branch_examples}.
@@ -84,33 +85,31 @@ We stress where gravity enters $\delta t$. The Salecker--Wigner lower bound for 
 \subsection{Postulate: branch clock independence.}
 This is the postulate of the model. In standard quantum mechanics one time parameter is common to the whole superposition. Here branches $a$ and $b$ have their own proper-time shifts, $\delta t_a$ and $\delta t_b$, and those shifts are independent.
 
-For two branches $a,b$ (in the sense of the definitions above) over the superposition interval $t$ (the same as in~\eqref{eq:dt}), the realized shifts $\delta t_a,\delta t_b$ are independent, centered Gaussian random variables of accumulated proper time with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$ and $\mathrm{Cov}(\delta t_a,\delta t_b)=0$. This is a substantive postulate, motivated by the ensemble ontology (\S~\ref{sec:intro}): distinct variants do not share a common clock; there is no strict derivation from that ontology, and what remains irreducible is the premise that the holographic information budget is allocated \emph{per branch} rather than as a single shared register.
+For two branches $a,b$ (in the sense of the definitions above) over the superposition interval $t$ (the same as in~\eqref{eq:dt}), the realized shifts $\delta t_a,\delta t_b$ are independent, centered Gaussian random variables of accumulated proper time with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$ and $\mathrm{Cov}(\delta t_a,\delta t_b)=0$. The variances are always equal. Branches of one split separate at one moment and, until they recombine or the apparatus reads which-path, share one interval $t$, so~\eqref{eq:dt} assigns them the same $\delta t$. This is a substantive postulate, motivated by the ensemble ontology (\S~\ref{sec:intro}): distinct variants do not share a common clock; there is no strict derivation from that ontology, and what remains irreducible is the premise that the holographic information budget is allocated \emph{per branch} rather than as a single shared register.
 
 Within one branch, all degrees of freedom \emph{not} participating in the split share that branch's clock. They do not form a branch of their own: the part that is the same on both arms enters each term of the split, advancing with $\delta t_a$ on term $a$ and with $\delta t_b$ on term $b$.
 
 Crucially, $\delta t_a$ is not a fluctuation of an external metric field and not environmental noise common to nearby trajectories. It is an \emph{ontic} random shift of proper time; its magnitude over the interval $t$ is set by $\delta t$ from~\eqref{eq:dt}---the holographic estimate of such uncertainty~\cite{ng2005foam}. An environmental source---for example, a difference of gravitational potentials on the interferometer arms---would give a \emph{correlated} shift $\delta t_a$, the closer to common the nearer the branches, and it would cancel in the relative phase; but that is a systematic shift, not noise. The holographic uncertainty attaches to the split subsystem of a branch, not to spatial points, so spatial proximity of branches does not by itself correlate their clocks. Attachment to discrete branches rather than positions is essential: noise independent for arbitrarily close \emph{positions} would mean a random phase field with unbounded gradient---hence a force and momentum diffusion. Noise independent for discrete \emph{branches} is pure dephasing without force.
 
-\section{Decoherence functional}\label{sec:decoherence}
+\section{Dephasing mechanism}\label{sec:decoherence}
 
-For a composite system we use the decomposition $H = mc^2 + P^2/(2m) + H_{\mathrm{int}}$. For which-path ($E_{a|b}=E_{b|a}=E_{\mathrm{br}}=mc^2$ by the definitions) the phase contribution of the split subsystem gives the relative phase
+The phase contribution of the split subsystem gives the relative phase
 \begin{equation}
-\Delta\varphi=\frac{E_{a|b}}{\hbar}\,\delta t_a-\frac{E_{b|a}}{\hbar}\,\delta t_b
-\approx\frac{mc^2}{\hbar}\,(\delta t_a-\delta t_b),
+\Delta\varphi=\frac{E_{a|b}}{\hbar}\,\delta t_a-\frac{E_{b|a}}{\hbar}\,\delta t_b,
 \label{eq:dphi}
 \end{equation}
-since $E_{a|b}=E_{b|a}=mc^2$ and interference involves the \emph{difference} of branch-exclusive contributions, not an absolute eigenvalue of the total Hamiltonian.
+Interference involves the \emph{difference} of branch-exclusive contributions, not an absolute eigenvalue of the total Hamiltonian.
 
-For a single superposition interval, the relation~\eqref{eq:dt} and the postulate fully specify the distribution of $\delta t_a,\delta t_b$ used in the derivation below; the multi-time structure of the noise is discussed in \S~\ref{sec:temporal_noise}. The general formula follows from~\eqref{eq:dphi} and the relation~\eqref{eq:dt} and the postulate. By the postulate, with $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$:
+By the postulate, $\mathrm{Var}(\delta t_a)=\mathrm{Var}(\delta t_b)=\delta t^2$; then:
 \begin{equation}
 \mathrm{Var}(\Delta\varphi)=\frac{E_{a|b}^{\,2}+E_{b|a}^{\,2}}{\hbar^2}\,\delta t^2.
 \label{eq:vardphi}
 \end{equation}
-If the centre of mass branches (which-path),~\eqref{eq:vardphi} gives
+If the centre of mass branches (which-path), we use the decomposition $H = mc^2 + P^2/(2m) + H_{\mathrm{int}}$ for a composite system: rest energy, centre-of-mass kinetic energy, and the Hamiltonian of the internal degrees of freedom. By~\S~\ref{sec:branch_energy}, $E_{a|b}=E_{b|a}=E_{\mathrm{br}}=mc^2$, and~\eqref{eq:vardphi} gives
 \begin{equation}
 \mathrm{Var}(\Delta\varphi)=2\,\omega_{\mathrm{eff}}^{\,2}\,\delta t^2,
 \qquad \omega_{\mathrm{eff}}=\frac{mc^2}{\hbar}.
 \end{equation}
-With \emph{shared} clocks the global phase $mc^2\tau/\hbar$ would cancel in $\Delta\varphi$; with independent clocks, by the postulate, the vacuum-referenced branch-exclusive accumulations enter the difference. A constant common term in the total Hamiltonian is removed by the definitions and cannot generate dephasing. For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $E_{0|1}=0$ and $E_{1|0}=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
 
 Since $\delta t_a,\delta t_b$ are Gaussian by the postulate, the relative phase $\Delta\varphi$ is also Gaussian and $\langle e^{i\Delta\varphi}\rangle=\exp[-\mathrm{Var}(\Delta\varphi)/2]$; the factor $2$ from the two branches and the factor $1/2$ from Gaussian averaging cancel. In the which-path case, for fringe visibility ($V$ relative to the reference $V_0$):
 \begin{equation}
@@ -127,14 +126,15 @@ For one pair of orthogonal branches
 \;}
 \label{eq:chi_general}
 \end{equation}
-The branches are the arms of one split between which the apparatus reads out interference. For which-path the energy of a branch in the superposition is the same on every arm: $mc^2$ per arm. Its own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair, including three or more arms. Independent splits are not combined into one: in a product of single-atom interferometers each atom has its own clock pair and $\mathcal D=1$, whereas a NOON state and a rigid cluster are one split, with $Nmc^2$ and $Mc^2$. The factor $e^{-\chi}$ is placed between orthogonal full branches; overlap of the one-particle $\gamma^{(1)}$ enters only $\mathcal D_s$. For $E_{a|b}=E_{b|a}=mc^2$ the equation reduces to~\eqref{eq:chi}. Because $E_{a|b}$ and $E_{b|a}$ are vacuum- or ground-state-referenced energies of the split sector,~\eqref{eq:chi_general} is unchanged by $H\mapsto H+C\mathbf1$. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
 
-\noindent\textbf{Relation to clock interference and the Compton phase.}
-The conceptual framework of ``proper time along each branch'' is already used in quantum-clock interference. In Zych et al., an internal state acts as a clock: a deterministic proper-time difference along the two paths records which-path information in the internal degree of freedom and reduces visibility~\cite{zych2011proper}. Pikovski et al.\ developed this mechanism for a composite object in a gravitational field: an externally imposed potential difference unitarily entangles the centre of mass with the internal-energy distribution, and dephasing appears after tracing out the internal degrees of freedom~\cite{pikovski2015}. In contrast, the present model does not rely on an external potential difference or on a dedicated internal degree of freedom that unitarily encodes which-path information; it adopts the K\'arolyh\'azy relation for $\delta t$ and the postulate of branch-clock independence, and therefore predicts irreversible ensemble dephasing even for an object in its internal ground state.
+For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $E_{0|1}=0$ and $E_{1|0}=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
 
-Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model adds the independent premise that the vacuum-referenced rest energy of branch-exclusive massive modes couples to the independent shifts $\delta t_a,\delta t_b$ and thereby becomes a random \emph{relative} contribution. It does not couple an arbitrary identity term in the total Hamiltonian: The definitions first remove the common sector and its reference energy. Without this premise the central prediction $\chi\propto m^2$ does not arise (see also \S~\ref{sec:discussion}).
+Each arm's own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair of one split, including three or more arms. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$, the interpretation of $\delta t$, and the choice of the effective $t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
 
-\noindent\textbf{Planck mass boundary.}
+Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model adds the independent premise that the vacuum-referenced rest energy of branch-exclusive massive modes couples to the independent shifts $\delta t_a,\delta t_b$ and thereby becomes a random \emph{relative} contribution. It does not couple an arbitrary identity term in the total Hamiltonian: The definitions first remove the common sector and its reference energy.
+
+\section{Planck mass boundary}\label{sec:planck}
+
 The decoherence time $t_{\mathrm{dec}}$ is defined by the condition $\chi=1$. From~\eqref{eq:chi}:
 \begin{equation}
 t_{\mathrm{dec}}=\frac{t_C^3}{\xi\,t_P^2},
@@ -148,36 +148,7 @@ m_\ast=\frac{m_P}{\sqrt{\xi}},
 \qquad
 m_P=\sqrt{\hbar c/G}\approx 2.2\times10^{-8}\;\text{kg}.
 \end{equation}
-For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement. The mechanism remains pure dephasing without population redistribution or spontaneous emission~\cite{donadi2021}. The growth of the von Neumann entropy of the averaged state is treated in \S~\ref{sec:entropy}. The ontological consequences of the macroscopic limit---an effective ensemble mixture in the branch basis, objective loss of inter-branch interference before readout, and distinction from dynamical collapse models---are discussed in \S~\ref{sec:objective_collapse}.
-
-\section{Examples}\label{sec:branch_examples}
-\label{sec:particle_count}
-$E_{\mathrm{br}}^{\mathrm{mot}}$ is the rest energy of those particles by which the already given branches differ. The full mass of the body enters only when the spatial packets of all its particles are distinguishable between the two branches. For particles of species $s$---one type and one mass $m_s$---let $\gamma^{(1)}_{a,s}$ and $\gamma^{(1)}_{b,s}$ be the one-particle reduced density matrices of the branches, normalized by $\operatorname{Tr}\gamma^{(1)}_{a,s}=\operatorname{Tr}\gamma^{(1)}_{b,s}=N_s$. The number of distinguishable particles of that species and the corresponding energy are
-\begin{equation}
-\mathcal D_s(a,b)=\frac12\left\|\gamma^{(1)}_{a,s}-\gamma^{(1)}_{b,s}\right\|_1,
-\qquad
-E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
-\label{eq:ebr_dist}
-\end{equation}
-Identical particles of one species share one matrix. Different species are added separately: each has its own mass and its own packet overlap. The definition does not depend on the one-particle basis and applies to identical particles~\cite{korsbakken2007}; throughout, $0\le\mathcal D_s\le N_s$. A state that is the same on both branches does not enter the difference of the matrices. For a motional pair this energy is the exclusive rest energy of each branch,
-\begin{equation}
-E_{a|b}^{\mathrm{mot}}
-=E_{b|a}^{\mathrm{mot}}
-=E_{\mathrm{br}}^{\mathrm{mot}}
-=c^2\sum_s m_s\mathcal D_s(a,b).
-\label{eq:exclusive_energy}
-\end{equation}
-This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches.
-
-\emph{Full resolution.} The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body.
-
-\emph{Partial overlap.} A species contributes $m_s\mathcal D_s c^2$. If the packets have separated only in part, the full mass of the body is replaced by the sum of $m_s\mathcal D_s$ over species.
-
-\emph{Common carrier.} Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions.
-
-\emph{Collective mode.} A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$.
-
-\emph{Current.} The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. For the devices considered, $\mathcal D_e\simeq42$--$5750$ against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The estimate of $\chi$ is given in \S~\ref{sec:many_body}.
+For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\ast$ we have $t_{\mathrm{dec}}\ll t_C$: inter-branch coherence vanishes over an interval below the uncertainty $\delta t$ from~\eqref{eq:dt} and in principle inaccessible to direct measurement. The mechanism remains pure dephasing without population redistribution or spontaneous emission~\cite{donadi2021}. The ontological consequences of the macroscopic limit---an effective ensemble mixture in the branch basis, objective loss of inter-branch interference before readout, and distinction from dynamical collapse models---are discussed in \S~\ref{sec:objective_collapse}.
 
 \section{Growth of the von Neumann entropy}\label{sec:entropy}
 
@@ -209,9 +180,38 @@ At $\chi=0$ the spectrum is $(1,0)$ and $S=0$. Since $\chi\propto t^{2/3}$, as t
 S\to-\sum_i|c_i|^2\ln|c_i|^2
 \label{eq:Ssat}
 \end{equation}
-(for equal weights, $S\to\ln 2$). A further increase of $\chi$ adds no new eigenvalues.
+(for $n$ equal weights, $S\to\ln n$). A further increase of $\chi$ adds no new eigenvalues.
 
 The populations $|c_i|^2$ stay constant throughout. $\lambda_+$ decreases from 1 to $1/2$ and $\lambda_-$ increases from 0 to $1/2$: the off-diagonal elements decay as $e^{-\chi}$, and the original pure vector ceases to be an eigenvector of the averaged matrix. This is the growth of the entropy of the averaged state of the split system itself, not of a reduced subsystem. In environmental decoherence the joint state of system and environment can remain pure, and entropy appears after the environment is traced out. Here there is no environment recording which-path information, and the purity of $\overline{\rho}$ cannot be restored by tracing out another quantum subsystem. The mixture and the growth of $S$ arise by averaging over the noise of the postulate. The map on $\overline{\rho}$ is linear, $\rho_{ab}\mapsto\rho_{ab}e^{-\chi}$.
+
+\section{Examples}\label{sec:branch_examples}
+\label{sec:particle_count}
+$E_{\mathrm{br}}^{\mathrm{mot}}$ is the rest energy of those particles by which the already given branches differ. The full mass of the body enters only when the spatial packets of all its particles are distinguishable between the two branches. For particles of species $s$---one type and one mass $m_s$---let $\gamma^{(1)}_{a,s}$ and $\gamma^{(1)}_{b,s}$ be the one-particle reduced density matrices of the branches, normalized by $\operatorname{Tr}\gamma^{(1)}_{a,s}=\operatorname{Tr}\gamma^{(1)}_{b,s}=N_s$. The number of distinguishable particles of that species and the corresponding energy are
+\begin{equation}
+\mathcal D_s(a,b)=\frac12\left\|\gamma^{(1)}_{a,s}-\gamma^{(1)}_{b,s}\right\|_1,
+\qquad
+E_{\mathrm{br}}^{\mathrm{mot}}=c^2\sum_s m_s\,\mathcal D_s(a,b).
+\label{eq:ebr_dist}
+\end{equation}
+Identical particles of one species share one matrix. Different species are added separately: each has its own mass and its own packet overlap. The definition does not depend on the one-particle basis and applies to identical particles~\cite{korsbakken2007}; throughout, $0\le\mathcal D_s\le N_s$. A state that is the same on both branches does not enter the difference of the matrices. For a motional pair this energy is the exclusive rest energy of each branch,
+\begin{equation}
+E_{a|b}^{\mathrm{mot}}
+=E_{b|a}^{\mathrm{mot}}
+=E_{\mathrm{br}}^{\mathrm{mot}}
+=c^2\sum_s m_s\mathcal D_s(a,b).
+\label{eq:exclusive_energy}
+\end{equation}
+This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches.
+
+\emph{Full resolution.} The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body.
+
+\emph{Partial overlap.} A species contributes $m_s\mathcal D_s c^2$. If the packets have separated only in part, the full mass of the body is replaced by the sum of $m_s\mathcal D_s$ over species.
+
+\emph{Common carrier.} Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions.
+
+\emph{Collective mode.} A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$.
+
+\emph{Current.} The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. For the devices considered, $\mathcal D_e\simeq42$--$5750$ against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The estimate of $\chi$ is given in \S~\ref{sec:many_body}.
 
 \section{Confrontation with experiment}\label{sec:experiment}
 
@@ -401,7 +401,11 @@ The mechanism differs from dynamical collapse models (Di\'osi--Penrose and other
 
 \subsection{Distinction from other decoherence mechanisms}
 \label{sec:other_mechanisms}
-The mechanism must be distinguished from nearby sources of interference loss. The closest formal relative is Milburn's intrinsic decoherence~\cite{milburn1991}; Adler's simplest equation coincides with it~\cite{adler2004,diosi2005}: stochastic unitary phase steps generated by the Hamiltonian yield fundamental dephasing specifically in the energy eigenbasis of $H$, with populations conserved and a rate that grows with $|E-E'|$. BDPT shares with that programme the idea of an internal (not environment-induced) loss of coherence from uncertain time evolution, but is not reducible to it. In Milburn's model decoherence is tied to the eigenstates of the full $H$ and for a free particle produces anomalous dispersion (an effective channel with an operator $\propto p^2$); at $E=E'$ there is no dephasing, so equal-rest-energy which-path arms alone yield no signal. The same vanishing at equal energies, and the factor \(t_P^{4/3}t^{2/3}\) in front of the square of a frequency, were already obtained by Gambini, Porto and Pullin from the Salecker--Wigner and Ng--van Dam clock bound: the off-diagonal element decays as \(\exp(-\omega_{nm}^2 t_P^{4/3}t^{2/3})\), where \(\omega_{nm}\) is the difference of eigenvalues of a single Hamiltonian~\cite{gambini2004,gambini2007}. In Equation~\eqref{eq:chi}, \(mc^2/\hbar\) stands in place of \(\omega_{nm}\) by the definitions and the postulate; the numerical coefficient differs by the factor \(\xi^{2/3}\). In BDPT the noise attaches to discrete branches by the definitions, and $\delta t$ is set by the K\'arolyh\'azy relation with $\chi\propto m^2 t^{2/3}$, and the postulate of independent clocks turn the common Compton phase into a random \emph{relative} contribution without force or momentum diffusion. In quantum-clock interference, a deterministic or potential-induced proper-time difference records which-path information through internal degrees of freedom or an external gravitational gradient~\cite{zych2011proper,pikovski2015}; BDPT is not reducible to such unitary readout and does not require a potential difference, but introduces a stochastic Planckian uncertainty $\delta t$ with independent $\delta t_a,\delta t_b$. An environment with momentum transfer (gas, thermal radiation, photon scattering) creates position-dependent noise, force, and momentum diffusion and is usually suppressed by improving the vacuum or cooling; the characteristic dependence on $\Delta x$ is described by localization factors~\cite{hornberger2004tli} (see \S~\ref{sec:signature}). The closest construction of this kind is Di\'osi's local-time uncertainty~\cite{diosi2005}: the rest energy \(c^2 f(r)\) couples to random shifts of local time with correlator \(\propto G\hbar/(|r-r'|c^4)\). With that correlator \(c\) cancels, and the master equation coincides with the Di\'osi--Penrose equation, whose rate is set by the gravitational self-energy. In the present model the shifts are independent across branches and their variance is fixed by the relation~\eqref{eq:dt}, so \(c\) remains and the rate is set by \(mc^2\). Dynamical Di\'osi--Penrose collapse models predict population redistribution and spontaneous emission~\cite{donadi2021}, to which the present model is \emph{transparent}: it is pure rest-phase dephasing without additional channels. Spatially attached implementations of Planckian uncertainty (correlated shear noise, external metric fluctuations) are constrained by devices such as the Holometer and LIGO-like detectors~\cite{chou2017holometer}; BDPT attaches to discrete branches, not to points, and does not act on a massless carrier. Finally, in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}; the present model does not settle that debate but postulates that, with independent branch clocks, the rest phase $mc^2$ becomes a random \emph{relative} contribution (see \S~\ref{sec:decoherence})---a separate and falsifiable premise.
+The mechanism must be distinguished from nearby sources of interference loss. The closest formal relative is Milburn's intrinsic decoherence~\cite{milburn1991}; Adler's simplest equation coincides with it~\cite{adler2004,diosi2005}: stochastic unitary phase steps generated by the Hamiltonian yield fundamental dephasing specifically in the energy eigenbasis of $H$, with populations conserved and a rate that grows with $|E-E'|$. BDPT shares with that programme the idea of an internal (not environment-induced) loss of coherence from uncertain time evolution, but is not reducible to it. In Milburn's model decoherence is tied to the eigenstates of the full $H$ and for a free particle produces anomalous dispersion (an effective channel with an operator $\propto p^2$); at $E=E'$ there is no dephasing, so equal-rest-energy which-path arms alone yield no signal. The same vanishing at equal energies, and the factor \(t_P^{4/3}t^{2/3}\) in front of the square of a frequency, were already obtained by Gambini, Porto and Pullin from the Salecker--Wigner and Ng--van Dam clock bound: the off-diagonal element decays as \(\exp(-\omega_{nm}^2 t_P^{4/3}t^{2/3})\), where \(\omega_{nm}\) is the difference of eigenvalues of a single Hamiltonian~\cite{gambini2004,gambini2007}. In Equation~\eqref{eq:chi}, \(mc^2/\hbar\) stands in place of \(\omega_{nm}\) by the definitions and the postulate; the numerical coefficient differs by the factor \(\xi^{2/3}\). In BDPT the noise attaches to discrete branches by the definitions, and $\delta t$ is set by the K\'arolyh\'azy relation with $\chi\propto m^2 t^{2/3}$, and the postulate of independent clocks turn the common Compton phase into a random \emph{relative} contribution without force or momentum diffusion. 
+
+The conceptual framework of ``proper time along each branch'' is already used in quantum-clock interference. In Zych et al., an internal state acts as a clock: a deterministic proper-time difference along the two paths records which-path information in the internal degree of freedom and reduces visibility~\cite{zych2011proper}. Pikovski et al.\ developed this mechanism for a composite object in a gravitational field: an externally imposed potential difference unitarily entangles the centre of mass with the internal-energy distribution, and dephasing appears after tracing out the internal degrees of freedom~\cite{pikovski2015}. In contrast, the present model does not rely on an external potential difference or on a dedicated internal degree of freedom that unitarily encodes which-path information; it adopts the K\'arolyh\'azy relation for $\delta t$ and the postulate of branch-clock independence, and therefore predicts irreversible ensemble dephasing even for an object in its internal ground state.
+
+An environment with momentum transfer (gas, thermal radiation, photon scattering) creates position-dependent noise, force, and momentum diffusion and is usually suppressed by improving the vacuum or cooling; the characteristic dependence on $\Delta x$ is described by localization factors~\cite{hornberger2004tli} (see \S~\ref{sec:signature}). The closest construction of this kind is Di\'osi's local-time uncertainty~\cite{diosi2005}: the rest energy \(c^2 f(r)\) couples to random shifts of local time with correlator \(\propto G\hbar/(|r-r'|c^4)\). With that correlator \(c\) cancels, and the master equation coincides with the Di\'osi--Penrose equation, whose rate is set by the gravitational self-energy. In the present model the shifts are independent across branches and their variance is fixed by the relation~\eqref{eq:dt}, so \(c\) remains and the rate is set by \(mc^2\). Dynamical Di\'osi--Penrose collapse models predict population redistribution and spontaneous emission~\cite{donadi2021}, to which the present model is \emph{transparent}: it is pure rest-phase dephasing without additional channels. Spatially attached implementations of Planckian uncertainty (correlated shear noise, external metric fluctuations) are constrained by devices such as the Holometer and LIGO-like detectors~\cite{chou2017holometer}; BDPT attaches to discrete branches, not to points, and does not act on a massless carrier. Finally, in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}; the present model does not settle that debate but postulates that, with independent branch clocks, the rest phase $mc^2$ becomes a random \emph{relative} contribution (see \S~\ref{sec:decoherence})---a separate and falsifiable premise.
 
 \section{Conclusion}\label{sec:conclusion}
 
