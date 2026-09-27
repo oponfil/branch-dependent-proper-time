@@ -210,6 +210,7 @@ The populations $|c_i|^2$ stay constant throughout. $\lambda_+$ decreases from 1
 \section{Examples}\label{sec:branch_examples}
 
 \subsection{Full resolution.}
+\label{sec:full_resolution}
 The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body, with no change of the internal configuration. An example is a sodium cluster in a matter-wave interferometer: two spatially resolved arms of one and the same body. When the single-atom packets of these arms do not overlap, $\mathcal D_{\rm Na}=N$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Nm_{\mathrm{at}}c^2=Mc^2$: the energy that enters is the mass of the whole cluster. For the Vienna cluster this is $m\approx172$~kDa; the comparison with the measured visibility is in \S~\ref{sec:experiment}.
 
 \subsection{Incomplete resolution.}
@@ -222,7 +223,22 @@ Only an internal level differs, and the spatial-motional part $|C\rangle$ is com
 A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$. An example is a vibrational mode of a molecule, or a phonon in a solid, at such a displacement. The atoms of the two branches are almost indistinguishable by position, so a count through $\mathcal D_s mc^2$ would insert the rest energy of distinguishable atoms, which this split does not have.
 
 \subsection{Current.}
-The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. For the devices considered, $\mathcal D_e\simeq42$--$5750$ against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The estimate of $\chi$ is given in \S~\ref{sec:many_body}.
+\label{sec:many_body}
+The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. A microscopic analysis of the BCS states gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The naive count puts the rest energy of the entire condensate into $E_{\mathrm{br}}$, as in full resolution $\mathcal D_e=N$. The upper value of $10^{10}$ electrons then gives $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would exclude the model. With $\mathcal D_e$ at the same $t$ one obtains $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between the naive and the microscopic count is not an $\mathcal O(1)$ uncertainty.
+
+\subsection{Product state.}
+A product state
+\begin{equation}
+\left[(|L\rangle+|R\rangle)/\sqrt2\right]^{\otimes N}
+\end{equation}
+contains $N$ independent one-atom superpositions, and each is its own split. Observed first-order coherence compares components with $\mathcal D=1$ and acquires the atomic energy $mc^2$.
+
+\subsection{NOON state.}
+This is the full resolution of \S~\ref{sec:full_resolution} for $N$ atoms of one split, not the mass of a rigid cluster. A NOON state
+\begin{equation}
+\bigl(|N,0\rangle+|0,N\rangle\bigr)/\sqrt2
+\end{equation}
+is one split: two collective branches with $\mathcal D=N$ and $E_{\mathrm{br}}=Nmc^2$. For $N=10^5$ ${}^{87}\mathrm{Rb}$ atoms and $t=10$~ms, Equation~\eqref{eq:chi} predicts $\chi\simeq1.4\times10^3$ at $\xi=1$, i.e.\ practically complete suppression of interference for a massive motional NOON state. This additional falsifiable prediction does not yet conflict with experiment: demonstrated atomic NOON states remain few-particle; for example, Ref.~\cite{chen2010noon} realized a second-order state.
 
 \section{Experimental test}\label{sec:experiment}
 
@@ -322,21 +338,6 @@ where $V_{\mathrm{QM}}$ includes coherent dynamics and grating interactions, whi
 
 \section{Limits on quantum computation}\label{sec:qc}
 
-\subsection{Composite superpositions: flux qubits and atomic NOON states}
-\label{sec:many_body}
-
-The unqualified phrase ``energy of the split subsystem'' is particularly hazardous for a superconducting flux qubit. Naively counting all $10^6$--$10^{10}$ electrons carrying superconductivity would give, at the upper end, $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would then exclude the model. A microscopic analysis of the BCS states, however, shows that the near-unit overlap of the one-electron states in the two current branches leaves only a small fraction of occupations changed. An estimate equivalent to the one-particle distinguishability in~\eqref{eq:ebr_dist} gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, rather than the total number of condensate electrons~\cite{korsbakken2009,korsbakken2010}. At $t=100~\mu\mathrm{s}$ this gives $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between naive and microscopic counts is not an $\mathcal O(1)$ uncertainty; this is why the distinguishability measure is part of the definitions.
-
-The same rule separates two often conflated regimes of atom interferometry. A product state
-\begin{equation}
-\left[(|L\rangle+|R\rangle)/\sqrt2\right]^{\otimes N}
-\end{equation}
-contains independent one-atom superpositions; observed first-order coherence compares components with $\mathcal D=1$ and acquires the atomic, not collective, energy $mc^2$. In contrast, a NOON state
-\begin{equation}
-\bigl(|N,0\rangle+|0,N\rangle\bigr)/\sqrt2
-\end{equation}
-has two collective branches with $\mathcal D=N$ and $E_{\mathrm{br}}=Nmc^2$. For $N=10^5$ ${}^{87}\mathrm{Rb}$ atoms and $t=10$~ms, Equation~\eqref{eq:chi} predicts $\chi\simeq1.4\times10^3$ at $\xi=1$, i.e.\ practically complete suppression of interference for a massive motional NOON state. This additional falsifiable prediction does not yet conflict with experiment: demonstrated atomic NOON states remain few-particle; for example, Ref.~\cite{chen2010noon} realized a second-order state.
-
 \subsection{Margolus--Levitin: a heuristic comparison}
 \label{sec:ml_link}
 
@@ -355,13 +356,6 @@ Since $t_C/t_P=m_P/m$, for which-path
 N_{\max}^{\rm formal}=\frac{2}{\pi\xi}\left(\frac{m_P}{m}\right)^{2}.
 \end{equation}
 At $m=m_\ast=m_P/\sqrt{\xi}$ this formal quantity is $2/\pi\approx0.64$. It is not a computational-power bound derived from the model. For internal branches, where the transition energy actually generates evolution, the theorem should instead be applied directly using the physical $E_{\mathrm{av}}$, without importing the formula based on $mc^2$.
-
-\subsection{Formal coincidence with holographic scaling}
-The same additional identification gives the formal rate $N=(2/\pi)\,t/t_C$. Combining it with the coherence condition $t_{\mathrm{dec}}\ge t$, i.e.\ $t_C\ge(\xi\,t_P^2\,t)^{1/3}$, and taking equality at the boundary gives
-\begin{equation}
-N_{\mathrm{formal}}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.
-\end{equation}
-Over one second this is $\approx4.5\times10^{28}$ at $\xi=1$. The exponent $2/3$ coincides with the scaling $N\propto(t/t_P)^{2/3}$ obtained by Ng for a ``space-time-foam computer'' and a black-hole quantum computer~\cite{ng2005foam}, because both estimates use the cubic law $\delta t^3\sim t_P^2t$. This is a meaningful structural analogy, but not an independent derivation of an operation-count bound: without additional physical justification for $E_{\mathrm{av}}=mc^2$, matching exponents does not turn $N_{\mathrm{formal}}$ into a computational limit of the model.
 
 \subsection{Phase noise and the qubit register}
 
@@ -396,6 +390,12 @@ The mechanism must be distinguished from nearby sources of interference loss. Th
 The conceptual framework of ``proper time along each branch'' is already used in quantum-clock interference. In Zych et al., an internal state acts as a clock: a deterministic proper-time difference along the two paths records which-path information in the internal degree of freedom and reduces visibility~\cite{zych2011proper}. Pikovski et al.\ developed this mechanism for a composite object in a gravitational field: an externally imposed potential difference unitarily entangles the centre of mass with the internal-energy distribution, and dephasing appears after tracing out the internal degrees of freedom~\cite{pikovski2015}. In contrast, the present model does not rely on an external potential difference or on a dedicated internal degree of freedom that unitarily encodes which-path information; it adopts the K\'arolyh\'azy relation for $\delta t$ and the postulate of branch-clock independence, and therefore predicts irreversible ensemble dephasing even for an object in its internal ground state.
 
 An environment with momentum transfer (gas, thermal radiation, photon scattering) creates position-dependent noise, force, and momentum diffusion and is usually suppressed by improving the vacuum or cooling; the characteristic dependence on $\Delta x$ is described by localization factors~\cite{hornberger2004tli} (see \S~\ref{sec:signature}). The closest construction of this kind is Di\'osi's local-time uncertainty~\cite{diosi2005}: the rest energy \(c^2 f(r)\) couples to random shifts of local time with correlator \(\propto G\hbar/(|r-r'|c^4)\). With that correlator \(c\) cancels, and the master equation coincides with the Di\'osi--Penrose equation, whose rate is set by the gravitational self-energy. In the present model the shifts are independent across branches and their variance is fixed by the relation~\eqref{eq:dt}, so \(c\) remains and the rate is set by \(mc^2\). Dynamical Di\'osi--Penrose collapse models predict population redistribution and spontaneous emission~\cite{donadi2021}, to which the present model is \emph{transparent}: it is pure rest-phase dephasing without additional channels. Spatially attached implementations of Planckian uncertainty (correlated shear noise, external metric fluctuations) are constrained by devices such as the Holometer and LIGO-like detectors~\cite{chou2017holometer}; BDPT attaches to discrete branches, not to points, and does not act on a massless carrier. Finally, in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}; the present model does not settle that debate but postulates that, with independent branch clocks, the rest phase $mc^2$ becomes a random \emph{relative} contribution (see \S~\ref{sec:decoherence})---a separate and falsifiable premise.
+
+The identification $E_{\mathrm{av}}=mc^2$ in \S~\ref{sec:ml_link} gives the formal rate $N=(2/\pi)\,t/t_C$. Combining it with the coherence condition $t_{\mathrm{dec}}\ge t$, i.e.\ $t_C\ge(\xi\,t_P^2\,t)^{1/3}$, and taking equality at the boundary gives
+\begin{equation}
+N_{\mathrm{formal}}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.
+\end{equation}
+Over one second this is $\approx4.5\times10^{28}$ at $\xi=1$. The exponent $2/3$ coincides with the scaling $N\propto(t/t_P)^{2/3}$ obtained by Ng for a ``space-time-foam computer'' and a black-hole quantum computer~\cite{ng2005foam}, because both estimates use the cubic law $\delta t^3\sim t_P^2t$. This is a meaningful structural analogy, but not an independent derivation of an operation-count bound: without additional physical justification for $E_{\mathrm{av}}=mc^2$, matching exponents does not turn $N_{\mathrm{formal}}$ into a computational limit of the model.
 
 \section{Conclusion}\label{sec:conclusion}
 
