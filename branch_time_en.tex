@@ -226,6 +226,16 @@ A mode of a common body is displaced by much less than the atomic zero-point mot
 \label{sec:many_body}
 The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. A microscopic analysis of the BCS states gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The naive count puts the rest energy of the entire condensate into $E_{\mathrm{br}}$, as in full resolution $\mathcal D_e=N$. The upper value of $10^{10}$ electrons then gives $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would exclude the model. With $\mathcal D_e$ at the same $t$ one obtains $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between the naive and the microscopic count is not an $\mathcal O(1)$ uncertainty.
 
+\subsection{Phase noise and the qubit register.}
+The definitions and the postulate act on any superposition, including a computational one. For strictly internal levels $|0\rangle,|1\rangle$ with a common one-particle spatial-motional density matrix, the definitions give $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$; the mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. This statement cannot automatically be transferred to a superposition of opposite persistent currents, for which Equation~\eqref{eq:ebr_dist} applies as discussed in \S~\ref{sec:many_body}. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the internal case: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the rest energy of the common walls, long-lived coherence is consistent with the model. The random relative phase between a pair of internal branches over time $t$:
+\begin{equation}
+\sigma(t)=\frac{\sqrt{E_{a|b}^{\,2}+E_{b|a}^{\,2}}}{\hbar}\,\delta t
+=\omega_q\bigl(\xi\,t_P^2\,t\bigr)^{1/3}
+\quad (E_{0|1}=0,\;E_{1|0}=\hbar\omega_q).
+\label{eq:sigmaq}
+\end{equation}
+For a superconducting qubit ($\omega_q\approx2\pi\times5$~GHz) and $t=1$~s: $\delta t\approx1.4\times10^{-29}$~s, $\sigma\approx4.5\times10^{-19}$~rad (the corresponding dephasing parameter $\chi=\sigma^2/2$). Crucially, the variance~\eqref{eq:sigmaq} is \emph{pairwise} and independent of the number of branches: interference involves only differences of independent $\delta t_a$, and the extremal phase spread over $2^n$ branches grows only as $\sigma\sqrt{2\ln 2^{\,n}}\propto\sigma\sqrt{n}$. If $d$ excitations form one collective branch against the ground state, $E=d\hbar\omega_q$ and $\chi\propto d^{\,2}$; for independently split qubits the exponents add, $\chi\propto d$. In the collective case, for the branch with all $n$ excitations the formal limit $n\,\omega_q\,\delta t\lesssim1$ gives $n\lesssim10^{18}$---far beyond practical horizons.
+
 \subsection{Product state.}
 A product state
 \begin{equation}
@@ -336,44 +346,6 @@ The test can be performed in one apparatus: at fixed $m$, $v$, superposition tim
 \end{equation}
 where $V_{\mathrm{QM}}$ includes coherent dynamics and grating interactions, while $\chi_{\mathrm{env}}^{\mathrm{calc}}$ contains the calculated gas and thermal contributions. The model predicts a constant addition to $\chi_{\mathrm{res}}$ on the distinguishability plateau, whereas unsaturated environmental channels retain a characteristic $\Delta x$ dependence. A flat residual alone is not unique: saturated environmental decoherence and $\Delta x$-independent technical losses can mimic it. The $\Delta x$ scan should therefore be combined with changes in vacuum or temperature and with a test of the $m^2t^{2/3}$ scaling.
 
-\section{Limits on quantum computation}\label{sec:qc}
-
-\subsection{Margolus--Levitin: a heuristic comparison}
-\label{sec:ml_link}
-
-The decoherence time of the model is the moment when $\chi=1$ and the visibility falls to $e^{-1}$; it is given by Equation~\eqref{eq:tdec}.
-
-The Margolus--Levitin theorem~\cite{margolus1998} limits the speed of orthogonal evolution by the energy \emph{above the ground level} $E_{\mathrm{av}}=\langle H\rangle-E_0$: $\tau_\perp\ge\pi\hbar/(2E_{\mathrm{av}})$, whence $\nu_{\max}=2E_{\mathrm{av}}/(\pi\hbar)$. This is a question \emph{distinct} from branch decoherence: the Margolus--Levitin theorem concerns the unitary speed of state change, not the noise of independent clocks.
-
-At fixed particle number, the term $mc^2$ is proportional to the identity and does not generate orthogonal centre-of-mass evolution; it cancels from $E_{\mathrm{av}}=\langle H\rangle-E_0$. Thus the identification $E_{\mathrm{av}}=E_{\mathrm{br}}=mc^2$ follows neither from the theorem nor from the definitions and the postulate. Only as a formal dimensional illustration, under the additional and nonstandard assumption of that identification, one may write the number of ``ticks'' over the window $t_{\mathrm{dec}}$ as
-\begin{equation}
-N_{\max}=\nu_{\max}\,t_{\mathrm{dec}}
-=\frac{2\omega_{\mathrm{eff}}}{\pi}\cdot\frac{t_C^3}{\xi\,t_P^2}
-=\frac{2}{\pi\xi}\left(\frac{t_C}{t_P}\right)^{2}.
-\end{equation}
-Since $t_C/t_P=m_P/m$, for which-path
-\begin{equation}
-N_{\max}^{\rm formal}=\frac{2}{\pi\xi}\left(\frac{m_P}{m}\right)^{2}.
-\end{equation}
-At $m=m_\ast=m_P/\sqrt{\xi}$ this formal quantity is $2/\pi\approx0.64$. It is not a computational-power bound derived from the model. For internal branches, where the transition energy actually generates evolution, the theorem should instead be applied directly using the physical $E_{\mathrm{av}}$, without importing the formula based on $mc^2$.
-
-\subsection{Phase noise and the qubit register}
-
-The definitions and the postulate act on any superposition, including a computational one. For strictly internal levels $|0\rangle,|1\rangle$ with a common one-particle spatial-motional density matrix, the definitions give $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$; the mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. This statement cannot automatically be transferred to a superposition of opposite persistent currents, for which Equation~\eqref{eq:ebr_dist} applies as discussed in \S~\ref{sec:many_body}. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the internal case: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the rest energy of the common walls, long-lived coherence is consistent with the model. The random relative phase between a pair of internal branches over time $t$:
-\begin{equation}
-\sigma(t)=\frac{\sqrt{E_{a|b}^{\,2}+E_{b|a}^{\,2}}}{\hbar}\,\delta t
-=\omega_q\bigl(\xi\,t_P^2\,t\bigr)^{1/3}
-\quad (E_{0|1}=0,\;E_{1|0}=\hbar\omega_q).
-\label{eq:sigmaq}
-\end{equation}
-For a superconducting qubit ($\omega_q\approx2\pi\times5$~GHz) and $t=1$~s: $\delta t\approx1.4\times10^{-29}$~s, $\sigma\approx4.5\times10^{-19}$~rad (the corresponding dephasing parameter $\chi=\sigma^2/2$). Crucially, the variance~\eqref{eq:sigmaq} is \emph{pairwise} and independent of the number of branches: interference involves only differences of independent $\delta t_a$, and the extremal phase spread over $2^n$ branches grows only as $\sigma\sqrt{2\ln 2^{\,n}}\propto\sigma\sqrt{n}$. If $d$ excitations form one collective branch against the ground state, $E=d\hbar\omega_q$ and $\chi\propto d^{\,2}$; for independently split qubits the exponents add, $\chi\propto d$. In the collective case, for the branch with all $n$ excitations the formal limit $n\,\omega_q\,\delta t\lesssim1$ gives $n\lesssim10^{18}$---far beyond practical horizons.
-
-\subsection{Phase-noise scale: exact and approximate QFT}
-The quantity $\sigma$ is the scale of the model's own relative phase over time $t$. An angle $\theta\lesssim\sigma$ lies below this scale on a single realization; over many runs such a shift is statistically distinguishable, and the comparison $2\pi/2^{\,n}\sim\sigma$ does not forbid an exact QFT. An exact quantum Fourier transform on $n$ qubits contains controlled rotations down to $2\pi/2^{\,n}$, and already at $n\gtrsim64$ these angles fall below $\sim10^{-19}$~rad. Exact QFT is not used in implementations: by Coppersmith~\cite{coppersmith1994} all rotations with $k>\mathcal O(\log(n/\varepsilon))$ can be \emph{omitted from the circuit} entirely, losing only $\varepsilon$ success probability; the minimum remaining angle $\sim2\pi\varepsilon/n$ is polynomially, not exponentially, small. For Shor's algorithm~\cite{shor1997} at $n=10^4$, $\varepsilon=10^{-2}$ this is $\sim10^{-5}$~rad---thirteen orders of magnitude above the scale~\eqref{eq:sigmaq}. Phase-estimation algorithms that read the answer from the position of an interference peak are not limited by this scale: the angle remaining after the omission lies many orders of magnitude above $\sigma$.
-
-\subsection{Grover's algorithm: a heuristic estimate}
-The case of amplitude amplification~\cite{grover1996} is contrasting. Here there is no QFT and nothing to truncate: each iteration rotates the state vector by a fixed angle $2\theta\approx2/\sqrt{N}$, set by the geometry of the problem, and all $\sim(\pi/4)\sqrt{N}$ iterations form one continuous coherent accumulation without intermediate readouts. The small rotation per step is irremovable: it \emph{is} the algorithm. The match $2/\sqrt{N}\sim\sigma$, with $\sigma$ taken from~\eqref{eq:sigmaq} at $t=1$~s, is an order-of-magnitude estimate. The Grover rotation angle and the relative branch phase are different quantities, and the noise accumulates over the full run of $\sim\sqrt{N}$ oracle calls. This threshold does not follow from the definitions and the postulate. Comparability with the scale~\eqref{eq:sigmaq} arises when $2/\sqrt{N}\sim\sigma$, i.e.\ at $N\sim(2/\sigma)^2\sim2\times10^{37}\approx2^{124}$: there the signal step is $2^{-61}\approx4\times10^{-19}$~rad. At smaller $N$ (e.g.\ $N=2^{80}$, step $\sim10^{-12}$~rad) the rotation is orders of magnitude above $\sigma$ and the mechanism is imperceptible on a single iteration; at larger $N$ the step falls below $\sigma$, and dephasing accumulated over $\sim\sqrt{N}$ iterations becomes critical---although in practice the computation time kills it first. This is consistent with the known structural fragility of the algorithm: with constant noise speed on the oracle, Grover's quadratic speedup is destroyed completely~\cite{regev2008}.
-
 \section{Discussion}\label{sec:discussion}
 
 \subsection{Temporal structure of proper-time noise}
@@ -391,7 +363,7 @@ The conceptual framework of ``proper time along each branch'' is already used in
 
 An environment with momentum transfer (gas, thermal radiation, photon scattering) creates position-dependent noise, force, and momentum diffusion and is usually suppressed by improving the vacuum or cooling; the characteristic dependence on $\Delta x$ is described by localization factors~\cite{hornberger2004tli} (see \S~\ref{sec:signature}). The closest construction of this kind is Di\'osi's local-time uncertainty~\cite{diosi2005}: the rest energy \(c^2 f(r)\) couples to random shifts of local time with correlator \(\propto G\hbar/(|r-r'|c^4)\). With that correlator \(c\) cancels, and the master equation coincides with the Di\'osi--Penrose equation, whose rate is set by the gravitational self-energy. In the present model the shifts are independent across branches and their variance is fixed by the relation~\eqref{eq:dt}, so \(c\) remains and the rate is set by \(mc^2\). Dynamical Di\'osi--Penrose collapse models predict population redistribution and spontaneous emission~\cite{donadi2021}, to which the present model is \emph{transparent}: it is pure rest-phase dephasing without additional channels. Spatially attached implementations of Planckian uncertainty (correlated shear noise, external metric fluctuations) are constrained by devices such as the Holometer and LIGO-like detectors~\cite{chou2017holometer}; BDPT attaches to discrete branches, not to points, and does not act on a massless carrier. Finally, in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}; the present model does not settle that debate but postulates that, with independent branch clocks, the rest phase $mc^2$ becomes a random \emph{relative} contribution (see \S~\ref{sec:decoherence})---a separate and falsifiable premise.
 
-The identification $E_{\mathrm{av}}=mc^2$ in \S~\ref{sec:ml_link} gives the formal rate $N=(2/\pi)\,t/t_C$. Combining it with the coherence condition $t_{\mathrm{dec}}\ge t$, i.e.\ $t_C\ge(\xi\,t_P^2\,t)^{1/3}$, and taking equality at the boundary gives
+The Margolus--Levitin theorem gives the orthogonal-evolution rate $\nu_{\max}=2E_{\mathrm{av}}/(\pi\hbar)$, where $E_{\mathrm{av}}$ is the energy above the ground level~\cite{margolus1998}. The additional identification $E_{\mathrm{av}}=mc^2$, which does not follow from the definitions and the postulate, gives the formal rate $N=(2/\pi)\,t/t_C$. Combining it with the coherence condition $t_{\mathrm{dec}}\ge t$, i.e.\ $t_C\ge(\xi\,t_P^2\,t)^{1/3}$, and taking equality at the boundary gives
 \begin{equation}
 N_{\mathrm{formal}}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.
 \end{equation}
