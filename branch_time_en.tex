@@ -59,7 +59,7 @@ The present work differs in that it takes the cubic clock bound and assigns inde
 
 \subsection{Definition of a branch.}
 \label{sec:branch_def}
-A branch $a$ is the term $c_a|a\rangle$ of one superposition $|\psi\rangle=\sum_a c_a|a\rangle$, differing in a \emph{physical degree of freedom} that participates in interference: a spatial-motional state (which-path or current), or an eigenstate of the internal Hamiltonian $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected and indistinguishable wave packet carries one clock. Branching occurs when evolution splits the state into distinguishable terms, and ceases when those terms recombine or the apparatus registers which-path. Which terms of this superposition count as branches is fixed by one split: the split whose interference is read out.
+A branch $a$ is the term $c_a|a\rangle$ of one superposition $|\psi\rangle=\sum_a c_a|a\rangle$, differing in a \emph{physical degree of freedom} that participates in interference: a spatial-motional state (which-path or current), or an eigenstate of the internal Hamiltonian $H_{\mathrm{int}}$ (spin, a hyperfine or optical level, a qubit). One connected and indistinguishable wave packet carries one clock. Branching occurs when evolution splits the state into distinguishable terms, and ceases when those terms recombine or the apparatus registers which-path. Which terms of this superposition count as branches is fixed by one split: the split whose interference is read out. In which-path the arms are fixed by the preparation and by the interferometer. Rewriting the same vector in another basis does not create new clocks. There is no general rule here that would single out the branch basis in every physical situation (see \S~\ref{sec:open_basis}).
 
 \subsection{Energy of a branch.}
 \label{sec:branch_energy}
@@ -88,7 +88,7 @@ E_{a|b}^{\mathrm{mot}}
 =c^2\sum_s m_s\mathcal D_s(a,b).
 \label{eq:exclusive_energy}
 \end{equation}
-This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches.
+This is the energy, relative to the vacuum, of the occupied branch-exclusive matter modes. The formula does not choose the decomposition into branches. The accounting through $E_{a|b}$ and $\mathcal D_s$ is a proposed rule for the extensions. Pairwise equality $E_{a|b}=E_{b|a}$ does not by itself give consistent noise for three or more branches: a branch must carry one energy that does not depend on which other branch it is compared with, or else the relative phases may fail to close a cycle (see \S~\ref{sec:open_pair}).
 
 \subsection{Proper-time fluctuation.}
 The proper-time fluctuation $\delta t$ is adopted from the K\'arolyh\'azy uncertainty relation and is not a new postulate of this work.
@@ -116,6 +116,7 @@ Crucially, $\delta t_a$ is not a fluctuation of an external metric field and not
 
 \section{Dephasing mechanism}\label{sec:decoherence}
 
+\subsection{Relative phase and visibility.}
 The phase contribution of the split subsystem gives the relative phase
 \begin{equation}
 \Delta\varphi=\frac{E_{a|b}}{\hbar}\,\delta t_a-\frac{E_{b|a}}{\hbar}\,\delta t_b,
@@ -152,9 +153,30 @@ For one pair of orthogonal branches
 
 For internal branches $|0\rangle,|1\rangle$ with a common carrier $|C\rangle$ we take $E_{\mathrm{br}}=\Delta E$ and $\omega_{\mathrm{eff}}=\Delta E/\hbar$; since here $E_{0|1}=0$ and $E_{1|0}=\Delta E$, dephasing is twice as weak as in the symmetric case: $\chi=\omega_{\mathrm{eff}}^{\,2}\,\delta t^2/2$.
 
-Each arm's own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair of one split, including three or more arms. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$ and the interpretation of $\delta t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
+When every arm carries the same energy, each arm's own $\delta t_a$ gives one factor $e^{-\chi}$ to every arm pair of one split, including three or more arms. The scaling form $\chi\propto m^2 t^{2/3}$ in a centre-of-mass interferometer follows from the relation~\eqref{eq:dt} and the postulate and constitutes the central testable prediction; the overall coefficient carries an $\mathcal O(1)$ uncertainty (through $\xi^{2/3}$ and the interpretation of $\delta t$; see \S~\ref{sec:experiment}). The mass-quadratic dependence follows from rest-phase accumulation ($\omega_{\mathrm{eff}}\propto mc^2$) and matches the typical dephasing scaling in models of metric and conformal space-time fluctuations~\cite{bonifacio2009,breuer2009}; in the high-mass interferometry programme, this mass growth of the signal is highlighted as a practical motivation for searching for hypothetical effects~\cite{kialka2022}.
 
 Using $\omega_C=mc^2/\hbar$ requires a caveat: in standard quantum mechanics the Compton phase cancels in a closed interferometer~\cite{wolf2011compton}, whereas atom interferometry has been interpreted as providing access to the mass frequency~\cite{lan2013clock}. The present model adds the independent premise that the vacuum-referenced rest energy of branch-exclusive massive modes couples to the independent shifts $\delta t_a,\delta t_b$ and thereby becomes a random \emph{relative} contribution. It does not couple an arbitrary identity term in the total Hamiltonian: The definitions first remove the common sector and its reference energy.
+
+\subsection{Dephasing map.}
+\label{sec:map}
+For fully resolved arms the spatial packets of every constituent are distinguishable, $\mathcal D_s=N_s$, and the energy of each arm is $Mc^2$. The arms are given by pairwise orthogonal projectors $P_a$ that sum to the identity on the space of this split.
+
+While the arms propagate separately, each is assigned one phase
+\begin{equation}
+\varphi_a=\frac{Mc^2}{\hbar}\,\delta t_a,
+\qquad
+\Delta\varphi_{ab}=\varphi_a-\varphi_b.
+\label{eq:arm_phase}
+\end{equation}
+For two arms there is one relative phase, $\Delta\varphi_{ab}=\varphi_a-\varphi_b$. For three or more arms the same differences close a cycle: for any three arms $a$, $b$, $c$ the sum $\Delta\varphi_{ab}+\Delta\varphi_{bc}+\Delta\varphi_{ca}=0$ holds identically, because each arm has one phase. Averaging over independent Gaussian $\delta t_a$ gives, on this interval, the dephasing map
+\begin{equation}
+\Phi_t(\rho)=q\rho+(1-q)\sum_a P_a\rho P_a,
+\qquad
+q=\exp\!\left[-\left(\frac{Mc^2}{\hbar}\right)^2
+(\xi\,t_P^2\,t)^{2/3}\right].
+\label{eq:phi_map}
+\end{equation}
+For $M=m$ the factor $q$ coincides with $e^{-\chi}$ from~\eqref{eq:chi}. Diagonal elements of $\rho$ are unchanged, the trace is preserved, and off-diagonal elements are multiplied by $q$. For $0\le q\le 1$ the map is a mixture of the identity channel and complete erasure of coherences in the arm basis, so it is completely positive. This is the dynamics of one interval of separate propagation. There is no general theory here of repeated splittings and recombinations (see \S~\ref{sec:open_repeat}).
 
 \section{Planck mass boundary}\label{sec:planck}
 
@@ -175,7 +197,7 @@ For $\xi=\mathcal O(1)$ this is of the order of the Planck mass. For $m\gg m_\as
 
 \section{Growth of the von Neumann entropy}\label{sec:entropy}
 
-Dephasing changes the von Neumann entropy of the averaged state. For a fixed realization of the shifts $\delta t_a,\delta t_b$ the vector
+Dephasing changes the von Neumann entropy of the averaged state. For a fixed realization of the shifts $\delta t_a,\delta t_b$ the evolution is unitary: the vector
 \begin{equation}
 |\psi\rangle=c_a|a\rangle+c_b e^{i\Delta\varphi}|b\rangle
 \label{eq:psi_phase}
@@ -205,26 +227,33 @@ S\to-\sum_i|c_i|^2\ln|c_i|^2
 \end{equation}
 (for $n$ equal weights, $S\to\ln n$). A further increase of $\chi$ adds no new eigenvalues.
 
-The populations $|c_i|^2$ stay constant throughout. $\lambda_+$ decreases from 1 to $1/2$ and $\lambda_-$ increases from 0 to $1/2$: the off-diagonal elements decay as $e^{-\chi}$, and the original pure vector ceases to be an eigenvector of the averaged matrix. This is the growth of the entropy of the averaged state of the split system itself, not of a reduced subsystem. In environmental decoherence the joint state of system and environment can remain pure, and entropy appears after the environment is traced out. Here there is no environment recording which-path information, and the purity of $\overline{\rho}$ cannot be restored by tracing out another quantum subsystem. The mixture and the growth of $S$ arise by averaging over the noise of the postulate. The map on $\overline{\rho}$ is linear, $\rho_{ab}\mapsto\rho_{ab}e^{-\chi}$.
+The populations $|c_i|^2$ stay constant throughout. $\lambda_+$ decreases from 1 to $1/2$ and $\lambda_-$ increases from 0 to $1/2$: the off-diagonal elements decay as $e^{-\chi}$, and the original pure vector ceases to be an eigenvector of the averaged matrix. This is the growth of the entropy of the averaged state of the split system itself, not of a reduced subsystem. In environmental decoherence the joint state of system and environment can remain pure, and entropy appears after the environment is traced out. Here there is no environment recording which-path information, and the purity of $\overline{\rho}$ cannot be restored by tracing out another quantum subsystem. The mixture and the growth of $S$ arise by averaging over the noise of the postulate. The averaged dephasing is non-unitary, yet linear in the density matrix, $\rho_{ab}\mapsto\rho_{ab}e^{-\chi}$. The growth of $S$ refers to $\overline{\rho}$ and does not contradict the unitarity of a single realization.
 
 \section{Examples}\label{sec:branch_examples}
 
 \subsection{Full resolution.}
 \label{sec:full_resolution}
-The spatial packets of every constituent are distinguishable: $\mathcal D_s=N_s$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Mc^2$. This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body, with no change of the internal configuration. An example is a sodium cluster in a matter-wave interferometer: two spatially resolved arms of one and the same body. When the single-atom packets of these arms do not overlap, $\mathcal D_{\rm Na}=N$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Nm_{\mathrm{at}}c^2=Mc^2$: the energy that enters is the mass of the whole cluster. For the Vienna cluster this is $m\approx172$~kDa; the comparison with the measured visibility is in \S~\ref{sec:experiment}.
+This is the case of a rigid cluster whose branches are centre-of-mass shifts of the whole body, with no change of the internal configuration. An example is a sodium cluster in a matter-wave interferometer: two spatially resolved arms of one and the same body. When the single-atom packets of these arms do not overlap, $\mathcal D_{\rm Na}=N$ and $E_{\mathrm{br}}^{\mathrm{mot}}=Nm_{\mathrm{at}}c^2=Mc^2$: the energy that enters is the mass of the whole cluster, and the map of \S~\ref{sec:map} applies. For the Vienna cluster this is $m\approx172$~kDa; the comparison with the measured visibility is in \S~\ref{sec:experiment}.
+
+\subsection{NOON state.}
+This is the full resolution of \S~\ref{sec:full_resolution} for $N$ atoms of one split, not the mass of a rigid cluster. A NOON state
+\begin{equation}
+\bigl(|N,0\rangle+|0,N\rangle\bigr)/\sqrt2
+\end{equation}
+is one split: two collective branches with $\mathcal D=N$ and $E_{\mathrm{br}}=Nmc^2$. The map~\eqref{eq:phi_map} therefore applies with the replacement $M\to Nm$. For $N=10^5$ ${}^{87}\mathrm{Rb}$ atoms and $t=10$~ms, Equation~\eqref{eq:chi} predicts $\chi\simeq1.4\times10^3$ at $\xi=1$, i.e.\ practically complete suppression of interference for a massive motional NOON state. This additional falsifiable prediction does not yet conflict with experiment: demonstrated atomic NOON states remain few-particle; for example, Ref.~\cite{chen2010noon} realized a second-order state.
 
 \subsection{Incomplete resolution.}
-If the packets of one species have separated only in part, $0<\mathcal D_s<N_s$, and that species contributes $m_s\mathcal D_s c^2$ rather than $m_s N_s c^2$. An example is the same two arms of a cluster while their separation is comparable to the packet width: some of the atoms still overlap, and $\mathcal D_{\rm Na}$ grows from zero toward $N$ as the arms separate. Species are not mixed in the sum. In a body of several species the nuclei may already be distinguishable while the electron packets still overlap; the terms $m_s\mathcal D_s c^2$ then differ and are added separately.
+If the packets of one species have separated only in part, $0<\mathcal D_s<N_s$, and that species contributes $m_s\mathcal D_s c^2$ rather than $m_s N_s c^2$. An example is the same two arms of a cluster while their separation is comparable to the packet width: some of the atoms still overlap, and $\mathcal D_{\rm Na}$ grows from zero toward $N$ as the arms separate. Species are not mixed in the sum. In a body of several species the nuclei may already be distinguishable while the electron packets still overlap; the terms $m_s\mathcal D_s c^2$ then differ and are added separately. This is a sketch. The pair energy here depends on the partner, and the packets are not given as orthogonal projectors. What is missing is a physical specification of the branches, one joint noise, and one overall map; their consistency does not follow from the map~\eqref{eq:phi_map} (see \S~\ref{sec:open_pair}).
 
 \subsection{Common carrier.}
-Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions. An example is an atomic clock: a superposition of two internal levels of one atom, both on the same trajectory $|C\rangle$. The arms differ by the level, not by position. For a microwave transition $\Delta E\ll mc^2$, and $\chi$ is negligible.
+Only an internal level differs, and the spatial-motional part $|C\rangle$ is common. The rest mass of the carrier does not enter the difference of the matrices; $E_{\mathrm{br}}^{\mathrm{int}}=|\Delta E|$, with the ordered values $E_{0|1}^{\mathrm{int}}=0$ and $E_{1|0}^{\mathrm{int}}=\Delta E$ from the definitions. An example is an atomic clock: a superposition of two internal levels of one atom, both on the same trajectory $|C\rangle$. The arms differ by the level, not by position. For a microwave transition $\Delta E\ll mc^2$, and $\chi$ is negligible. For these two levels there is a single relative phase, the ground-state phase vanishes, and averaging produces a channel of the same form as~\eqref{eq:phi_map}; the dephasing is again twice as weak as in the symmetric case.
 
 \subsection{Collective mode.}
-A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$. An example is a vibrational mode of a molecule, or a phonon in a solid, at such a displacement. The atoms of the two branches are almost indistinguishable by position, so a count through $\mathcal D_s mc^2$ would insert the rest energy of distinguishable atoms, which this split does not have.
+A mode of a common body is displaced by much less than the atomic zero-point motion. $E_{\mathrm{br}}$ receives the mode energy, not $\mathcal D_s mc^2$. An example is a vibrational mode of a molecule, or a phonon in a solid, at such a displacement. The atoms of the two branches are almost indistinguishable by position, so a count through $\mathcal D_s mc^2$ would insert the rest energy of distinguishable atoms, which this split does not have. This is a sketch: an orthogonal basis of the mode is not given, and there is no single joint noise with one overall evolution map. Consistency with the map~\eqref{eq:phi_map} does not follow (see \S~\ref{sec:open_pair}).
 
 \subsection{Current.}
 \label{sec:many_body}
-The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. A microscopic analysis of the BCS states gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The naive count puts the rest energy of the entire condensate into $E_{\mathrm{br}}$, as in full resolution $\mathcal D_e=N$. The upper value of $10^{10}$ electrons then gives $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would exclude the model. With $\mathcal D_e$ at the same $t$ one obtains $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between the naive and the microscopic count is not an $\mathcal O(1)$ uncertainty.
+The current in the definitions is the persistent current in the superconducting loop of a flux qubit. The branches are the states with opposite sense of that current, clockwise and counterclockwise. The loop is the same in both, so the condensate electrons of the two branches overlap almost completely: the energy receives $\mathcal D_e$, not the mass of every electron. A microscopic analysis of the BCS states gives $\mathcal D_e\simeq42$--$5750$ for the devices considered, against $10^6$--$10^{10}$ condensate electrons~\cite{korsbakken2009,korsbakken2010}. The naive count puts the rest energy of the entire condensate into $E_{\mathrm{br}}$, as in full resolution $\mathcal D_e=N$. The upper value of $10^{10}$ electrons then gives $E_{\mathrm{br}}\simeq8.2\times10^{-4}$~J and, for $t=100~\mu\mathrm{s}$ and $\xi=1$, $\chi\simeq26.5$; the observed coherence of current states would exclude the model. With $\mathcal D_e$ at the same $t$ one obtains $\chi\lesssim9\times10^{-12}$: existing flux qubits are safe for the model. The difference between the naive and the microscopic count is not an $\mathcal O(1)$ uncertainty. The two senses of the current give a two-arm channel of the same form as~\eqref{eq:phi_map}, with the energy assembled from $\mathcal D_e$.
 
 \subsection{Phase noise and the qubit register.}
 The definitions and the postulate act on any superposition, including a computational one. For strictly internal levels $|0\rangle,|1\rangle$ with a common one-particle spatial-motional density matrix, the definitions give $E_{\mathrm{br}}=\hbar\omega_q=\Delta E$; the mass of the chip and resonator enters the common $|C\rangle$ and does not enter $\omega_{\mathrm{eff}}$. This statement cannot automatically be transferred to a superposition of opposite persistent currents, for which Equation~\eqref{eq:ebr_dist} applies as discussed in \S~\ref{sec:many_body}. Superconducting resonators storing a single photon for $\sim\!34$~ms with $\gtrsim10^{23}$ electrons in their walls~\cite{milul2023cavity} illustrate the internal case: with $E_{\mathrm{br}}=\Delta E$ of the photon, not the rest energy of the common walls, long-lived coherence is consistent with the model. The random relative phase between a pair of internal branches over time $t$:
@@ -234,21 +263,14 @@ The definitions and the postulate act on any superposition, including a computat
 \quad (E_{0|1}=0,\;E_{1|0}=\hbar\omega_q).
 \label{eq:sigmaq}
 \end{equation}
-For a superconducting qubit ($\omega_q\approx2\pi\times5$~GHz) and $t=1$~s: $\delta t\approx1.4\times10^{-29}$~s, $\sigma\approx4.5\times10^{-19}$~rad (the corresponding dephasing parameter $\chi=\sigma^2/2$). Crucially, the variance~\eqref{eq:sigmaq} is \emph{pairwise} and independent of the number of branches: interference involves only differences of independent $\delta t_a$, and the extremal phase spread over $2^n$ branches grows only as $\sigma\sqrt{2\ln 2^{\,n}}\propto\sigma\sqrt{n}$. If $d$ excitations form one collective branch against the ground state, $E=d\hbar\omega_q$ and $\chi\propto d^{\,2}$; for independently split qubits the exponents add, $\chi\propto d$. In the collective case, for the branch with all $n$ excitations the formal limit $n\,\omega_q\,\delta t\lesssim1$ gives $n\lesssim10^{18}$---far beyond practical horizons.
+For a superconducting qubit ($\omega_q\approx2\pi\times5$~GHz) and $t=1$~s: $\delta t\approx1.4\times10^{-29}$~s, $\sigma\approx4.5\times10^{-19}$~rad (the corresponding dephasing parameter $\chi=\sigma^2/2$). Crucially, the variance~\eqref{eq:sigmaq} is \emph{pairwise} and independent of the number of branches: interference involves only differences of independent $\delta t_a$, and the extremal phase spread over $2^n$ branches grows only as $\sigma\sqrt{2\ln 2^{\,n}}\propto\sigma\sqrt{n}$. This holds in one fixed basis, in which each basis vector carries its own energy. A change of basis defines a different split, and the map~\eqref{eq:phi_map} does not generate it (see \S~\ref{sec:open_basis}). If $d$ excitations form one collective branch against the ground state, $E=d\hbar\omega_q$ and $\chi\propto d^{\,2}$; for independently split qubits the exponents add, $\chi\propto d$. In the collective case, for the branch with all $n$ excitations the formal limit $n\,\omega_q\,\delta t\lesssim1$ gives $n\lesssim10^{18}$---far beyond practical horizons.
 
 \subsection{Product state.}
 A product state
 \begin{equation}
 \left[(|L\rangle+|R\rangle)/\sqrt2\right]^{\otimes N}
 \end{equation}
-contains $N$ independent one-atom superpositions, and each is its own split. Observed first-order coherence compares components with $\mathcal D=1$ and acquires the atomic energy $mc^2$.
-
-\subsection{NOON state.}
-This is the full resolution of \S~\ref{sec:full_resolution} for $N$ atoms of one split, not the mass of a rigid cluster. A NOON state
-\begin{equation}
-\bigl(|N,0\rangle+|0,N\rangle\bigr)/\sqrt2
-\end{equation}
-is one split: two collective branches with $\mathcal D=N$ and $E_{\mathrm{br}}=Nmc^2$. For $N=10^5$ ${}^{87}\mathrm{Rb}$ atoms and $t=10$~ms, Equation~\eqref{eq:chi} predicts $\chi\simeq1.4\times10^3$ at $\xi=1$, i.e.\ practically complete suppression of interference for a massive motional NOON state. This additional falsifiable prediction does not yet conflict with experiment: demonstrated atomic NOON states remain few-particle; for example, Ref.~\cite{chen2010noon} realized a second-order state.
+contains $N$ independent one-atom superpositions, and each is its own split. Observed first-order coherence compares components with $\mathcal D=1$ and acquires the atomic energy $mc^2$. The joint map is the tensor product of one-atom channels of the form~\eqref{eq:phi_map} with energy $mc^2$.
 
 \section{Experimental test}\label{sec:experiment}
 
@@ -358,6 +380,22 @@ The Margolus--Levitin theorem gives the orthogonal-evolution rate $\nu_{\max}=2E
 N_{\mathrm{formal}}(t)=\frac{2}{\pi\,\xi^{1/3}}\left(\frac{t}{t_P}\right)^{2/3}.
 \end{equation}
 Over one second this is $\approx4.5\times10^{28}$ at $\xi=1$. The exponent $2/3$ coincides with the scaling $N\propto(t/t_P)^{2/3}$ obtained by Ng for a ``space-time-foam computer'' and a black-hole quantum computer~\cite{ng2005foam}, because both estimates use the cubic law $\delta t^3\sim t_P^2t$. This is a meaningful structural analogy, but not an independent derivation of an operation-count bound: without additional physical justification for $E_{\mathrm{av}}=mc^2$, matching exponents does not turn $N_{\mathrm{formal}}$ into a computational limit of the model.
+
+\section{Open questions}\label{sec:open}
+
+These are open questions for the further development of the model.
+
+\subsection{Branch basis.}
+\label{sec:open_basis}
+Outside a prepared which-path split there is no general rule that would single out the branch basis. Rewriting the same vector in another basis does not create new clocks. In a qubit register the pairwise variance is independent of the number of branches only in one fixed basis: a change of basis defines a different split, and the full-resolution map does not generate it. The point is that the clocks and the map are attached to a decomposition: until the physics of the interval fixes it, the same superposition written in two ways receives different clocks. A possible direction is to take the basis singled out on that interval by the distinguishing interaction, the preparation or the Hamiltonian of the split, and for internal levels the eigenbasis of $H_{\mathrm{int}}$, and to hold it until the interval ends.
+
+\subsection{Partner-dependent energy.}
+\label{sec:open_pair}
+The equality $E_{a|b}=E_{b|a}$ does not make the noise consistent for three or more branches when the energy of a branch depends on which other branch it is compared with: the relative phases may then fail to close a cycle. When packets overlap only in part, that energy is different for each pair, the packets are not given as orthogonal projectors, and there is no single overall map. For a mode displaced by much less than the atomic zero-point motion an orthogonal basis is likewise not given: the energy that enters is the mode energy rather than a pairwise particle count, and there is no single joint noise with one overall map. The point is that a consistent map needs one energy and one phase per branch; a partner-dependent pair energy may fail to supply that set of phases, and the averaged matrix may then lose positivity. A possible direction is to assign one energy to each branch of an already given orthogonal decomposition and to average the diagonal unitaries. While the packets overlap, $\mathcal D_s$ remains an estimate of the fraction of that energy. For a soft mode the basis is the states of the mode, and the energy is the mode energy.
+
+\subsection{Repeated splittings.}
+\label{sec:open_repeat}
+The map derived in~\S~\ref{sec:map} covers one interval while the arms propagate separately. There is no rule for composing repeated splittings and recombinations. The point is that the map of one interval does not say what happens when the arms merge and when they split again: the clocks may stop or keep a memory, and a product of maps is not defined. A possible direction is, on merging, to pass the relative phase into the interference and to stop the clocks of that split, and to start a new splitting with new independent shifts on a new interval.
 
 \bibliographystyle{unsrt}
 \bibliography{refs}
