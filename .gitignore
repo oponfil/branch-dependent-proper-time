@@ -18,3 +18,6 @@
 email_recipients.*
 cover_letter.*
 ijtp_submission.*
+
+# Cursor project rules, local only
+.cursor/
