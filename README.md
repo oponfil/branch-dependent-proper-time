@@ -1,5 +1,7 @@
 # Branch-Dependent Proper Time
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21497430.svg)](https://doi.org/10.5281/zenodo.21497430)
+
 **Author:** [Oleg Ponfilenok](mailto:ponfil@gmail.com) · Independent researcher, Vietnam
 
 Manuscript proposing a decoherence model in which gravitationally induced space-time blurring is tied to **proper time** rather than spatial length, and in which proper-time fluctuations are **statistically independent across quantum branches** (ensemble ontology).
@@ -72,16 +74,23 @@ Build artifacts (`.aux`, `.log`, `.bbl`, etc.) are listed in [`.gitignore`](.git
 
 ## Citation
 
-If you use this work, please cite the manuscript (preprint; update when published):
+If you use this work, please cite the preprint:
 
 ```bibtex
-@unpublished{ponfilenok2026branch,
-  author  = {Ponfilenok, Oleg},
-  title   = {Branch-Dependent Proper Time},
-  year    = {2026},
-  note    = {Manuscript. \url{https://github.com/oponfil/branch-dependent-proper-time}}
+@misc{ponfilenok2026branch,
+  author    = {Ponfilenok, Oleg},
+  title     = {Branch-Dependent Proper Time},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21497430},
+  url       = {https://doi.org/10.5281/zenodo.21497430},
+  note      = {Preprint. Also available as viXra:2607.0087}
 }
 ```
+
+- Zenodo (all versions, always resolves to the latest): https://doi.org/10.5281/zenodo.21497430
+- Zenodo v2 (2026-10-13): https://doi.org/10.5281/zenodo.23345608
+- viXra: https://vixra.org/abs/2607.0087
 
 ## Keywords
 
