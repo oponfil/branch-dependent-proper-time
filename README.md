@@ -88,8 +88,7 @@ If you use this work, please cite the preprint:
 }
 ```
 
-- Zenodo (all versions, always resolves to the latest): https://doi.org/10.5281/zenodo.21497430
-- Zenodo v2 (2026-10-13): https://doi.org/10.5281/zenodo.23345608
+- Zenodo: https://doi.org/10.5281/zenodo.21497430
 - viXra: https://vixra.org/abs/2607.0087
 
 ## Keywords
